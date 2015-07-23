@@ -23,14 +23,13 @@ quasi static multi phase connector.
 # License
 
 This Modelica library is free software and the use is completely at your own
-risk. The library is released under Modelica License 1.1
-https://www.modelica.org/licenses/ModelicaLicense1.1
+risk. The library is released under [Modelica License 1.1](https://www.modelica.org/licenses/ModelicaLicense1.1)
 
 # Development and contribution
 
 The library was developed during a Diploma project at the Technical
-Engineering College, TGM, Wexstraße 19-23, 1200 Vienna, Austria. 
-Library authors are Christian Kral, Philip Eberhart and Tek Shan Chung.
+Engineering College, [TGM](http://www.tgm.ac.at), Wexstraße 19-23, 1200 Vienna, Austria. 
+Library authors are [Christian Kral](http://christiankral.net), Philip Eberhart and Tek Shan Chung.
 
 # Contact
 
