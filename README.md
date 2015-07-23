@@ -29,7 +29,7 @@ https://www.modelica.org/licenses/ModelicaLicense1.1
 # Development and contribution
 
 The library was developed during a Diploma project at the Technical
-Engineering College, TGM, http://www.tgm.ac.at
+Engineering College, TGM, Wexstraße 19-23, 1200 Vienna, Austria. 
 Library authors are Christian Kral, Philip Eberhart and Tek Shan Chung.
 
 # Contact
