@@ -1,0 +1,2 @@
+Open Data Commons (ODC) Public Domain Dedication and Licence (PDDL)
+see http://opendatacommons.org/licenses/pddl/1.0/
