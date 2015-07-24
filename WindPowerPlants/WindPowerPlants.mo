@@ -1314,7 +1314,7 @@ Additionally, the frequency of the current source is defined by a real signal in
 </html>"), Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics));
     end VariableUnrootedCurrentSource;
   end MSL_322;
-  annotation(version = "0.9.X", versionBuild = 0, versionDate = "2015-XX-XX", uses(Modelica(version = "3.2.1"), Complex(version = "3.2.1")), preferredView = "info", Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Documentation(info = "<html>
+  annotation(version = "0.9.0", versionBuild = 0, versionDate = "2015-07-24", uses(Modelica(version = "3.2.1"), Complex(version = "3.2.1")), preferredView = "info", Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Documentation(info = "<html>
 <h3>WindPowerPlants Library</h3>
 
 <p>The WindPowerPlants library is an open source library for the 
