@@ -791,7 +791,7 @@ The generator is operated at positive angular
 speed <code>w</code> and thus torque <code>tau</code> is negative. Torque limitation,
 however, is implemented as function of speed.
 The characteristic of the torque limiter is shown the figure below
-for the input torque <code>tau = −10kNm</code> and a torque limit of
+for the input torque <code>tau = -10kNm</code> and a torque limit of
 <code>tauRef = 10kNm</code>. However, In the investigated case the reference
 speed <code>wRef = 50*pi rad/s</code>. For positive speeds
 greater than <code>linear = 2%</code> of the reference speed the torque is not
