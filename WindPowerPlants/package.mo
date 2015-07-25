@@ -8,9 +8,9 @@ package WindPowerPlants "Library of wind power plants"
       extends Modelica.Icons.Information;
       annotation(preferredView = "info", Documentation(info = "<html>
 <p>
-The concept of the WindPowerPlants library is described in 
+The concept of the WindPowerPlants library is described in
 [<a href=\"modelica://WindPowerPlants.UsersGuide.References\">Eberhart2015</a>].
-</p> 
+</p>
 </html>"));
     end Concept;
 
@@ -19,7 +19,7 @@ The concept of the WindPowerPlants library is described in
       annotation(Documentation(info = "<html>
 <h3>WindPowerPlants Modelica Library and Octave Scripts</h3>
 
-<p>The WindPowerPlants library and the included Octave scripts are released under the 
+<p>The WindPowerPlants library and the included Octave scripts are released under the
 <a href=\"https://www.modelica.org/licenses/ModelicaLicense1.1\">Modelica License 1.1</a>
 </p>
 <h4>
@@ -58,11 +58,11 @@ The software (sources, binaries, etc.) in their original or in a modified form
 
 <h3>Wind Data</h3>
 
-<p>Examples of real wind data can be taken from 
-<a href=\"https://catalog.data.gov/dataset/anemometer-data-wind-speed-direction-for-beresford-south-dakota-2006-4f2db\">data.gov</a> 
-for an anemometer in the height of 50m. The data are provided under 
-<a href=\"modelica://WindPowerPlants/Resources/Data/ODC_PDDLicense.pdf\">Open Data Commons (ODC) Public Domain Dedication and Licence (PDDL)</a>. 
-These data have been converted into a Modelica readable test file 
+<p>Examples of real wind data can be taken from
+<a href=\"https://catalog.data.gov/dataset/anemometer-data-wind-speed-direction-for-beresford-south-dakota-2006-4f2db\">data.gov</a>
+for an anemometer in the height of 50m. The data are provided under
+<a href=\"modelica://WindPowerPlants/Resources/Data/ODC_PDDLicense.pdf\">Open Data Commons (ODC) Public Domain Dedication and Licence (PDDL)</a>.
+These data have been converted into a Modelica readable test file
 <a href=\"modelica://WindPowerPlants/Resources/Data/beresford2006.txt\">Resources/Data/beresford2006.txt</a>.</p>
 
 </html>"));
@@ -92,7 +92,7 @@ Tek Shan Chung<br>
 </p>
 
 <p>
-This library was developed during a diploma thesis at the 
+This library was developed during a diploma thesis at the
 <a href=\"http://www.tgm.ac.at\">TGM</a>
 by Philip Eberhart and Tek Shan Chung under the supervision of Christian Kral.
 </p>
@@ -108,7 +108,7 @@ by Philip Eberhart and Tek Shan Chung under the supervision of Christian Kral.
     <tr>
       <td valign=\"top\">[Allagui2013]</td>
       <td valign=\"top\">Mehdi Allagui, Othman B.K Hasnaoui, Jamel Belhadj
-        &quot;Exploitation 
+        &quot;Exploitation
         of pitch control to improve the integration of a direct drive wind turbine to the grid,&quot;
         <i>J. Electrical Systems</i> 9(2),
       pp. 179-190, 2013</td>
@@ -117,7 +117,7 @@ by Philip Eberhart and Tek Shan Chung under the supervision of Christian Kral.
     <tr>
       <td valign=\"top\">[Eberhart2015]</td>
       <td valign=\"top\">Philip Eberhart, Tek Shan Chung, Anton Haumer, Christian Kral
-        &quot;<a href=\"https://www.modelica.org/events/modelica2015/\">Open 
+        &quot;<a href=\"https://www.modelica.org/events/modelica2015/\">Open
         Source Library for the Simulation of Wind Power Plants</a>,&quot;
         <i>Modelica Conference</i>,
         September 2015.</td>
@@ -134,10 +134,10 @@ by Philip Eberhart and Tek Shan Chung under the supervision of Christian Kral.
 
     <tr>
       <td valign=\"top\">[Thonham2009]</td>
-      <td valign=\"top\">J. Thongam, P. Bouchard, H. Ezzaidi, M. Ouhrouche,  
-      &quot;Wind speed sensorless maximum power point tracking control of 
-      variable speed wind energy conversion systems,&quot; <i>IEEE International Electric Machines 
-      and Drives Conference, IEMDC '09. ,</i> 
+      <td valign=\"top\">J. Thongam, P. Bouchard, H. Ezzaidi, M. Ouhrouche,
+      &quot;Wind speed sensorless maximum power point tracking control of
+      variable speed wind energy conversion systems,&quot; <i>IEEE International Electric Machines
+      and Drives Conference, IEMDC '09. ,</i>
       pp. 1832-1837, 2009
     </tr>
 
@@ -152,19 +152,19 @@ by Philip Eberhart and Tek Shan Chung under the supervision of Christian Kral.
 
 <h5>IMPORTANT NOTE</h5>
 <p>The WindPowerPlants library is based on Modelica classes which are going the be released
-in the MSL 3.2.2. In order to provide compatibility to the actual release of 
-MSL 3.2.1 the package <a href=\"WindPowerPlants.MSL_322\">MSL_322</a> is provided. 
+in the MSL 3.2.2. In order to provide compatibility to the actual release of
+MSL 3.2.1 the package <a href=\"WindPowerPlants.MSL_322\">MSL_322</a> is provided.
 Once MSL 3.2.2 is release package <a href=\"WindPowerPlants.MSL_322\">MSL_322</a>
-will be removed and this will cause a <b>non backwards compatible change</b> 
-of the library. If you do not use components of the 
-<a href=\"WindPowerPlants.MSL_322\">MSL_322</a> package directly, 
+will be removed and this will cause a <b>non backwards compatible change</b>
+of the library. If you do not use components of the
+<a href=\"WindPowerPlants.MSL_322\">MSL_322</a> package directly,
 you do not have to be concerned about this issue.
 </p>
 
 <h5>Version 0.9.0, 2015-XX-XX</h5>
 <ul>
 <li>Implemented open wind data to be distributed with the library</li>
-<li>Put library under 
+<li>Put library under
     <a href=\"modelica://WindPowerPlants.UsersGuide.License\">Modelica license 1.1</a></li>
 <li>Updated documentation of library</li>
 <li>Re-structured example models</li>
@@ -239,11 +239,11 @@ Plot <code>windturbine.cp</code> as a function of <code>windturbine.lambda</code
       annotation(experiment(StopTime = 2678400, Interval = 10), Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = false, initialScale = 0.1, grid = {2, 2})), Documentation(info = "<html>
 <p>This examples shows a generic wind power plant without electric connection to the mains. The simulation model uses real wind data.</p>
 
-<p>Examples of real wind data can be taken from 
-<a href=\"https://catalog.data.gov/dataset/anemometer-data-wind-speed-direction-for-beresford-south-dakota-2006-4f2db\">data.gov</a> 
-for an anemometer in the height of 50m. The data are provided under 
-<a href=\"modelica://WindPowerPlants/Resources/Data/ODC_PDDLicense.pdf\">Open Data Commons (ODC) Public Domain Dedication and Licence (PDDL)</a>. 
-These data have been converted into a Modelica readable test file 
+<p>Examples of real wind data can be taken from
+<a href=\"https://catalog.data.gov/dataset/anemometer-data-wind-speed-direction-for-beresford-south-dakota-2006-4f2db\">data.gov</a>
+for an anemometer in the height of 50m. The data are provided under
+<a href=\"modelica://WindPowerPlants/Resources/Data/ODC_PDDLicense.pdf\">Open Data Commons (ODC) Public Domain Dedication and Licence (PDDL)</a>.
+These data have been converted into a Modelica readable test file
 <a href=\"modelica://WindPowerPlants/Resources/Data/beresford2006.txt\">Resources/Data/beresford2006.txt</a>.</p>
 
 <p>
@@ -268,9 +268,9 @@ YYYY-MM-DD  HH:MM:SS  time (s)
 </pre>
 </p>
 
-<p>In the provided example the wind speed data are transformed from 50m to a height of 105m 
+<p>In the provided example the wind speed data are transformed from 50m to a height of 105m
 using a roughness of 0.1m.</p>
- 
+
 </html>"));
     end GenericPlantRealData;
 
@@ -300,11 +300,11 @@ using a roughness of 0.1m.</p>
       annotation(experiment(StopTime = 2678400, NumberOfIntervals = 267840), Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Documentation(info = "<html>
 <p>This examples shows a generic wind power plant with electric connection to the mains. The simulation model uses real wind data.</p>
 
-<p>Examples of real wind data can be taken from 
-<a href=\"https://catalog.data.gov/dataset/anemometer-data-wind-speed-direction-for-beresford-south-dakota-2006-4f2db\">data.gov</a> 
-for an anemometer in the height of 50m. The data are provided under 
-<a href=\"modelica://WindPowerPlants/Resources/Data/ODC_PDDLicense.pdf\">Open Data Commons (ODC) Public Domain Dedication and Licence (PDDL)</a>. 
-These data have been converted into a Modelica readable test file 
+<p>Examples of real wind data can be taken from
+<a href=\"https://catalog.data.gov/dataset/anemometer-data-wind-speed-direction-for-beresford-south-dakota-2006-4f2db\">data.gov</a>
+for an anemometer in the height of 50m. The data are provided under
+<a href=\"modelica://WindPowerPlants/Resources/Data/ODC_PDDLicense.pdf\">Open Data Commons (ODC) Public Domain Dedication and Licence (PDDL)</a>.
+These data have been converted into a Modelica readable test file
 <a href=\"modelica://WindPowerPlants/Resources/Data/beresford2006.txt\">Resources/Data/beresford2006.txt</a>.</p>
 
 <p>
@@ -329,7 +329,7 @@ YYYY-MM-DD  HH:MM:SS  time (s)
 </pre>
 </p>
 
-<p>In the provided example the wind speed data are transformed from 50m to a height of 105m 
+<p>In the provided example the wind speed data are transformed from 50m to a height of 105m
 using a roughness of 0.1m.</p>
 </html>"));
     end GenericPlantElectricRealData;
@@ -348,9 +348,9 @@ using a roughness of 0.1m.</p>
         connect(windSource.v, plant.v) annotation(Line(points = {{1, 4.44089e-16}, {1, 0}, {8, 0}}, color = {0, 0, 127}));
         connect(energyIntegrator.y, logTerminal.u) annotation(Line(points = {{71, 20}, {78, 20}}, color = {0, 0, 127}));
         annotation(experiment(StopTime = 31536000, Interval = 10), Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = false, initialScale = 0.1, grid = {2, 2})), Documentation(info = "<html>
-<p>The results of simulation example A are incorporated in 
-[<a href=\"modelica://WindPowerPlants.UsersGuide.References\">Eberhart2015</a>]. 
-The average wind speed <code>vMean = 6.95 m/s</code>. The total energy generated 
+<p>The results of simulation example A are incorporated in
+[<a href=\"modelica://WindPowerPlants.UsersGuide.References\">Eberhart2015</a>].
+The average wind speed <code>vMean = 6.95 m/s</code>. The total energy generated
 can be determined from <code>energyIntegrator.y</code>.
 </p>
 </html>"));
@@ -359,9 +359,9 @@ can be determined from <code>energyIntegrator.y</code>.
       model GenericPlant_B "Generic wind power plant B [Eberhart2015] with statistical wind data"
         extends GenericPlant_A(windSource(vMean = 7.12));
         annotation(experiment(StopTime = 31536000, Interval = 10), Documentation(info = "<html>
-<p>The results of simulation example B are incorporated in 
-[<a href=\"modelica://WindPowerPlants.UsersGuide.References\">Eberhart2015</a>]. 
-The average wind speed <code>vMean = 6.95 m/s</code>. The total energy generated 
+<p>The results of simulation example B are incorporated in
+[<a href=\"modelica://WindPowerPlants.UsersGuide.References\">Eberhart2015</a>].
+The average wind speed <code>vMean = 6.95 m/s</code>. The total energy generated
 can be determined from <code>energyIntegrator.y</code>.
 </p>
 </html>"));
@@ -370,9 +370,9 @@ can be determined from <code>energyIntegrator.y</code>.
       model GenericPlant_C "Generic wind power plant C [Eberhart2015] with statistical wind data"
         extends GenericPlant_A(windSource(vMean = 7.30), plant(powerMax = 2E6, JTurbine = 2.2E7, D = 90));
         annotation(experiment(StopTime = 31536000, Interval = 10), Documentation(info = "<html>
-<p>The results of simulation example C are incorporated in 
-[<a href=\"modelica://WindPowerPlants.UsersGuide.References\">Eberhart2015</a>]. 
-The average wind speed <code>vMean = 6.95 m/s</code>. The total energy generated 
+<p>The results of simulation example C are incorporated in
+[<a href=\"modelica://WindPowerPlants.UsersGuide.References\">Eberhart2015</a>].
+The average wind speed <code>vMean = 6.95 m/s</code>. The total energy generated
 can be determined from <code>energyIntegrator.y</code>.
 </p>
 </html>"));
@@ -465,8 +465,8 @@ can be determined from <code>energyIntegrator.y</code>.
       connect(mechanicalPowerSensor.flange_b, inertia.flange_a) annotation(Line(points = {{-20, -6.66134e-16}, {10, -6.66134e-16}, {10, 0}, {40, 0}}, color = {0, 0, 0}, smooth = Smooth.None));
       connect(mechanicalPowerSensor.power, power) annotation(Line(points = {{-38, 11}, {-38, 40}, {-60, 40}, {-60, 110}}, color = {0, 0, 127}, smooth = Smooth.None));
       annotation(defaultComponentName = "generator", Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics = {Rectangle(extent = {{-50, 60}, {70, -60}}, lineColor = {0, 0, 0}, fillPattern = FillPattern.HorizontalCylinder, fillColor = {213, 255, 170}), Rectangle(extent = {{-50, 60}, {-70, -60}}, lineColor = {0, 0, 0}, fillPattern = FillPattern.HorizontalCylinder, fillColor = {128, 128, 128}), Rectangle(extent = {{70, 10}, {90, -10}}, lineColor = {0, 0, 0}, fillPattern = FillPattern.HorizontalCylinder, fillColor = {95, 95, 95}), Rectangle(extent = {{-50, 70}, {30, 50}}, lineColor = {95, 95, 95}, fillColor = {95, 95, 95}, fillPattern = FillPattern.Solid), Polygon(points = {{-60, -90}, {-50, -90}, {-20, -20}, {30, -20}, {60, -90}, {70, -90}, {70, -100}, {-60, -100}, {-60, -90}}, lineColor = {0, 0, 0}, fillColor = {0, 0, 0}, fillPattern = FillPattern.Solid)}), Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics), Documentation(info = "<html>
-<p>Variable speed generator with 100% efficiency and no loss. 
-The generator has a torque input which is directly converted into a 
+<p>Variable speed generator with 100% efficiency and no loss.
+The generator has a torque input which is directly converted into a
 physical signal of the rotational connector.
 </p>
 </html>"));
@@ -505,10 +505,10 @@ physical signal of the rotational connector.
       connect(mechanicalPowerSensor.flange_b, inertia.flange_a) annotation(Line(points = {{-20, 0}, {40, 0}}, color = {0, 0, 0}, smooth = Smooth.None));
       connect(inertia.flange_b, flange_a) annotation(Line(points = {{60, 0}, {100, 0}}, color = {0, 0, 0}, smooth = Smooth.None));
       annotation(defaultComponentName = "generator", Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics = {Rectangle(extent = {{-50, 60}, {70, -60}}, lineColor = {0, 0, 0}, fillPattern = FillPattern.HorizontalCylinder, fillColor = {213, 255, 170}), Rectangle(extent = {{-50, 60}, {-70, -60}}, lineColor = {0, 0, 0}, fillPattern = FillPattern.HorizontalCylinder, fillColor = {128, 128, 128}), Rectangle(extent = {{70, 10}, {90, -10}}, lineColor = {0, 0, 0}, fillPattern = FillPattern.HorizontalCylinder, fillColor = {95, 95, 95}), Rectangle(extent = {{-50, 70}, {30, 50}}, lineColor = {95, 95, 95}, fillColor = {95, 95, 95}, fillPattern = FillPattern.Solid), Polygon(points = {{-60, -90}, {-50, -90}, {-20, -20}, {30, -20}, {60, -90}, {70, -90}, {70, -100}, {-60, -100}, {-60, -90}}, lineColor = {0, 0, 0}, fillColor = {0, 0, 0}, fillPattern = FillPattern.Solid)}), Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics), Documentation(info = "<html>
-<p>Variable speed generator with 100% efficiency and no loss. 
+<p>Variable speed generator with 100% efficiency and no loss.
 The mechanical power is directly converted into an equivalent three phase electric power.
-The generator has a torque input which is directly converted into a 
-physical signal of the rotational connector. 
+The generator has a torque input which is directly converted into a
+physical signal of the rotational connector.
 </p>
 </html>"));
     end GenericVariableSpeedGeneratorElectrical;
@@ -542,8 +542,8 @@ physical signal of the rotational connector.
 <p>The wind turbine model determined the power coefficient
 <img src=\"modelica://WindPowerPlants/Resources/Images/cp.png\"/>
 as a function of the input <img src=\"modelica://WindPowerPlants/Resources/Images/beta.png\"/> and the quantitiy
-<img src=\"modelica://WindPowerPlants/Resources/Images/lambda1.png\"/>. 
-The coefficients <img src=\"modelica://WindPowerPlants/Resources/Images/c1...c6.png\"/> 
+<img src=\"modelica://WindPowerPlants/Resources/Images/lambda1.png\"/>.
+The coefficients <img src=\"modelica://WindPowerPlants/Resources/Images/c1...c6.png\"/>
 are determined from a parameter record in
 <a href=\"modelica://WindPowerPlantsRecords.Turbine\">Turbine</a> </p>
 </html>"), Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = false, initialScale = 0.1, grid = {2, 2}), graphics = {Line(origin = {-59.6474, -0.17987}, points = {{-0.706547, 0.533853}, {-20.3526, 80.1799}, {-0.3526, 100.18}, {19.6474, 80.1799}, {-20.3526, -79.8201}, {-0.3526, -99.8201}, {21.6474, -79.8201}, {0.00141724, 0.179871}}), Ellipse(fillColor = {95, 95, 95}, fillPattern = FillPattern.HorizontalCylinder, extent = {{-100, 10}, {-60, -10}}, endAngle = 360), Rectangle(fillColor = {95, 95, 95}, fillPattern = FillPattern.HorizontalCylinder, extent = {{-80, 10}, {100, -10}}), Text(origin = {0, 121}, lineColor = {0, 0, 255}, extent = {{-100, 9}, {100, -11}}, textString = "%name"), Line(points = {{0, 40}, {0, -100}}, color = {255, 0, 255}, smooth = Smooth.None), Line(points = {{-40, 20}, {-38, 22}, {20, 80}, {80, 80}}, color = {255, 0, 255}, smooth = Smooth.None)}));
@@ -583,7 +583,7 @@ are determined from a parameter record in
       connect(limiter.y, slewRateLimiter.u) annotation(Line(points = {{50, -19}, {50, -2}}, color = {0, 0, 127}, smooth = Smooth.None));
       connect(slewRateLimiter.y, turbine.beta) annotation(Line(points = {{50, 21}, {50, 54}, {59, 54}}, color = {0, 0, 127}, smooth = Smooth.None));
       annotation(Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = false, initialScale = 0.1, grid = {2, 2}), graphics), Documentation(info = "<html>
-<p>The controlled wind turbine model uses the optimal beta to achieve the optimum power coefficient cp. 
+<p>The controlled wind turbine model uses the optimal beta to achieve the optimum power coefficient cp.
 In the power limiting range the pitch angle is controlled such way that the maximum power is not exceeded.
 The model is based on
 <a href=\"modelica://WindPowerPlants.Components.PitchWindTurbine\">PitchWindTurbine</a>.
@@ -628,7 +628,7 @@ and the wind turbine coefficients of
       end if;
       annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics), Documentation(info = "<html>
 <p>This function evaluates the polynomial approximation of the optimum power coefficient cp
-storted in the turbine record 
+storted in the turbine record
 <a href=\"WindPowerPlants.Records.TurbineControlData.Generic\">TurbineControlData</a>.
 </p>
 </html>"));
@@ -646,8 +646,8 @@ storted in the turbine record
     equation
       lambda * v = w * D / 2;
       annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics), Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics = {Rectangle(extent = {{-100, 100}, {100, -100}}, lineColor = {0, 0, 127}, fillColor = {255, 255, 255}, fillPattern = FillPattern.Solid), Ellipse(extent = {{-20, 20}, {20, -20}}, lineColor = {95, 95, 95}, fillColor = {255, 255, 255}, fillPattern = FillPattern.Solid), Text(extent = {{-150, 150}, {150, 110}}, textString = "%name", lineColor = {0, 0, 255})}), Documentation(info = "<html>
-<p>This block calculates the angular velocity <code>w</code> 
-from tip speed ratio <code>lambda</code> 
+<p>This block calculates the angular velocity <code>w</code>
+from tip speed ratio <code>lambda</code>
 and wind speed <code>v</code> according to </p>
 <p>
 <img src=\"modelica://WindPowerPlants/Resources/Images/lambda.png\"/>.
@@ -687,11 +687,11 @@ and wind speed <code>v</code> according to </p>
       connect(PID.y, tau) annotation(Line(points = {{21, -60}, {60, -60}, {60, 4.44089e-16}, {110, 4.44089e-16}}, color = {0, 0, 127}, smooth = Smooth.None));
       connect(zero.y, PID.u_m) annotation(Line(points = {{79, -90}, {10, -90}, {10, -72}}, color = {0, 0, 127}, smooth = Smooth.None));
       annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics), Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics = {Rectangle(extent = {{-100, 100}, {100, -100}}, lineColor = {0, 0, 127}, fillColor = {255, 255, 255}, fillPattern = FillPattern.Solid), Ellipse(extent = {{-20, 20}, {20, -20}}, lineColor = {95, 95, 95}, fillColor = {255, 255, 255}, fillPattern = FillPattern.Solid), Text(extent = {{-150, 150}, {150, 110}}, textString = "%name", lineColor = {0, 0, 255})}), Documentation(info = "<html>
-<p>This model controls the angular velocity <code>w</code> based 
+<p>This model controls the angular velocity <code>w</code> based
 on the tip speed ration <code>lambda</code> and wind speed
-<code>v</code>. For wind speeds below the cut in wind speed, <code>vMin</code>, zero angular 
-velocity is controlled. Otherwise, it is intended to control such a way that 
-<code>lambda</code> is and optimum; see 
+<code>v</code>. For wind speeds below the cut in wind speed, <code>vMin</code>, zero angular
+velocity is controlled. Otherwise, it is intended to control such a way that
+<code>lambda</code> is and optimum; see
 [<a href=\"modelica://WindPowerPlants.UsersGuide.References\">Eberhart2015</a>].
 </p>
 </html>"));
@@ -728,14 +728,14 @@ velocity is controlled. Otherwise, it is intended to control such a way that
       vout = vin * log(hout / roughness) / log(hin / roughness);
       annotation(Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = false, initialScale = 0.1, grid = {2, 2})), Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = false, initialScale = 0.1, grid = {2, 2}), graphics = {Rectangle(extent = {{-100, 100}, {100, -100}}, lineColor = {0, 0, 0}, fillColor = {255, 255, 255}, fillPattern = FillPattern.Solid), Line(points = {{-98, -98}, {98, 98}, {98, 98}}), Text(origin = {-18, 118}, lineColor = {0, 0, 255}, extent = {{-82, 16}, {118, -6}}, textString = "%name")}), Documentation(info = "<html>
 <p>
-This model transformes wind speeds with respect of height <code>hin</code> 
+This model transformes wind speeds with respect of height <code>hin</code>
 to wind speeds of height <code>hout</code>.</p>
 <pre>
   vout = vin * log(hout / roughness) / log(hin / roughness)
 </pre>
 <p>Typical <code>roughness</code> lengths can be obtained from
 <a href=\"https://energypedia.info/wiki/Estimation_of_Wind_Energy_Production#Roughness\">https://energypedia.info/</a>
-</p> 
+</p>
 </html>"));
     end SpeedAdaptor;
 
@@ -748,7 +748,7 @@ to wind speeds of height <code>hout</code>.</p>
       lambda = D / 2 * w / v;
       annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics), Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics = {Rectangle(extent = {{-100, 100}, {100, -100}}, lineColor = {0, 0, 127}, fillColor = {255, 255, 255}, fillPattern = FillPattern.Solid), Text(extent = {{-150, 150}, {150, 110}}, textString = "%name", lineColor = {0, 0, 255}), Line(origin = {0.3526, -0.17987}, points = {{-0.706547, 0.533853}, {-20.3526, 80.1799}, {-0.3526, 100.18}, {19.6474, 80.1799}, {-20.3526, -79.8201}, {-0.3526, -99.8201}, {21.6474, -79.8201}, {0.00141724, 0.179871}})}), Documentation(info = "<html>
 <p>
-Tip speed ratio is determined from wind speed <code>v</code> and 
+Tip speed ratio is determined from wind speed <code>v</code> and
 the angular velocity <code>w</code> by means of:
 </p>
 <p><img src=\"modelica://WindPowerPlants/Resources/Images/lambda.png\"/>
@@ -766,7 +766,7 @@ the angular velocity <code>w</code> by means of:
 <p>
 In this model the actual pitch angle <code>beta</code> is determined from the actual
 tip speed ratio <code>lambda</code> using function
-<a href=\"modelica://WindPowerPlants.Functions.turbineControlVal\">turbineControlVal</a>. The turbe specific parameters of this function are retrieved from 
+<a href=\"modelica://WindPowerPlants.Functions.turbineControlVal\">turbineControlVal</a>. The turbe specific parameters of this function are retrieved from
 <a href=\"modelica://WindPowerPlants.Records.TurbineControlData.Generic\">records</a>.
 </p>
 </html>"));
@@ -786,12 +786,12 @@ tip speed ratio <code>lambda</code> using function
 The torque output of the angular velocity control is limited
 to avoid significant dynamics around zero speed and
 for negative speeds. Since the electric machine is operated
-as generator, the mechanical power is negative. 
+as generator, the mechanical power is negative.
 The generator is operated at positive angular
 speed <code>w</code> and thus torque <code>tau</code> is negative. Torque limitation,
 however, is implemented as function of speed.
 The characteristic of the torque limiter is shown the figure below
-for the input torque <code>tau = −10kNm</code> and a torque limit of
+for the input torque <code>tau = -10kNm</code> and a torque limit of
 <code>tauRef = 10kNm</code>. However, In the investigated case the reference
 speed <code>wRef = 50*pi rad/s</code>. For positive speeds
 greater than <code>linear = 2%</code> of the reference speed the torque is not
@@ -810,7 +810,7 @@ towards the negative reference angular velocity.
     </td>
   </tr>
   <caption align=\"bottom\">Torque limitation as function of angular velocity</caption>
-</table> 
+</table>
 </p>
 </html>"));
     end TorqueLimiter;
@@ -847,9 +847,9 @@ towards the negative reference angular velocity.
       annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics), Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics = {Rectangle(extent = {{-100, 100}, {100, -100}}, lineColor = {0, 0, 255}, fillColor = {255, 255, 255}, fillPattern = FillPattern.Solid), Line(points = {{-60, 40}, {-20, 40}, {-20, 60}, {20, 60}, {20, 80}, {60, 80}}, color = {0, 0, 255}, smooth = Smooth.None), Line(points = {{-58, -80}, {-40, -40}, {-20, -80}, {0, -40}, {20, -80}, {40, -40}, {60, -80}}, color = {0, 0, 255}, smooth = Smooth.None)}), Documentation(info = "<html>
 <p>The step output starts from <code>stepOffset</code> and increases to <code>stepOffset + stepHeight</code> in <code>stepNumber</code>steps. The total duration of all step changes is equal to <code>T</code>. </p>
 <p>During each step the <code>triangle</code> output is increased from
-<code>triangleOffset</code> to <code>triangleOffset + triangleHeight</code> 
+<code>triangleOffset</code> to <code>triangleOffset + triangleHeight</code>
 and back to <code>triangleOffset</code>.</p>
-<p>This way a variable sweep (<code>triangleOffset</code>) can be performed for different 
+<p>This way a variable sweep (<code>triangleOffset</code>) can be performed for different
 stepwise changed variables (<code>step</code>).
 </html>"));
     end TriangleAndRamp;
@@ -880,7 +880,7 @@ stepwise changed variables (<code>step</code>).
 </p>
 <p>where <code>n-1</code> is the degree of the polynom. The optimum power coefficient is indicated by <code>beta = betaOpt </code> and <code>lambda = lambdaOpt</code>.</p>
 <p>The polynominal parameters can be calculated by the Octave script
-<a href=\"modelica://WindPowerPlants/Octave/cpcont.m>cpcont.m</a>. 
+<a href=\"modelica://WindPowerPlants/Octave/cpcont.m>cpcont.m</a>.
 </p>
 </html>"));
       end Generic;
@@ -888,7 +888,7 @@ stepwise changed variables (<code>step</code>).
       record Heier2009 "Turbine control data of [Heier2009]"
         extends Generic(final p = {0.00212298309850983, -0.10552111636622796, 1.79931615238508824, -8.34638029169715701}, final lambdaMin = 8.98, final lambdaMax = 18.53, final lambdaOpt = 7.87, final betaMin = 0, final betaMax = 90, final betaOpt = 0);
         annotation(Documentation(info = "<html>
-<p>Wind turbine control parameters of 
+<p>Wind turbine control parameters of
 [<a href=\"modelica://WindPowerPlants.UsersGuide.References\">Heier2009</a>].
 </p></html>"));
       end Heier2009;
@@ -896,7 +896,7 @@ stepwise changed variables (<code>step</code>).
       record Allagui2013 "Turbine control data of [Allagui2013]"
         extends Generic(final p = {-2.72813147692429e-05, -1.41541287898308e-02, 5.49622742151171e-01, -2.96334696366955e+00}, final lambdaMin = 9.38, final lambdaMax = 30, final lambdaOpt = 28.56, final betaMin = 0, final betaMax = 90, final betaOpt = 0.14);
         annotation(Documentation(info = "<html>
-<p>Wind turbine control parameters of 
+<p>Wind turbine control parameters of
 [<a href=\"modelica://WindPowerPlants.UsersGuide.References\">Allagui2013</a>].
 </p></html>"));
       end Allagui2013;
@@ -904,7 +904,7 @@ stepwise changed variables (<code>step</code>).
       record Thongam2009 "Turbine control data of [Thongam2009]"
         extends Generic(final p = {0.00181568948139207, -0.08293733085338961, 1.28855124643962093, -4.65888550563144754}, final lambdaMin = 7.29, final lambdaMax = 90, final lambdaOpt = 6.24, final betaMin = 0, final betaMax = 90, final betaOpt = 0);
         annotation(Documentation(info = "<html>
-<p>Wind turbine control parameters of 
+<p>Wind turbine control parameters of
 [<a href=\"modelica://WindPowerPlants.UsersGuide.References\">Thongam2009</a>].
 </p></html>"));
       end Thongam2009;
@@ -936,7 +936,7 @@ stepwise changed variables (<code>step</code>).
       record Heier2009 "Wind turbine [Heier2009]"
         extends WindPowerPlants.Records.TurbineData.Generic(final c1 = 0.5, final c2 = 116, final c3 = 0.4, final c4 = 5, final c5 = 21, final c6 = 0);
         annotation(Documentation(info = "<html>
-<p>Wind turbine parameters of 
+<p>Wind turbine parameters of
 [<a href=\"modelica://WindPowerPlants.UsersGuide.References\">Heier2009</a>].
 </p></html>"));
       end Heier2009;
@@ -944,7 +944,7 @@ stepwise changed variables (<code>step</code>).
       record Allagui2013 "Wind turbine [Allagui2013]"
         extends WindPowerPlants.Records.TurbineData.Generic(final c1 = 0.22, final c2 = 116, final c3 = 0.4, final c4 = 5, final c5 = 12.5, final c6 = 0);
         annotation(Documentation(info = "<html>
-<p>Wind turbine parameters of 
+<p>Wind turbine parameters of
 [<a href=\"modelica://WindPowerPlants.UsersGuide.References\">Allagui2013</a>].
 </p></html>"));
       end Allagui2013;
@@ -952,7 +952,7 @@ stepwise changed variables (<code>step</code>).
       record Thongam2009 "Wind turbine [Thongam2009]"
         extends WindPowerPlants.Records.TurbineData.Generic(final c1 = 0.5176, final c2 = 116, final c3 = 0.4, final c4 = 5, final c5 = 21, final c6 = 0.006795);
         annotation(Documentation(info = "<html>
-<p>Wind turbine parameters of 
+<p>Wind turbine parameters of
 [<a href=\"modelica://WindPowerPlants.UsersGuide.References\">Thongam2009</a>].
 </p></html>"));
       end Thongam2009;
@@ -1079,9 +1079,9 @@ value <code>veps</code>must be indicated.</p>
       connect(variableCurrentSource.plug_n, star.plug_p) annotation(Line(points = {{40, 30}, {40, 20}}, color = {85, 170, 255}, smooth = Smooth.None));
       annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics), Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics = {Ellipse(extent = {{-60, 60}, {60, -60}}, lineColor = {0, 0, 255}), Line(points = {{0, 90}, {0, 88}, {0, 60}}, color = {0, 0, 255}, smooth = Smooth.None), Text(extent = {{-40, 40}, {40, -40}}, lineColor = {0, 0, 255}, textString = "P")}), Documentation(info = "<html>
 <p>
-The ideal real power source is based on a space phasor approach, 
-where the current and voltage space phasor are aligned. 
-The reference voltage and the time constant are required to scale the 
+The ideal real power source is based on a space phasor approach,
+where the current and voltage space phasor are aligned.
+The reference voltage and the time constant are required to scale the
 control behavior of the power source for different reference voltages.
 </p>
 </html>"));
@@ -1117,7 +1117,7 @@ control behavior of the power source for different reference voltages.
       annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics), Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics = {Ellipse(extent = {{-60, 60}, {60, -60}}, lineColor = {0, 0, 255}), Line(points = {{0, 90}, {0, 88}, {0, 60}}, color = {0, 0, 255}, smooth = Smooth.None), Text(extent = {{-40, 40}, {40, -40}}, lineColor = {0, 0, 255}, textString = "P"), Ellipse(extent = {{-80, 80}, {80, -80}}, lineColor = {0, 0, 255})}), Documentation(info = "<html>
 <p>
 The ideal real power source is based on a controlled variable conductor.
-The reference voltage and the time constant are required to scale the 
+The reference voltage and the time constant are required to scale the
 control behavior of the power source for different reference voltages.
 </p>
 </html>"));
@@ -1317,8 +1317,8 @@ Additionally, the frequency of the current source is defined by a real signal in
   annotation(version = "0.9.X", versionBuild = 0, versionDate = "2015-XX-XX", uses(Modelica(version = "3.2.1"), Complex(version = "3.2.1")), preferredView = "info", Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Documentation(info = "<html>
 <h3>WindPowerPlants Library</h3>
 
-<p>The WindPowerPlants library is an open source library for the 
-simulation of wind power plants. The library provides models of wind 
+<p>The WindPowerPlants library is an open source library for the
+simulation of wind power plants. The library provides models of wind
 turbines, generators and control.</p>
 
 <h4>Short description</h4>
