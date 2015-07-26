@@ -297,7 +297,7 @@ using a roughness of 0.1m.</p>
       connect(energyIntegrator.y, logTerminal.u) annotation(Line(points = {{71, 20}, {71, 20}, {78, 20}}, color = {0, 0, 127}));
       connect(windSource.v, speedadaptor1.vin) annotation(Line(points = {{-29, 4.44089e-16}, {-22, 4.44089e-16}, {-22, 0}}, color = {0, 0, 127}));
       connect(speedadaptor1.vout, plant.v) annotation(Line(points = {{1, 0}, {4, 0}, {4, 8.88178e-16}, {8, 8.88178e-16}}, color = {0, 0, 127}));
-      annotation(experiment(StopTime = 2678400, NumberOfIntervals = 267840), Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Documentation(info = "<html>
+      annotation(experiment(StopTime = 2678400, Interval = 10), Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Documentation(info = "<html>
 <p>This examples shows a generic wind power plant with electric connection to the mains. The simulation model uses real wind data.</p>
 
 <p>Examples of real wind data can be taken from 
