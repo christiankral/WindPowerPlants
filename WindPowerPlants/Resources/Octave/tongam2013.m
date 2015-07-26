@@ -2,10 +2,10 @@
 %
 % Literature
 %   [Thongam2013]
-%     Thongam, J.; Bouchard, P.; Ezzaidi, H. & Ouhrouche, M. (2009), 
-%     'Wind speed sensorless maximum power point tracking control of 
-%     variable speed wind energy conversion systems', Electric Machines 
-%     and Drives Conference, 2009. IEMDC '09. IEEE International, 
+%     Thongam, J.; Bouchard, P.; Ezzaidi, H. & Ouhrouche, M. (2009),
+%     'Wind speed sensorless maximum power point tracking control of
+%     variable speed wind energy conversion systems', Electric Machines
+%     and Drives Conference, 2009. IEMDC '09. IEEE International,
 %     1832-1837.
 %
 % Turbine coefficients

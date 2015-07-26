@@ -8,7 +8,7 @@ class References "References"
     <tr>
       <td valign=\"top\">[Allagui2013]</td>
       <td valign=\"top\">Mehdi Allagui, Othman B.K Hasnaoui, Jamel Belhadj
-        &quot;Exploitation 
+        &quot;Exploitation
         of pitch control to improve the integration of a direct drive wind turbine to the grid,&quot;
         <i>J. Electrical Systems</i> 9(2),
       pp. 179-190, 2013</td>
@@ -17,7 +17,7 @@ class References "References"
     <tr>
       <td valign=\"top\">[Eberhart2015]</td>
       <td valign=\"top\">Philip Eberhart, Tek Shan Chung, Anton Haumer, Christian Kral
-        &quot;<a href=\"https://www.modelica.org/events/modelica2015/\">Open 
+        &quot;<a href=\"https://www.modelica.org/events/modelica2015/\">Open
         Source Library for the Simulation of Wind Power Plants</a>,&quot;
         <i>Modelica Conference</i>,
         September 2015.</td>
@@ -34,10 +34,10 @@ class References "References"
 
     <tr>
       <td valign=\"top\">[Thonham2009]</td>
-      <td valign=\"top\">J. Thongam, P. Bouchard, H. Ezzaidi, M. Ouhrouche,  
-      &quot;Wind speed sensorless maximum power point tracking control of 
-      variable speed wind energy conversion systems,&quot; <i>IEEE International Electric Machines 
-      and Drives Conference, IEMDC '09. ,</i> 
+      <td valign=\"top\">J. Thongam, P. Bouchard, H. Ezzaidi, M. Ouhrouche,
+      &quot;Wind speed sensorless maximum power point tracking control of
+      variable speed wind energy conversion systems,&quot; <i>IEEE International Electric Machines
+      and Drives Conference, IEMDC '09. ,</i>
       pp. 1832-1837, 2009
     </tr>
 

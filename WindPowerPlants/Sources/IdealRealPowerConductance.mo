@@ -30,7 +30,7 @@ equation
   annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics), Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics = {Ellipse(extent=  {{-60, 60}, {60, -60}}, lineColor=  {0, 0, 255}), Line(points=  {{0, 90}, {0, 88}, {0, 60}}, color=  {0, 0, 255}, smooth=  Smooth.None), Text(extent=  {{-40, 40}, {40, -40}}, lineColor=  {0, 0, 255}, textString=  "P"), Ellipse(extent=  {{-80, 80}, {80, -80}}, lineColor=  {0, 0, 255})}), Documentation(info = "<html>
 <p>
 The ideal real power source is based on a controlled variable conductor.
-The reference voltage and the time constant are required to scale the 
+The reference voltage and the time constant are required to scale the
 control behavior of the power source for different reference voltages.
 </p>
 </html>"));

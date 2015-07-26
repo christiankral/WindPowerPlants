@@ -23,7 +23,7 @@ Tek Shan Chung<br>
 </p>
 
 <p>
-This library was developed during a diploma thesis at the 
+This library was developed during a diploma thesis at the
 <a href=\"http://www.tgm.ac.at\">TGM</a>
 by Philip Eberhart and Tek Shan Chung under the supervision of Christian Kral.
 </p>

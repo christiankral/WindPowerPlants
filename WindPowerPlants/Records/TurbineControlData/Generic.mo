@@ -18,7 +18,7 @@ record Generic "Generic turbine control data"
 </p>
 <p>where <code>n-1</code> is the degree of the polynom. The optimum power coefficient is indicated by <code>beta = betaOpt </code> and <code>lambda = lambdaOpt</code>.</p>
 <p>The polynominal parameters can be calculated by the Octave script
-<a href=\"modelica://WindPowerPlants/Octave/cpcont.m>cpcont.m</a>. 
+<a href=\"modelica://WindPowerPlants/Octave/cpcont.m>cpcont.m</a>.
 </p>
 </html>"));
 end Generic;

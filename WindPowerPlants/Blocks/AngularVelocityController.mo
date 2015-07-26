@@ -34,11 +34,11 @@ equation
   connect(PID.y, tau) annotation(Line(points = {{21, -60}, {60, -60}, {60, 4.44089e-16}, {110, 4.44089e-16}}, color = {0, 0, 127}, smooth = Smooth.None));
   connect(zero.y, PID.u_m) annotation(Line(points = {{79, -90}, {10, -90}, {10, -72}}, color = {0, 0, 127}, smooth = Smooth.None));
   annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics), Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics = {Rectangle(extent=  {{-100, 100}, {100, -100}}, lineColor=  {0, 0, 127}, fillColor=  {255, 255, 255}, fillPattern=  FillPattern.Solid), Ellipse(extent=  {{-20, 20}, {20, -20}}, lineColor=  {95, 95, 95}, fillColor=  {255, 255, 255}, fillPattern=  FillPattern.Solid), Text(extent=  {{-150, 150}, {150, 110}}, textString=  "%name", lineColor=  {0, 0, 255})}), Documentation(info = "<html>
-<p>This model controls the angular velocity <code>w</code> based 
+<p>This model controls the angular velocity <code>w</code> based
 on the tip speed ration <code>lambda</code> and wind speed
-<code>v</code>. For wind speeds below the cut in wind speed, <code>vMin</code>, zero angular 
-velocity is controlled. Otherwise, it is intended to control such a way that 
-<code>lambda</code> is and optimum; see 
+<code>v</code>. For wind speeds below the cut in wind speed, <code>vMin</code>, zero angular
+velocity is controlled. Otherwise, it is intended to control such a way that
+<code>lambda</code> is and optimum; see
 [<a href=\"modelica://WindPowerPlants.UsersGuide.References\">Eberhart2015</a>].
 </p>
 </html>"));

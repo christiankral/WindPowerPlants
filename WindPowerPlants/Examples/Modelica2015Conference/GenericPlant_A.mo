@@ -11,9 +11,9 @@ equation
   connect(windSource.v, plant.v) annotation(Line(points = {{1, 4.44089e-16}, {1, 0}, {8, 0}}, color = {0, 0, 127}));
   connect(energyIntegrator.y, logTerminal.u) annotation(Line(points = {{71, 20}, {78, 20}}, color = {0, 0, 127}));
   annotation(experiment(StopTime = 31536000, Interval = 10), Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = false, initialScale = 0.1, grid = {2, 2})), Documentation(info = "<html>
-<p>The results of simulation example A are incorporated in 
-[<a href=\"modelica://WindPowerPlants.UsersGuide.References\">Eberhart2015</a>]. 
-The average wind speed <code>vMean = 6.95 m/s</code>. The total energy generated 
+<p>The results of simulation example A are incorporated in
+[<a href=\"modelica://WindPowerPlants.UsersGuide.References\">Eberhart2015</a>].
+The average wind speed <code>vMean = 6.95 m/s</code>. The total energy generated
 can be determined from <code>energyIntegrator.y</code>.
 </p>
 </html>"));

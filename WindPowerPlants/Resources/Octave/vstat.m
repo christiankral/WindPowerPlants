@@ -1,21 +1,21 @@
 % Program:
 %   vstat.m
-% 
-% Copyright (C) 
+%
+% Copyright (C)
 %   Christian Kral, 2014-15
-% 
-% License 
+%
+% License
 %   Modelica 2 license
 %
 % Input parameters
-%   month[:]    Integer vector holding the months to be evaluated 
+%   month[:]    Integer vector holding the months to be evaluated
 %   V[:,:]      Array with three columns where:
 %               V[:,1]      time (s)
 %               V[:,2]      v (m/s)
 %               V[:,3]      month (integer)
 %
 % Version
-%   1.0.0       Initial version 
+%   1.0.0       Initial version
 
 % Time (s)
 t=V(:,1);

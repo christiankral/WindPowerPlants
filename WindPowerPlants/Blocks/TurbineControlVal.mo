@@ -10,7 +10,7 @@ equation
 <p>
 In this model the actual pitch angle <code>beta</code> is determined from the actual
 tip speed ratio <code>lambda</code> using function
-<a href=\"modelica://WindPowerPlants.Functions.turbineControlVal\">turbineControlVal</a>. The turbe specific parameters of this function are retrieved from 
+<a href=\"modelica://WindPowerPlants.Functions.turbineControlVal\">turbineControlVal</a>. The turbe specific parameters of this function are retrieved from
 <a href=\"modelica://WindPowerPlants.Records.TurbineControlData.Generic\">records</a>.
 </p>
 </html>"));

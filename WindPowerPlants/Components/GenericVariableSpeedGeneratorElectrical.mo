@@ -34,10 +34,10 @@ equation
   connect(mechanicalPowerSensor.flange_b, inertia.flange_a) annotation(Line(points = {{-20, 0}, {40, 0}}, color = {0, 0, 0}, smooth = Smooth.None));
   connect(inertia.flange_b, flange_a) annotation(Line(points = {{60, 0}, {100, 0}}, color = {0, 0, 0}, smooth = Smooth.None));
   annotation(defaultComponentName = "generator", Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics = {Rectangle(extent=  {{-50, 60}, {70, -60}}, lineColor=  {0, 0, 0}, fillPattern=  FillPattern.HorizontalCylinder, fillColor=  {213, 255, 170}), Rectangle(extent=  {{-50, 60}, {-70, -60}}, lineColor=  {0, 0, 0}, fillPattern=  FillPattern.HorizontalCylinder, fillColor=  {128, 128, 128}), Rectangle(extent=  {{70, 10}, {90, -10}}, lineColor=  {0, 0, 0}, fillPattern=  FillPattern.HorizontalCylinder, fillColor=  {95, 95, 95}), Rectangle(extent=  {{-50, 70}, {30, 50}}, lineColor=  {95, 95, 95}, fillColor=  {95, 95, 95}, fillPattern=  FillPattern.Solid), Polygon(points=  {{-60, -90}, {-50, -90}, {-20, -20}, {30, -20}, {60, -90}, {70, -90}, {70, -100}, {-60, -100}, {-60, -90}}, lineColor=  {0, 0, 0}, fillColor=  {0, 0, 0}, fillPattern=  FillPattern.Solid)}), Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics), Documentation(info = "<html>
-<p>Variable speed generator with 100% efficiency and no loss. 
+<p>Variable speed generator with 100% efficiency and no loss.
 The mechanical power is directly converted into an equivalent three phase electric power.
-The generator has a torque input which is directly converted into a 
-physical signal of the rotational connector. 
+The generator has a torque input which is directly converted into a
+physical signal of the rotational connector.
 </p>
 </html>"));
 end GenericVariableSpeedGeneratorElectrical;

@@ -27,11 +27,11 @@ equation
   annotation(experiment(StopTime = 2678400, Interval = 10), Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Documentation(info = "<html>
 <p>This examples shows a generic wind power plant with electric connection to the mains. The simulation model uses real wind data.</p>
 
-<p>Examples of real wind data can be taken from 
-<a href=\"https://catalog.data.gov/dataset/anemometer-data-wind-speed-direction-for-beresford-south-dakota-2006-4f2db\">data.gov</a> 
-for an anemometer in the height of 50m. The data are provided under 
-<a href=\"modelica://WindPowerPlants/Resources/Data/ODC_PDDLicense.pdf\">Open Data Commons (ODC) Public Domain Dedication and Licence (PDDL)</a>. 
-These data have been converted into a Modelica readable test file 
+<p>Examples of real wind data can be taken from
+<a href=\"https://catalog.data.gov/dataset/anemometer-data-wind-speed-direction-for-beresford-south-dakota-2006-4f2db\">data.gov</a>
+for an anemometer in the height of 50m. The data are provided under
+<a href=\"modelica://WindPowerPlants/Resources/Data/ODC_PDDLicense.pdf\">Open Data Commons (ODC) Public Domain Dedication and Licence (PDDL)</a>.
+These data have been converted into a Modelica readable test file
 <a href=\"modelica://WindPowerPlants/Resources/Data/beresford2006.txt\">Resources/Data/beresford2006.txt</a>.</p>
 
 <p>
@@ -56,7 +56,7 @@ YYYY-MM-DD  HH:MM:SS  time (s)
 </pre>
 </p>
 
-<p>In the provided example the wind speed data are transformed from 50m to a height of 105m 
+<p>In the provided example the wind speed data are transformed from 50m to a height of 105m
 using a roughness of 0.1m.</p>
 </html>"));
 end GenericPlantElectricRealData;

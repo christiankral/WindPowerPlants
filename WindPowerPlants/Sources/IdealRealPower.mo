@@ -37,9 +37,9 @@ equation
   connect(variableCurrentSource.plug_n, star.plug_p) annotation(Line(points = {{40, 30}, {40, 20}}, color = {85, 170, 255}, smooth = Smooth.None));
   annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics), Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics = {Ellipse(extent=  {{-60, 60}, {60, -60}}, lineColor=  {0, 0, 255}), Line(points=  {{0, 90}, {0, 88}, {0, 60}}, color=  {0, 0, 255}, smooth=  Smooth.None), Text(extent=  {{-40, 40}, {40, -40}}, lineColor=  {0, 0, 255}, textString=  "P")}), Documentation(info = "<html>
 <p>
-The ideal real power source is based on a space phasor approach, 
-where the current and voltage space phasor are aligned. 
-The reference voltage and the time constant are required to scale the 
+The ideal real power source is based on a space phasor approach,
+where the current and voltage space phasor are aligned.
+The reference voltage and the time constant are required to scale the
 control behavior of the power source for different reference voltages.
 </p>
 </html>"));

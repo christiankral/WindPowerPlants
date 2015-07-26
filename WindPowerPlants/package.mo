@@ -17,8 +17,8 @@ package WindPowerPlants "Library of wind power plants"
   annotation(version = "0.9.2", versionBuild = 1, versionDate = "2015-07-27", uses(Modelica(version = "3.2.1"), Complex(version = "3.2.1")), preferredView = "info", Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Documentation(info = "<html>
 <h3>WindPowerPlants Library</h3>
 
-<p>The WindPowerPlants library is an open source library for the 
-simulation of wind power plants. The library provides models of wind 
+<p>The WindPowerPlants library is an open source library for the
+simulation of wind power plants. The library provides models of wind
 turbines, generators and control.</p>
 
 <h4>Short description</h4>

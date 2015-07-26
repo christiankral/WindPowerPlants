@@ -4,7 +4,7 @@ class License "Modelica License 1.1"
   annotation(Documentation(info = "<html>
 <h3>WindPowerPlants Modelica Library and Octave Scripts</h3>
 
-<p>The WindPowerPlants library and the included Octave scripts are released under the 
+<p>The WindPowerPlants library and the included Octave scripts are released under the
 <a href=\"https://www.modelica.org/licenses/ModelicaLicense1.1\">Modelica License 1.1</a>
 </p>
 <h4>
@@ -43,11 +43,11 @@ The software (sources, binaries, etc.) in their original or in a modified form
 
 <h3>Wind Data</h3>
 
-<p>Examples of real wind data can be taken from 
-<a href=\"https://catalog.data.gov/dataset/anemometer-data-wind-speed-direction-for-beresford-south-dakota-2006-4f2db\">data.gov</a> 
-for an anemometer in the height of 50m. The data are provided under 
-<a href=\"modelica://WindPowerPlants/Resources/Data/ODC_PDDLicense.pdf\">Open Data Commons (ODC) Public Domain Dedication and Licence (PDDL)</a>. 
-These data have been converted into a Modelica readable test file 
+<p>Examples of real wind data can be taken from
+<a href=\"https://catalog.data.gov/dataset/anemometer-data-wind-speed-direction-for-beresford-south-dakota-2006-4f2db\">data.gov</a>
+for an anemometer in the height of 50m. The data are provided under
+<a href=\"modelica://WindPowerPlants/Resources/Data/ODC_PDDLicense.pdf\">Open Data Commons (ODC) Public Domain Dedication and Licence (PDDL)</a>.
+These data have been converted into a Modelica readable test file
 <a href=\"modelica://WindPowerPlants/Resources/Data/beresford2006.txt\">Resources/Data/beresford2006.txt</a>.</p>
 
 </html>"));
