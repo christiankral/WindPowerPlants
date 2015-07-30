@@ -1,20 +1,20 @@
-% Program 
+% Program
 %   cpopt.m
 %
-% Purpose 
-%   This program determines iso cp lines and the characteristic 
+% Purpose
+%   This program determines iso cp lines and the characteristic
 %   parameters of a wind turbine, characterized by a model as provided
-%   by [Heier2009] 
+%   by [Heier2009]
 %
 % Authors
 %   Christian Kral
 %
-% Copyright 
+% Copyright
 %   Christian Kral, 1060 Vienna, Austria, http://christiankral.net
 %
 % License
-%   Modelica License 1.1 
-% 
+%   Modelica License 1.1
+%
 % Version history
 %   1.0.0    2015-02-08    Ubuntu 14.04    Octave 3.8.1
 %   1.1.0    2015-07-23    Ubuntu 14.04    Octave 3.8.1
@@ -31,7 +31,7 @@
 %   cp = c1*(c2/lambda1+c3*beta-c4)*exp(c5/lambda1)+c6*lambda1
 % where
 %   lambda1 = 1/(1/(lambda+0.089)-0.035/(beta^3+1))
-% and 
+% and
 %   lambda = w*D/(2*v)
 % with
 %   w        angular velocity (rad/s)
@@ -39,8 +39,8 @@
 %   v        wind speed (m/s)
 %
 % Literature
-%   [Heier2009] 
-%     Heier, S. (2009), Windkraftanlagen: Systemauslegung, 
+%   [Heier2009]
+%     Heier, S. (2009), Windkraftanlagen: Systemauslegung,
 %     Netzintegration und Regelung, Springer.
 
 % Calculate cp
@@ -60,7 +60,7 @@ hold on;
 plot(lambda,beta(imax1),'k');
 
 % Determine maximum cp of entire array
-[cpOpt,iOpt] = max(cp(:)); 
+[cpOpt,iOpt] = max(cp(:));
 [iBetaOpt,iLambdaOpt]=ind2sub(size(cp),iOpt);
 betaOpt=beta(iBetaOpt);
 lambdaOpt=lambda(iLambdaOpt);
@@ -72,9 +72,9 @@ lambdax = lambda(iopt);
 betax = betaopt(iopt);
 % Plot all beta>0
 plot(lambdax,betax,'linewidth',2,'k');
-% Make third grade poly approximation 
+% Make third grade poly approximation
 p3=polyfit(lambdax,betax',3);
-plot(lambdax,polyval(p3,lambdax),'k--');  
+plot(lambdax,polyval(p3,lambdax),'k--');
 polyout(p3,'lambda')
 disp "\nHigh precision poly coefficients"
 format long
@@ -87,4 +87,3 @@ printf("betaMin (deg) = %g \taccording to model validity\n",0);
 printf("betaMax (deg) = %g \taccording to model validity\n",90);
 printf("betaOpt (deg) = %g\n",betaOpt);
 printf("cpOpt = %g @ lambda = lambdaOpt @ beta = betaOpt\n",cpOpt);
-

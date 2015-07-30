@@ -5,12 +5,12 @@ class ReleaseNotes "Release Notes"
 
 <h5>IMPORTANT NOTE</h5>
 <p>The WindPowerPlants library is based on Modelica classes which are going the be released
-in the MSL 3.2.2. In order to provide compatibility to the actual release of 
-MSL 3.2.1 the package <a href=\"WindPowerPlants.MSL_322\">MSL_322</a> is provided. 
+in the MSL 3.2.2. In order to provide compatibility to the actual release of
+MSL 3.2.1 the package <a href=\"WindPowerPlants.MSL_322\">MSL_322</a> is provided.
 Once MSL 3.2.2 is release package <a href=\"WindPowerPlants.MSL_322\">MSL_322</a>
-will be removed and this will cause a <b>non backwards compatible change</b> 
-of the library. If you do not use components of the 
-<a href=\"WindPowerPlants.MSL_322\">MSL_322</a> package directly, 
+will be removed and this will cause a <b>non backwards compatible change</b>
+of the library. If you do not use components of the
+<a href=\"WindPowerPlants.MSL_322\">MSL_322</a> package directly,
 you do not have to be concerned about this issue.
 </p>
 
@@ -23,7 +23,7 @@ you do not have to be concerned about this issue.
 <h5>Version 0.9.0, 2015-07-26</h5>
 <ul>
 <li>Implemented open wind data to be distributed with the library</li>
-<li>Put library under 
+<li>Put library under
     <a href=\"modelica://WindPowerPlants.UsersGuide.License\">Modelica license 1.1</a></li>
 <li>Updated documentation of library</li>
 <li>Re-structured example models</li>

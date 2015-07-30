@@ -3,8 +3,8 @@ class Concept "Concept"
   extends Modelica.Icons.Information;
   annotation(preferredView = "info", Documentation(info = "<html>
 <p>
-The concept of the WindPowerPlants library is described in 
+The concept of the WindPowerPlants library is described in
 [<a href=\"modelica://WindPowerPlants.UsersGuide.References\">Eberhart2015</a>].
-</p> 
+</p>
 </html>"));
 end Concept;

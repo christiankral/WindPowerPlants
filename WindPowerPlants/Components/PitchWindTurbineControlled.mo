@@ -35,7 +35,7 @@ equation
   connect(limiter.y, slewRateLimiter.u) annotation(Line(points = {{50, -19}, {50, -2}}, color = {0, 0, 127}, smooth = Smooth.None));
   connect(slewRateLimiter.y, turbine.beta) annotation(Line(points = {{50, 21}, {50, 54}, {59, 54}}, color = {0, 0, 127}, smooth = Smooth.None));
   annotation(Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = false, initialScale = 0.1, grid = {2, 2}), graphics), Documentation(info = "<html>
-<p>The controlled wind turbine model uses the optimal beta to achieve the optimum power coefficient cp. 
+<p>The controlled wind turbine model uses the optimal beta to achieve the optimum power coefficient cp.
 In the power limiting range the pitch angle is controlled such way that the maximum power is not exceeded.
 The model is based on
 <a href=\"modelica://WindPowerPlants.Components.PitchWindTurbine\">PitchWindTurbine</a>.

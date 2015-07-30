@@ -29,8 +29,8 @@ equation
 <p>The wind turbine model determined the power coefficient
 <img src=\"modelica://WindPowerPlants/Resources/Images/cp.png\"/>
 as a function of the input <img src=\"modelica://WindPowerPlants/Resources/Images/beta.png\"/> and the quantitiy
-<img src=\"modelica://WindPowerPlants/Resources/Images/lambda1.png\"/>. 
-The coefficients <img src=\"modelica://WindPowerPlants/Resources/Images/c1...c6.png\"/> 
+<img src=\"modelica://WindPowerPlants/Resources/Images/lambda1.png\"/>.
+The coefficients <img src=\"modelica://WindPowerPlants/Resources/Images/c1...c6.png\"/>
 are determined from a parameter record in
 <a href=\"modelica://WindPowerPlantsRecords.Turbine\">Turbine</a> </p>
 </html>"),

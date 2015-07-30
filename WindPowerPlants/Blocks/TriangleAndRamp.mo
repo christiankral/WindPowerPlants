@@ -31,9 +31,9 @@ equation
   annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics), Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics = {Rectangle(extent=  {{-100, 100}, {100, -100}}, lineColor=  {0, 0, 255}, fillColor=  {255, 255, 255}, fillPattern=  FillPattern.Solid), Line(points=  {{-60, 40}, {-20, 40}, {-20, 60}, {20, 60}, {20, 80}, {60, 80}}, color=  {0, 0, 255}, smooth=  Smooth.None), Line(points=  {{-58, -80}, {-40, -40}, {-20, -80}, {0, -40}, {20, -80}, {40, -40}, {60, -80}}, color=  {0, 0, 255}, smooth=  Smooth.None)}), Documentation(info = "<html>
 <p>The step output starts from <code>stepOffset</code> and increases to <code>stepOffset + stepHeight</code> in <code>stepNumber</code>steps. The total duration of all step changes is equal to <code>T</code>. </p>
 <p>During each step the <code>triangle</code> output is increased from
-<code>triangleOffset</code> to <code>triangleOffset + triangleHeight</code> 
+<code>triangleOffset</code> to <code>triangleOffset + triangleHeight</code>
 and back to <code>triangleOffset</code>.</p>
-<p>This way a variable sweep (<code>triangleOffset</code>) can be performed for different 
+<p>This way a variable sweep (<code>triangleOffset</code>) can be performed for different
 stepwise changed variables (<code>step</code>).
 </html>"));
 end TriangleAndRamp;

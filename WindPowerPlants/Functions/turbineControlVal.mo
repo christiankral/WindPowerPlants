@@ -14,7 +14,7 @@ algorithm
   end if;
   annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics), Documentation(info = "<html>
 <p>This function evaluates the polynomial approximation of the optimum power coefficient cp
-storted in the turbine record 
+storted in the turbine record
 <a href=\"WindPowerPlants.Records.TurbineControlData.Generic\">TurbineControlData</a>.
 </p>
 </html>"));

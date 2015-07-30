@@ -13,7 +13,7 @@ equation
 The torque output of the angular velocity control is limited
 to avoid significant dynamics around zero speed and
 for negative speeds. Since the electric machine is operated
-as generator, the mechanical power is negative. 
+as generator, the mechanical power is negative.
 The generator is operated at positive angular
 speed <code>w</code> and thus torque <code>tau</code> is negative. Torque limitation,
 however, is implemented as function of speed.
@@ -37,7 +37,7 @@ towards the negative reference angular velocity.
     </td>
   </tr>
   <caption align=\"bottom\">Torque limitation as function of angular velocity</caption>
-</table> 
+</table>
 </p>
 </html>"));
 end TorqueLimiter;

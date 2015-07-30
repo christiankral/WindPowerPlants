@@ -1,8 +1,8 @@
 % Parameters for cpcont.m
 %
 % Literature
-%   [Heier2009] 
-%     Heier, S. (2009), Windkraftanlagen: Systemauslegung, 
+%   [Heier2009]
+%     Heier, S. (2009), Windkraftanlagen: Systemauslegung,
 %     Netzintegration und Regelung, Springer.
 %
 % Turbine coefficients
