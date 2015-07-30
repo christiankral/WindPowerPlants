@@ -2,7 +2,7 @@ within WindPowerPlants.Examples;
 model GenericPlantRealData
   "Generic wind power plant simulation with real wind data"
   extends Modelica.Icons.Example;
-  parameter String fileName = Modelica.Utilities.Files.loadResource("modelica:/WindPowerPlants/Resources/Data/beresford2006.txt")
+  parameter String fileName = Modelica.Utilities.Files.loadResource("modelica://WindPowerPlants/Resources/Data/beresford2006.txt")
     "File on which data is present"                                                                                                   annotation(Dialog(loadSelector(filter = "Text files (*.txt)", caption = "Open text file to read parameters of the form \"name = value\"")));
   Modelica.Blocks.Continuous.Integrator energyIntegrator(k = 1) annotation(Placement(visible = true, transformation(origin = {60, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   Plants.GenericVariableSpeed plant(limitMot = 0.01, k = 120 * 112.8) annotation(Placement(transformation(extent = {{10, -10}, {30, 10}})));
