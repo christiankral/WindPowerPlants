@@ -1,4 +1,8 @@
 #1
+
+# Anemometer Data for Beresford, South Dakota (2006)
+# Data source: http://en.openei.org/doe-opendata/dataset/10df853b-7f80-49b4-980d-ea8abceceee7
+
 double velocity(52560,3)
 0	8.45	1
 600	7.82	1

@@ -1,2 +1,0 @@
-Data source:
-https://catalog.data.gov/dataset/anemometer-data-wind-speed-direction-for-beresford-south-dakota-2006-4f2db
