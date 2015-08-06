@@ -1,8 +1,9 @@
 within WindPowerPlants.UsersGuide;
 
+
 class ReleaseNotes "Release Notes"
   extends Modelica.Icons.ReleaseNotes;
-  annotation(preferredView = "info", Documentation(info = "<html>
+  annotation(preferredView = "info", Documentation(info="<html>
 
 <h5>IMPORTANT NOTE</h5>
 <p>The WindPowerPlants library is based on Modelica classes which are going the be released
@@ -14,6 +15,11 @@ of the library. If you do not use components of the
 <a href=\"WindPowerPlants.MSL_322\">MSL_322</a> package directly,
 you do not have to be concerned about this issue.
 </p>
+
+<h5>Version 0.9.4, 2015-08-06</h5>
+<ul>
+<li>Improved setting of intial conditions</li>
+</ul>
 
 <h5>Version 0.9.3, 2015-08-06</h5>
 <ul>
