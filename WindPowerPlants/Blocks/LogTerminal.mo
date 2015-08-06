@@ -14,7 +14,7 @@ equation
 <p>This block writes a value to the Modelica log file once the simulation terminates. The output to the Modelica log file consists of:
 <ul>
 <li>a string written prior to the numeric value</li>
-<li>a numeric value being equal to the input signal times the <code>gain</code> at the terminatation time of the simulation</li>
+<li>a numeric value being equal to the input signal times the <code>gain</code> at the termination time of the simulation</li>
 <li>a string written after the numeric value</li>
 </p>
 </html>"));
