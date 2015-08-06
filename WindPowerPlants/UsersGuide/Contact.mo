@@ -1,4 +1,5 @@
 within WindPowerPlants.UsersGuide;
+
 class Contact "Contact"
   extends Modelica.Icons.Contact;
   annotation(preferredView = "info", Documentation(info = "<html>

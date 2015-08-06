@@ -1,19 +1,18 @@
 within WindPowerPlants.Plants;
-model GenericVariableSpeed
-  "Ideal wind power plant with variable speed generator"
+
+model GenericVariableSpeed "Ideal wind power plant with variable speed generator"
   extends Interfaces.BasePlant;
-  Modelica.SIunits.AngularVelocity wGenerator = der(generator.flange_a.phi)
-    "Angular velocity of generator";
-  Modelica.SIunits.AngularVelocity wTurbine = der(windturbine.flange_a.phi)
-    "Angular velocity of turbine";
+  Modelica.SIunits.AngularVelocity wGenerator = der(generator.flange_a.phi) "Angular velocity of generator";
+  Modelica.SIunits.AngularVelocity wTurbine = der(windturbine.flange_a.phi) "Angular velocity of turbine";
   Components.PitchWindTurbineControlled windturbine(final rho = rho, final D = D, final powerMax = powerMax, final turbineData = turbineData, final turbineControlData = turbineControlData, final T = T) annotation(Placement(transformation(extent = {{-60, -10}, {-40, 10}})));
   Blocks.AngularVelocityController angularVelocityControl(final turbineControlData = turbineControlData, final D = D, final k = k, final Ti = Ti, final tauRef = tauRef, final limitMot = limitMot, final vMin = vMin) annotation(Placement(transformation(extent = {{-40, -60}, {-20, -40}})));
   Modelica.Mechanics.Rotational.Components.Inertia inertia(final J = JTurbine) annotation(Placement(transformation(extent = {{-30, -10}, {-10, 10}})));
-  Components.GenericVariableSpeedGenerator generator(final J = JGenerator)
-    "Generic variable speed generator"                                                                        annotation(Placement(transformation(extent = {{60, -10}, {40, 10}})));
+  Components.GenericVariableSpeedGenerator generator(final J = JGenerator) "Generic variable speed generator" annotation(Placement(transformation(extent = {{60, -10}, {40, 10}})));
   Modelica.Mechanics.Rotational.Components.IdealGear idealGear(final ratio = ratio) annotation(Placement(transformation(extent = {{20, -10}, {0, 10}})));
   Blocks.TorqueLimiter torqueLimiter(tauRef = tauRef, wRef = wRef) annotation(Placement(transformation(extent = {{20, -60}, {40, -40}})));
   Modelica.Mechanics.Rotational.Sensors.SpeedSensor speedSensor annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 270, origin = {30, -20})));
+initial equation
+  windturbine.flange_a.phi = phiStart;
 equation
   connect(windturbine.lambda, angularVelocityControl.lambda) annotation(Line(points = {{-56, -11}, {-56, -50}, {-41, -50}}, color = {0, 0, 127}, smooth = Smooth.None));
   connect(windturbine.flange_a, inertia.flange_a) annotation(Line(points = {{-40, 0}, {-30, 0}}, color = {0, 0, 0}, smooth = Smooth.None));

@@ -1,8 +1,8 @@
 within WindPowerPlants.Functions;
+
 function cpVal "Power coefficient"
   extends Modelica.Icons.Function;
-  input WindPowerPlants.Records.TurbineData.Generic turbineData
-    "Wind turbine record";
+  input WindPowerPlants.Records.TurbineData.Generic turbineData "Wind turbine record";
   input Real lambda "Tip speed ratio";
   input Real beta "Pitch angle in degree";
   output Real cp "Power coefficient";

@@ -1,4 +1,5 @@
 within WindPowerPlants.Sources;
+
 model IdealRealPower "Ideal three phase power source or sink"
   final parameter Integer m = 3 "Number of phases";
   parameter Modelica.SIunits.Voltage VRef = 1 "Reference line to line voltage";
@@ -35,7 +36,7 @@ equation
   connect(star.pin_n, ground.pin) annotation(Line(points = {{40, 1.33227e-15}, {40, -10}}, color = {85, 170, 255}, smooth = Smooth.None));
   connect(powerSensor.currentN, variableCurrentSource.plug_p) annotation(Line(points = {{40, 60}, {40, 50}}, color = {85, 170, 255}, smooth = Smooth.None));
   connect(variableCurrentSource.plug_n, star.plug_p) annotation(Line(points = {{40, 30}, {40, 20}}, color = {85, 170, 255}, smooth = Smooth.None));
-  annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics), Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics = {Ellipse(extent=  {{-60, 60}, {60, -60}}, lineColor=  {0, 0, 255}), Line(points=  {{0, 90}, {0, 88}, {0, 60}}, color=  {0, 0, 255}, smooth=  Smooth.None), Text(extent=  {{-40, 40}, {40, -40}}, lineColor=  {0, 0, 255}, textString=  "P")}), Documentation(info = "<html>
+  annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics), Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics = {Ellipse(extent = {{-60, 60}, {60, -60}}, lineColor = {0, 0, 255}), Line(points = {{0, 90}, {0, 88}, {0, 60}}, color = {0, 0, 255}, smooth = Smooth.None), Text(extent = {{-40, 40}, {40, -40}}, lineColor = {0, 0, 255}, textString = "P")}), Documentation(info = "<html>
 <p>
 The ideal real power source is based on a space phasor approach,
 where the current and voltage space phasor are aligned.

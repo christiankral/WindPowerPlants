@@ -1,4 +1,3 @@
-within ;
 package WindPowerPlants "Library of wind power plants"
   extends Modelica.Icons.Package;
   annotation(version = "0.X.X", versionBuild = 1, versionDate = "2015-XX-XX", uses(Modelica(version = "3.2.1"), Complex(version = "3.2.1")), preferredView = "info", Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Documentation(info = "<html>

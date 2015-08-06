@@ -1,6 +1,6 @@
 within WindPowerPlants.Sources;
-model IdealRealPowerConductance
-  "Ideal three phase power source or sink based on controlled conductance"
+
+model IdealRealPowerConductance "Ideal three phase power source or sink based on controlled conductance"
   final parameter Integer m = 3 "Number of phases";
   parameter Modelica.SIunits.Voltage VRef = 1 "Reference line to line voltage";
   parameter Modelica.SIunits.Time T = 1E-3 "Internal control time constant";
@@ -27,7 +27,7 @@ equation
   connect(star.pin_n, ground.pin) annotation(Line(points = {{40, -40}, {40, -50}}, color = {85, 170, 255}, smooth = Smooth.None));
   connect(integrator.y, replicator.u) annotation(Line(points = {{-27, 0}, {-12, 0}}, color = {0, 0, 127}, smooth = Smooth.None));
   connect(replicator.y, variableCurrentSource.G_ref) annotation(Line(points = {{11, 0}, {29, 0}}, color = {0, 0, 127}, smooth = Smooth.None));
-  annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics), Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics = {Ellipse(extent=  {{-60, 60}, {60, -60}}, lineColor=  {0, 0, 255}), Line(points=  {{0, 90}, {0, 88}, {0, 60}}, color=  {0, 0, 255}, smooth=  Smooth.None), Text(extent=  {{-40, 40}, {40, -40}}, lineColor=  {0, 0, 255}, textString=  "P"), Ellipse(extent=  {{-80, 80}, {80, -80}}, lineColor=  {0, 0, 255})}), Documentation(info = "<html>
+  annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics), Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics = {Ellipse(extent = {{-60, 60}, {60, -60}}, lineColor = {0, 0, 255}), Line(points = {{0, 90}, {0, 88}, {0, 60}}, color = {0, 0, 255}, smooth = Smooth.None), Text(extent = {{-40, 40}, {40, -40}}, lineColor = {0, 0, 255}, textString = "P"), Ellipse(extent = {{-80, 80}, {80, -80}}, lineColor = {0, 0, 255})}), Documentation(info = "<html>
 <p>
 The ideal real power source is based on a controlled variable conductor.
 The reference voltage and the time constant are required to scale the

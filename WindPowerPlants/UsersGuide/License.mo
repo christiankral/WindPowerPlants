@@ -1,4 +1,5 @@
 within WindPowerPlants.UsersGuide;
+
 class License "Modelica License 1.1"
   extends Modelica.Icons.Information;
   annotation(Documentation(info = "<html>

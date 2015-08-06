@@ -1,6 +1,6 @@
 within WindPowerPlants.Examples.Modelica2015Conference;
-model GenericPlant_A
-  "Generic wind power plant A [Eberhart2015] with statistical wind data"
+
+model GenericPlant_A "Generic wind power plant A [Eberhart2015] with statistical wind data"
   extends Modelica.Icons.Example;
   Modelica.Blocks.Continuous.Integrator energyIntegrator(k = 1) annotation(Placement(visible = true, transformation(origin = {60, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   Plants.GenericVariableSpeed plant(rho = 1.198, D = 112, powerMax = 3E6, JTurbine = 3E7) annotation(Placement(transformation(extent = {{10, -10}, {30, 10}})));

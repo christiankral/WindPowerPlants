@@ -1,8 +1,8 @@
 within WindPowerPlants.Functions;
+
 function turbineControlVal "Evaluation of polynominal for given input"
   extends Modelica.Icons.Function;
-  input WindPowerPlants.Records.TurbineControlData.Generic turbineControlData
-    "turbine control record";
+  input WindPowerPlants.Records.TurbineControlData.Generic turbineControlData "turbine control record";
   input Real lambda "Evaluation variable";
   output Real beta "Approximated pitch angle";
 algorithm

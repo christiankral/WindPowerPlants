@@ -1,4 +1,5 @@
 within WindPowerPlants.Records.TurbineControlData;
+
 record Generic "Generic turbine control data"
   extends Modelica.Icons.Record;
   parameter Real p[:] "Polynominal coefficients";

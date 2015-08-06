@@ -1,6 +1,6 @@
 within WindPowerPlants.Examples;
-model GenericPlantRayleigh
-  "Generic wind power plant simulation with statistical wind data"
+
+model GenericPlantRayleigh "Generic wind power plant simulation with statistical wind data"
   extends Modelica.Icons.Example;
   Modelica.Blocks.Continuous.Integrator energyIntegrator(k = 1) annotation(Placement(visible = true, transformation(origin = {60, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   Plants.GenericVariableSpeed plant annotation(Placement(transformation(extent = {{10, -10}, {30, 10}})));

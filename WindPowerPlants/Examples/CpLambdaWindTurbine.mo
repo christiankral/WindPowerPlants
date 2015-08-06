@@ -1,6 +1,6 @@
 within WindPowerPlants.Examples;
-model CpLambdaWindTurbine
-  "Investigate cp versus lambda of wind turbine for different pitch angles"
+
+model CpLambdaWindTurbine "Investigate cp versus lambda of wind turbine for different pitch angles"
   extends Modelica.Icons.Example;
   Components.PitchWindTurbine windturbine(D = 101, powerMax = 3.05E6, turbineData = WindPowerPlants.Records.TurbineData.Heier2009()) annotation(Placement(visible = true, transformation(origin = {-22, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   Modelica.Mechanics.Rotational.Sources.Speed speed(exact = true) annotation(Placement(visible = true, transformation(origin = {20, 0}, extent = {{10, -10}, {-10, 10}}, rotation = 0)));

@@ -1,4 +1,5 @@
 within WindPowerPlants.Blocks;
+
 model TorqueLimiter
   parameter Modelica.SIunits.Torque tauRef "Reference torque";
   parameter Modelica.SIunits.AngularVelocity wRef "Reference angular velocity";
@@ -8,7 +9,7 @@ model TorqueLimiter
   Modelica.Blocks.Interfaces.RealInput w "rotational speed" annotation(Placement(visible = true, transformation(origin = {0, 110}, extent = {{-10, -10}, {10, 10}}, rotation = 270), iconTransformation(origin = {0, 110}, extent = {{-10, -10}, {10, 10}}, rotation = 270)));
 equation
   tauLimited = if w > 0 and w < linear * wRef then if tau < 0 then tau * abs(w) / (linear * wRef) else tau elseif w <= 0 then if tau < 0 then tau * abs(w) / wRef else tau else tau;
-  annotation(Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics = {Rectangle(extent=  {{-100, 100}, {100, -100}}, lineColor=  {0, 0, 127}, fillColor=  {255, 255, 255}, fillPattern=  FillPattern.Solid), Line(points=  {{-80, -60}, {-40, -20}, {40, -20}, {80, -60}}, color=  {0, 0, 0}, smooth=  Smooth.None), Line(points=  {{0, 102}, {0, 20}}, color=  {0, 0, 0}, smooth=  Smooth.None), Line(points=  {{-80, 60}, {-40, 20}, {40, 20}, {80, 60}}, color=  {0, 0, 0}, smooth=  Smooth.None)}), Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics), Documentation(info = "<html>
+  annotation(Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics = {Rectangle(extent = {{-100, 100}, {100, -100}}, lineColor = {0, 0, 127}, fillColor = {255, 255, 255}, fillPattern = FillPattern.Solid), Line(points = {{-80, -60}, {-40, -20}, {40, -20}, {80, -60}}, color = {0, 0, 0}, smooth = Smooth.None), Line(points = {{0, 102}, {0, 20}}, color = {0, 0, 0}, smooth = Smooth.None), Line(points = {{-80, 60}, {-40, 20}, {40, 20}, {80, 60}}, color = {0, 0, 0}, smooth = Smooth.None)}), Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics), Documentation(info = "<html>
 <p>
 The torque output of the angular velocity control is limited
 to avoid significant dynamics around zero speed and

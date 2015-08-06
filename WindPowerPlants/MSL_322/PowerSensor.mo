@@ -1,4 +1,5 @@
 within WindPowerPlants.MSL_322;
+
 model PowerSensor "Power sensor"
   extends Modelica.Icons.RotationalSensor;
   parameter Integer m(min = 1) = 3 "number of phases";
@@ -25,7 +26,7 @@ equation
   connect(powerSensor.voltageN, plugToPinsVoltageN.pin_n) annotation(Line(points = {{0, -10}, {0, -10}, {0, -68}, {0, -68}}, color = {85, 170, 255}));
   connect(powerSensor.y, sum.u) annotation(Line(points = {{-8, -11}, {-8, -40}, {-80, -40}, {-80, -58}}, color = {85, 170, 255}));
   connect(sum.y, y) annotation(Line(points = {{-80, -81}, {-80, -110}}, color = {85, 170, 255}));
-  annotation(Icon(graphics={  Line(points=  {{0, 100}, {0, 70}}, color=  {0, 0, 255}), Line(points=  {{0, -70}, {0, -100}}, color=  {0, 0, 255}), Text(extent=  {{-29, -70}, {30, -11}}, textString=  "P"), Line(points=  {{-80, -100}, {-80, 0}}, color=  {85, 170, 255}), Text(textColor=  {0, 0, 255}, extent=  {{-100, 110}, {100, 150}}, textString=  "%name"), Line(points=  {{-100, 0}, {100, 0}}, color=  {0, 0, 255})}), Documentation(info = "<html>
+  annotation(Icon(graphics = {Line(points = {{0, 100}, {0, 70}}, color = {0, 0, 255}), Line(points = {{0, -70}, {0, -100}}, color = {0, 0, 255}), Text(extent = {{-29, -70}, {30, -11}}, textString = "P"), Line(points = {{-80, -100}, {-80, 0}}, color = {85, 170, 255}), Text(textColor = {0, 0, 255}, extent = {{-100, 110}, {100, 150}}, textString = "%name"), Line(points = {{-100, 0}, {100, 0}}, color = {0, 0, 255})}), Documentation(info = "<html>
 
 <p>
 This sensor can be used to measure <i>m</i> complex apparent power values, using <i>m</i>
@@ -41,6 +42,5 @@ This sensor can be used to measure <i>m</i> complex apparent power values, using
 <a href=\"modelica://Modelica.Electrical.QuasiStationary.MultiPhase.Sensors.CurrentSensor\">CurrentSensor</a>
 </p>
 
-</html>"),
-       Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics));
+</html>"), Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics));
 end PowerSensor;
