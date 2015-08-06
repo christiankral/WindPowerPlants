@@ -1,9 +1,8 @@
 within WindPowerPlants.UsersGuide;
 
-
 class ReleaseNotes "Release Notes"
   extends Modelica.Icons.ReleaseNotes;
-  annotation(preferredView = "info", Documentation(info="<html>
+  annotation(preferredView = "info", Documentation(info = "<html>
 
 <h5>IMPORTANT NOTE</h5>
 <p>The WindPowerPlants library is based on Modelica classes which are going the be released
