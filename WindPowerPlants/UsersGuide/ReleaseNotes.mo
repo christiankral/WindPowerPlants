@@ -5,7 +5,7 @@ class ReleaseNotes "Release Notes"
   annotation(preferredView = "info", Documentation(info = "<html>
 
 <h5>IMPORTANT NOTE</h5>
-<p>The WindPowerPlants library is based on Modelica classes which are going the be released
+<p>The WindPowerPlants library is based on Modelica classes which are going to be released
 in the MSL 3.2.2. In order to provide compatibility to the actual release of
 MSL 3.2.1 the package <a href=\"WindPowerPlants.MSL_322\">MSL_322</a> is provided.
 Once MSL 3.2.2 is release package <a href=\"WindPowerPlants.MSL_322\">MSL_322</a>
