@@ -1,6 +1,6 @@
 within WindPowerPlants.WindSources;
 
-block Rayleigh "Rayleigh wind distributution"
+block Rayleigh "Rayleigh wind distribution"
   import Modelica.Constants.pi;
   parameter Modelica.SIunits.Velocity vMean = 5 "Mean velocity";
   parameter Modelica.SIunits.Velocity vMax = 20 "Maximum velocity (v<=vMax)";
@@ -8,7 +8,7 @@ block Rayleigh "Rayleigh wind distributution"
   parameter Modelica.SIunits.Time T = 100 "Time period";
   parameter Boolean increaseDecrease = false "If true, altering velocity increase and decrease after one period";
   final parameter Modelica.SIunits.Velocity dv = vMax / n "Velocity increment";
-  final parameter Modelica.SIunits.Velocity vDiscrete[n] = array(k * dv for k in 1:n) "Discrete Velocities";
+  final parameter Modelica.SIunits.Velocity vDiscrete[n] = array(k * dv for k in 1:n) "Discrete velocities";
   final parameter Real rayleigh[n] = array(dv * pi / 2 * vDiscrete[k] / vMean ^ 2 * exp(-pi / 4 * vDiscrete[k] ^ 2 / vMean ^ 2) for k in 1:n) "Rayleigh probaility";
   final parameter Real rayleigh_sum = sum(rayleigh) "Sum of all rayleigh probabilities";
   final parameter Real probability[n] = rayleigh / rayleigh_sum "Probabilities of velocities";
@@ -48,10 +48,10 @@ algorithm
 <p><img src=\"modelica://WindPowerPlants/Resources/Images/Delta_v.png\"/></p>
 <p><br><img src=\"modelica://WindPowerPlants/Resources/Images/Rayleigh.png\"/></p>
 <p>The sum of all probabilities <img src=\"modelica://WindPowerPlants/Resources/Images/d.png\"/> is equal to one.</p>
-<p>The boolean parameter <code>increaseDecrease</code> indicates wheather</p>
+<p>The boolean parameter <code>increaseDecrease</code> indicates whether</p>
 <ul>
-<li><code>false</code>: discrete velcocites over time are only increasing in each period <img src=\"modelica://WindPowerPlants/Resources/Images/T.png\"/>, or</li>
-<li><code>true</code>: discrete velcocites over time are alternatingly increasing and decreasing, in every other period <img src=\"modelica://WindPowerPlants/Resources/Images/T.png\"/>.</li>
+<li><code>false</code>: discrete velocities over time are only increasing in each period <img src=\"modelica://WindPowerPlants/Resources/Images/T.png\"/>, or</li>
+<li><code>true</code>: discrete velocities over time are alternatingly increasing and decreasing, in every other period <img src=\"modelica://WindPowerPlants/Resources/Images/T.png\"/>.</li>
 </ul>
 </html>"));
 end Rayleigh;
