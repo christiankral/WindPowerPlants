@@ -4,16 +4,16 @@ model PowerSensor "Power sensor"
   extends Modelica.Icons.RotationalSensor;
   parameter Integer m(min = 1) = 3 "number of phases";
   Modelica.SIunits.AngularVelocity omega = der(currentP.reference.gamma);
-  Modelica.Electrical.QuasiStationary.MultiPhase.Interfaces.PositivePlug currentP(final m = m) annotation(Placement(transformation(extent = {{-110, -10}, {-90, 10}}, rotation = 0)));
-  Modelica.Electrical.QuasiStationary.MultiPhase.Interfaces.NegativePlug currentN(final m = m) annotation(Placement(transformation(extent = {{90, -10}, {110, 10}}, rotation = 0)));
-  Modelica.Electrical.QuasiStationary.MultiPhase.Interfaces.PositivePlug voltageP(final m = m) annotation(Placement(transformation(extent = {{-10, 90}, {10, 110}}, rotation = 0)));
-  Modelica.Electrical.QuasiStationary.MultiPhase.Interfaces.NegativePlug voltageN(final m = m) annotation(Placement(transformation(extent = {{-10, -110}, {10, -90}}, rotation = 0)));
+  Modelica.Electrical.QuasiStationary.MultiPhase.Interfaces.PositivePlug currentP(final m = m) annotation(Placement(transformation(extent = {{-110, -10}, {-90, 10}})));
+  Modelica.Electrical.QuasiStationary.MultiPhase.Interfaces.NegativePlug currentN(final m = m) annotation(Placement(transformation(extent = {{90, -10}, {110, 10}})));
+  Modelica.Electrical.QuasiStationary.MultiPhase.Interfaces.PositivePlug voltageP(final m = m) annotation(Placement(transformation(extent = {{-10, 90}, {10, 110}})));
+  Modelica.Electrical.QuasiStationary.MultiPhase.Interfaces.NegativePlug voltageN(final m = m) annotation(Placement(transformation(extent = {{-10, -110}, {10, -90}})));
   Modelica.ComplexBlocks.Interfaces.ComplexOutput y annotation(Placement(transformation(origin = {-80, -110}, extent = {{-10, -10}, {10, 10}}, rotation = 270)));
-  Modelica.Electrical.QuasiStationary.MultiPhase.Basic.PlugToPins_p plugToPinsCurrentP(final m = m) annotation(Placement(transformation(extent = {{-80, -10}, {-60, 10}}, rotation = 0)));
+  Modelica.Electrical.QuasiStationary.MultiPhase.Basic.PlugToPins_p plugToPinsCurrentP(final m = m) annotation(Placement(transformation(extent = {{-80, -10}, {-60, 10}})));
   Modelica.Electrical.QuasiStationary.MultiPhase.Basic.PlugToPins_p plugToPinsVoltageP(final m = m) annotation(Placement(transformation(origin = {0, 70}, extent = {{-10, -10}, {10, 10}}, rotation = 270)));
-  Modelica.Electrical.QuasiStationary.MultiPhase.Basic.PlugToPins_n plugToPinsCurrentN(final m = m) annotation(Placement(transformation(extent = {{80, -10}, {60, 10}}, rotation = 0)));
+  Modelica.Electrical.QuasiStationary.MultiPhase.Basic.PlugToPins_n plugToPinsCurrentN(final m = m) annotation(Placement(transformation(extent = {{80, -10}, {60, 10}})));
   Modelica.Electrical.QuasiStationary.MultiPhase.Basic.PlugToPins_n plugToPinsVoltageN(final m = m) annotation(Placement(transformation(origin = {0, -70}, extent = {{-10, 10}, {10, -10}}, rotation = 90)));
-  Modelica.Electrical.QuasiStationary.SinglePhase.Sensors.PowerSensor powerSensor[m] annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  Modelica.Electrical.QuasiStationary.SinglePhase.Sensors.PowerSensor powerSensor[m] annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}})));
   Modelica.ComplexBlocks.ComplexMath.Sum sum(final nin = m) annotation(Placement(transformation(origin = {-80, -70}, extent = {{-10, -10}, {10, 10}}, rotation = 270)));
 equation
   connect(plugToPinsCurrentP.plug_p, currentP) annotation(Line(points = {{-72, 0}, {-79, 0}, {-86, 0}, {-100, 0}}, color = {85, 170, 255}));
@@ -42,5 +42,5 @@ This sensor can be used to measure <i>m</i> complex apparent power values, using
 <a href=\"modelica://Modelica.Electrical.QuasiStationary.MultiPhase.Sensors.CurrentSensor\">CurrentSensor</a>
 </p>
 
-</html>"), Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics));
+</html>"));
 end PowerSensor;

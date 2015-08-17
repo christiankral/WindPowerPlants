@@ -3,16 +3,16 @@ within WindPowerPlants.Examples;
 model GenericPlantElectricRealData "Generic wind power plant simulation with real wind data and mains"
   extends Modelica.Icons.Example;
   parameter String fileName = Modelica.Utilities.Files.loadResource("modelica://WindPowerPlants/Resources/Data/beresford2006.txt") "File on which data is present" annotation(Dialog(loadSelector(filter = "Text files (*.txt)", caption = "Open text file to read parameters of the form \"name = value\"")));
-  Modelica.Blocks.Continuous.Integrator energyIntegrator annotation(Placement(visible = true, transformation(origin = {60, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-  Modelica.Electrical.QuasiStationary.MultiPhase.Basic.Resistor resistor(R_ref = fill(1, 3)) annotation(Placement(visible = true, transformation(origin = {20, -30}, extent = {{-10, -10}, {10, 10}}, rotation = 90)));
-  Modelica.Electrical.QuasiStationary.MultiPhase.Basic.Inductor inductor(L = fill(0.0072934, 3)) annotation(Placement(visible = true, transformation(origin = {20, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 90)));
-  Modelica.Electrical.QuasiStationary.SinglePhase.Basic.Ground ground annotation(Placement(visible = true, transformation(origin = {-60, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-  WindPowerPlants.Plants.GenericVariableSpeedElectrical plant annotation(Placement(visible = true, transformation(origin = {20, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-  Modelica.Electrical.QuasiStationary.MultiPhase.Sources.VoltageSource voltagesource(f = 50, V = fill(10000 / sqrt(3), 3)) annotation(Placement(visible = true, transformation(origin = {-10, -70}, extent = {{-10, -10}, {10, 10}}, rotation = 180)));
-  Modelica.Electrical.QuasiStationary.MultiPhase.Basic.Star star annotation(Placement(visible = true, transformation(origin = {-40, -70}, extent = {{-10, -10}, {10, 10}}, rotation = 180)));
-  WindSources.RealData windSource(fileName = fileName) annotation(Placement(visible = true, transformation(extent = {{-50, -10}, {-30, 10}}, rotation = 0)));
+  Modelica.Blocks.Continuous.Integrator energyIntegrator annotation(Placement(transformation(origin = {60, 20}, extent = {{-10, -10}, {10, 10}})));
+  Modelica.Electrical.QuasiStationary.MultiPhase.Basic.Resistor resistor(R_ref = fill(1, 3)) annotation(Placement(transformation(origin = {20, -30}, extent = {{-10, -10}, {10, 10}}, rotation = 90)));
+  Modelica.Electrical.QuasiStationary.MultiPhase.Basic.Inductor inductor(L = fill(0.0072934, 3)) annotation(Placement(transformation(origin = {20, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 90)));
+  Modelica.Electrical.QuasiStationary.SinglePhase.Basic.Ground ground annotation(Placement(transformation(origin = {-60, -80}, extent = {{-10, -10}, {10, 10}})));
+  WindPowerPlants.Plants.GenericVariableSpeedElectrical plant annotation(Placement(transformation(origin = {20, 0}, extent = {{-10, -10}, {10, 10}})));
+  Modelica.Electrical.QuasiStationary.MultiPhase.Sources.VoltageSource voltagesource(f = 50, V = fill(10000 / sqrt(3), 3)) annotation(Placement(transformation(origin = {-10, -70}, extent = {{-10, -10}, {10, 10}}, rotation = 180)));
+  Modelica.Electrical.QuasiStationary.MultiPhase.Basic.Star star annotation(Placement(transformation(origin = {-40, -70}, extent = {{-10, -10}, {10, 10}}, rotation = 180)));
+  WindSources.RealData windSource(fileName = fileName) annotation(Placement(transformation(extent = {{-50, -10}, {-30, 10}})));
   Blocks.LogTerminal logTerminal(preString = "Total energy = ", postString = " kWh", gain = 1 / 3.6E6) annotation(Placement(transformation(extent = {{80, 10}, {100, 30}})));
-  Blocks.SpeedAdaptor speedadaptor1(hin = 50, hout = 105, roughness = 0.1) annotation(Placement(visible = true, transformation(origin = {-10, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  Blocks.SpeedAdaptor speedadaptor1(hin = 50, hout = 105, roughness = 0.1) annotation(Placement(transformation(origin = {-10, 0}, extent = {{-10, -10}, {10, 10}})));
 equation
   connect(star.pin_n, ground.pin) annotation(Line(points = {{-50, -70}, {-60, -70}}, color = {85, 170, 255}));
   connect(star.plug_p, voltagesource.plug_n) annotation(Line(points = {{-30, -70}, {-20, -70}}, color = {85, 170, 255}));
@@ -23,7 +23,7 @@ equation
   connect(energyIntegrator.y, logTerminal.u) annotation(Line(points = {{71, 20}, {71, 20}, {78, 20}}, color = {0, 0, 127}));
   connect(windSource.v, speedadaptor1.vin) annotation(Line(points = {{-29, 4.44089e-16}, {-22, 4.44089e-16}, {-22, 0}}, color = {0, 0, 127}));
   connect(speedadaptor1.vout, plant.v) annotation(Line(points = {{1, 0}, {4, 0}, {4, 8.88178e-16}, {8, 8.88178e-16}}, color = {0, 0, 127}));
-  annotation(experiment(StopTime = 2678400, Interval = 10), Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Documentation(info = "<html>
+  annotation(experiment(StopTime = 2678400, Interval = 10), Documentation(info = "<html>
 <p>This examples shows a generic wind power plant with electric connection to the mains. The simulation model uses real wind data.</p>
 
 <p>Examples of real wind data can be taken from
