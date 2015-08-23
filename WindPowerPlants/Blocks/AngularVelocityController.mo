@@ -8,8 +8,8 @@ model AngularVelocityController "Controller of the angular velocity incorporatin
   parameter Modelica.SIunits.Torque tauRef = 0 "Reference generator torque > 0";
   parameter Real limitMot = 0.05 "Motoring torque limit w.r.t. tauRef";
   parameter Modelica.SIunits.Velocity vMin = 4 "Minimum wind speed of operation";
-  Modelica.Blocks.Interfaces.RealInput v "Wind speed" annotation(Placement(visible = true, transformation(origin = {-110, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-110, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-  Modelica.Blocks.Interfaces.RealOutput tau "Reference Torque" annotation(Placement(transformation(extent = {{100, -10}, {120, 10}})));
+  Modelica.Blocks.Interfaces.RealInput v(unit = "m/s") "Wind speed" annotation(Placement(visible = true, transformation(origin = {-110, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-110, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  Modelica.Blocks.Interfaces.RealOutput tau(unit = "N.m") "Reference Torque" annotation(Placement(transformation(extent = {{100, -10}, {120, 10}})));
   Modelica.Blocks.Interfaces.RealInput lambda "Tip speed ratio" annotation(Placement(visible = true, transformation(origin = {-110, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-110, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   Blocks.AngularVelocity angularVelocity(final D = D) annotation(Placement(transformation(extent = {{-40, -70}, {-20, -50}})));
   Modelica.Blocks.Math.Feedback feedback annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 270, origin = {-80, -30})));

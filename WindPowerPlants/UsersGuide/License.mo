@@ -50,6 +50,5 @@ for an anemometer in the height of 50m. The data are provided under
 <a href=\"modelica://WindPowerPlants/Resources/Data/ODC_PDDLicense.pdf\">Open Data Commons (ODC) Public Domain Dedication and Licence (PDDL)</a>.
 These data have been converted into a Modelica readable test file
 <a href=\"modelica://WindPowerPlants/Resources/Data/beresford2006.txt\">Resources/Data/beresford2006.txt</a>.</p>
-
 </html>"));
 end License;

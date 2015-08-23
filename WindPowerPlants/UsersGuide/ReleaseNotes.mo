@@ -15,6 +15,18 @@ of the library. If you do not use components of the
 you do not have to be concerned about this issue.
 </p>
 
+<h5>Version 0.9.5, 2015-08-23</h5>
+<ul>
+<li>Re-designed <a href=\"modelica://WindPowerPlants.Blocks.TorqueLimiter\">torque limiter</a></li>
+<li>Replaced first order delay
+    <a href=\"modelica://WindPowerPlants.Components.PitchWindTurbineControlled\">PitchWindTurbineControlled</a>
+    in by slew limiter</li>
+<li>Re-located signal input connectors</li>
+<li>New name of model class
+    <a href=\"modelica://WindPowerPlants.Blocks.TriangleAndStep\">TriangleAndStep</a>;
+    this is a non backwards compatible change</li>
+</ul>
+
 <h5>Version 0.9.4, 2015-08-06</h5>
 <ul>
 <li>Improved setting of intial conditions</li>
@@ -45,7 +57,7 @@ you do not have to be concerned about this issue.
     <a href=\"modelica://WindPowerPlants.UsersGuide.License\">Modelica license 1.1</a></li>
 <li>Updated documentation of library</li>
 <li>Re-structured example models</li>
-<li>Added more turbine control data</code>
+<li>Added more turbine control data</li>
 </ul>
 
 <h5>Version 0.1.0, 2015-07-22</h5>

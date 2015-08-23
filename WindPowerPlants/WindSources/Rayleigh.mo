@@ -19,7 +19,7 @@ block Rayleigh "Rayleigh wind distribution"
   Integer increment(final start = 1, final fixed = true) "Increment of index";
   Modelica.SIunits.Time tNext(final start = tDiscrete[1], final fixed = true) "Time of next event";
   discrete Modelica.SIunits.Velocity velocity(final start = vDiscrete[1], final fixed = true) "Velocity";
-  Modelica.Blocks.Interfaces.RealOutput v(unit="m/s") "Wind velocity" annotation(Placement(transformation(extent = {{100, -10}, {120, 10}})));
+  Modelica.Blocks.Interfaces.RealOutput v(unit = "m/s") "Wind velocity" annotation(Placement(transformation(extent = {{100, -10}, {120, 10}})));
 algorithm
   when time >= tNext then
     index := index + increment;

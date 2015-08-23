@@ -5,7 +5,7 @@ model IdealRealPowerConductance "Ideal three phase power source or sink based on
   parameter Modelica.SIunits.Voltage VRef = 1 "Reference line to line voltage";
   parameter Modelica.SIunits.Time T = 1E-3 "Internal control time constant";
   Modelica.Electrical.QuasiStationary.MultiPhase.Interfaces.PositivePlug positivePlug annotation(Placement(transformation(extent = {{-10, 90}, {10, 110}}), iconTransformation(extent = {{-10, 90}, {10, 110}})));
-  Modelica.Blocks.Interfaces.RealInput power "Real power to be controlled" annotation(Placement(transformation(extent = {{-140, -20}, {-100, 20}}), iconTransformation(extent = {{-140, -20}, {-100, 20}})));
+  Modelica.Blocks.Interfaces.RealInput power(unit = "W") "Real power to be controlled" annotation(Placement(transformation(extent = {{-140, -20}, {-100, 20}}), iconTransformation(extent = {{-140, -20}, {-100, 20}})));
   Modelica.Electrical.QuasiStationary.MultiPhase.Basic.VariableConductor variableCurrentSource(final m = m) annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 90, origin = {40, 0})));
   Modelica.Electrical.QuasiStationary.MultiPhase.Basic.Star star(final m = m) annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 270, origin = {40, -30})));
   MSL_322.PowerSensor powerSensor(final m = m) annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 270, origin = {40, 50})));

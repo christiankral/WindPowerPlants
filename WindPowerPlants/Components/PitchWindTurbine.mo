@@ -9,7 +9,7 @@ model PitchWindTurbine "Wind turbine with pitch input"
   Modelica.Blocks.Interfaces.RealInput beta "Pitch angle (deg)" annotation(Placement(transformation(origin = {-110, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-110, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   Modelica.Blocks.Interfaces.BooleanOutput limit(final start = limitStart, final fixed = true) "True if power limit is reached" annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 270, origin = {0, -110})));
   Modelica.Blocks.Interfaces.RealOutput lambda "Tip speed ratio" annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 270, origin = {-60, -110})));
-  Modelica.Blocks.Interfaces.RealOutput w "Angular velocity of flange" annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 270, origin = {60, -110})));
+  Modelica.Blocks.Interfaces.RealOutput w(unit = "rad/s") "Angular velocity of flange" annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 270, origin = {60, -110})));
 equation
   // Tip speed ratio
   lambda * v = w * D / 2;

@@ -4,11 +4,11 @@ model GenericVariableSpeedGenerator "Ideal doubly fed induction generator withou
   parameter Modelica.SIunits.Inertia J = 0 "Moment of inertia" annotation(Evaluate = true);
   Modelica.SIunits.AngularVelocity w = der(flange_a.phi) "Angular rotor velocity";
   Modelica.Mechanics.Rotational.Interfaces.Flange_a flange_a annotation(Placement(transformation(extent = {{90, -10}, {110, 10}})));
-  Modelica.Blocks.Interfaces.RealInput tau "Torque to be controlled" annotation(Placement(transformation(extent = {{-140, -20}, {-100, 20}})));
+  Modelica.Blocks.Interfaces.RealInput tau(unit = "N.m") "Torque to be controlled" annotation(Placement(transformation(extent = {{-140, -20}, {-100, 20}})));
   Modelica.Mechanics.Rotational.Sources.Torque torque annotation(Placement(visible = true, transformation(origin = {-52, 0}, extent = {{-28, -10}, {-8, 10}}, rotation = 0)));
   Modelica.Mechanics.Rotational.Sensors.PowerSensor mechanicalPowerSensor annotation(Placement(visible = true, transformation(origin = {-30, 0}, extent = {{-10, 10}, {10, -10}}, rotation = 0)));
   Modelica.Mechanics.Rotational.Components.Inertia inertia(w(fixed = true, start = 0.2), final J = J) annotation(Placement(transformation(extent = {{40, -10}, {60, 10}})));
-  Modelica.Blocks.Interfaces.RealOutput power "Real power" annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 90, origin = {-60, 110}), iconTransformation(extent = {{-10, -10}, {10, 10}}, rotation = 90, origin = {-60, 110})));
+  Modelica.Blocks.Interfaces.RealOutput power(unit = "W") "Real power" annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 90, origin = {-60, 110}), iconTransformation(extent = {{-10, -10}, {10, 10}}, rotation = 90, origin = {-60, 110})));
 equation
   connect(tau, torque.tau) annotation(Line(points = {{-120, 0}, {-82, 0}}, color = {0, 0, 127}, smooth = Smooth.None));
   connect(torque.flange, mechanicalPowerSensor.flange_a) annotation(Line(points = {{-60, 0}, {-52, 0}, {-52, -6.66134e-16}, {-40, -6.66134e-16}}, color = {0, 0, 0}, smooth = Smooth.None));

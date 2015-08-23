@@ -18,7 +18,7 @@ equation
   connect(angularVelocityControl.v, v) annotation(Line(points = {{-41, -56}, {-80, -56}, {-80, 8.88178e-16}, {-120, 8.88178e-16}}, color = {0, 0, 127}, smooth = Smooth.None));
   connect(generator.power, power) annotation(Line(points = {{56, 11}, {56, 60}, {60, 60}, {60, 110}}, color = {0, 0, 127}, smooth = Smooth.None));
   connect(inertia.flange_b, idealGear.flange_b) annotation(Line(points = {{-10, 0}, {0, 0}}, color = {0, 0, 0}, smooth = Smooth.None));
-  connect(speedSensor.w, torqueLimiter.w) annotation(Line(points = {{30, -31}, {30, -39}}, color = {0, 0, 127}, smooth = Smooth.None));
+  connect(speedSensor.w, torqueLimiter.w) annotation(Line(points = {{30, -31}, {30, -38}}, color = {0, 0, 127}, smooth = Smooth.None));
   connect(idealGear.flange_a, generator.flange_a) annotation(Line(points = {{20, 6.66134e-16}, {30, 6.66134e-16}, {30, 0}, {40, 0}}, color = {0, 0, 0}, smooth = Smooth.None));
   connect(angularVelocityControl.tau, torqueLimiter.tau) annotation(Line(points = {{-19, -50}, {18, -50}}, color = {0, 0, 127}, smooth = Smooth.None));
   connect(torqueLimiter.tauLimited, generator.tau) annotation(Line(points = {{41, -50}, {80, -50}, {80, 0}, {62, 0}}, color = {0, 0, 127}, smooth = Smooth.None));

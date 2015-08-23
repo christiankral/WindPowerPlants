@@ -1,6 +1,6 @@
 within WindPowerPlants.Blocks;
 
-block TriangleAndRamp "Multiple steps"
+block TriangleAndStep "Multiple steps and triangles"
   parameter Modelica.SIunits.Time T = 1 "Total time of varying outputs";
   parameter Integer stepNumber = 5 "Number of steps";
   parameter Real stepHeight = 1 "Total step height";
@@ -37,4 +37,4 @@ and back to <code>triangleOffset</code>.</p>
 <p>This way a variable sweep (<code>triangleOffset</code>) can be performed for different
 stepwise changed variables (<code>step</code>).
 </html>"));
-end TriangleAndRamp;
+end TriangleAndStep;

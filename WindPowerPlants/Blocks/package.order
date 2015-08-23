@@ -5,4 +5,4 @@ SpeedAdaptor
 TipSpeedRatio
 TurbineControlVal
 TorqueLimiter
-TriangleAndRamp
+TriangleAndStep

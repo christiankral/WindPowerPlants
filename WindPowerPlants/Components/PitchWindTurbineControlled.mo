@@ -15,8 +15,8 @@ model PitchWindTurbineControlled "Wind turbine with controlled pitch angle"
   Blocks.TurbineControlVal turbineControlVal(final turbineControlData = turbineControlData) annotation(Placement(transformation(extent = {{-20, -40}, {0, -20}})));
   Modelica.Blocks.Nonlinear.Limiter limiter(final uMax = turbineControlData.betaMax, final uMin = turbineControlData.betaMin) annotation(Placement(transformation(extent = {{10, 10}, {-10, -10}}, rotation = 270, origin = {50, -30})));
   Modelica.Blocks.Interfaces.RealOutput lambda "Tip speed ratio" annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 270, origin = {-60, -110})));
-  Modelica.Blocks.Interfaces.RealOutput w "Angular velocity of flange" annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 270, origin = {60, -110})));
-  Modelica.Blocks.Continuous.FirstOrder slewRateLimiter(final initType = Modelica.Blocks.Types.Init.InitialState, final y_start = 0, final k = 1, final T = 1) annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 90, origin = {50, 10})));
+  Modelica.Blocks.Interfaces.RealOutput w(unit = "rad/s") "Angular velocity of flange" annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 270, origin = {60, -110})));
+  Modelica.Blocks.Nonlinear.SlewRateLimiter slewRateLimiter(final Rising = 3, final Falling = -3) annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 90, origin = {50, 10})));
 equation
   connect(v, turbine.v) annotation(Line(points = {{-110, 4.44089e-16}, {-70, 4.44089e-16}, {-70, 60}, {59, 60}}, color = {0, 0, 127}, smooth = Smooth.None));
   connect(turbine.flange_a, flange_a) annotation(Line(points = {{80, 60}, {100, 60}, {100, 4.44089e-16}}, color = {0, 0, 0}, smooth = Smooth.None));
@@ -40,7 +40,7 @@ In the power limiting range the pitch angle is controlled such way that the maxi
 The model is based on
 <a href=\"modelica://WindPowerPlants.Components.PitchWindTurbine\">PitchWindTurbine</a>.
 </p>
-<p>In a future version of this model the slew rate limiter will be improved. 
+<p>In a future version of this model the slew rate limiter will be improved.
 For backwards compatibility reasons the parameters of the slew rate limiter are currently not available.</p>.
 </html>"), Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = false, initialScale = 0.1, grid = {2, 2}), graphics = {Line(origin = {-59.6474, -0.17987}, points = {{-0.706547, 0.533853}, {-20.3526, 80.1799}, {-0.3526, 100.18}, {19.6474, 80.1799}, {-20.3526, -79.8201}, {-0.3526, -99.8201}, {21.6474, -79.8201}, {0.00141724, 0.179871}}), Ellipse(fillColor = {95, 95, 95}, fillPattern = FillPattern.HorizontalCylinder, extent = {{-100, 10}, {-60, -10}}, endAngle = 360), Rectangle(fillColor = {95, 95, 95}, fillPattern = FillPattern.HorizontalCylinder, extent = {{-80, 10}, {100, -10}}), Text(origin = {0, 121}, lineColor = {0, 0, 255}, extent = {{-100, 9}, {100, -11}}, textString = "%name"), Line(points = {{60, -100}, {60, -20}}, color = {0, 0, 127}, smooth = Smooth.None), Line(points = {{40, -20}, {80, -20}}, color = {0, 0, 127}, smooth = Smooth.None), Line(points = {{40, 20}, {80, 20}}, color = {0, 0, 127}, smooth = Smooth.None), Line(points = {{0, 40}, {0, -100}}, color = {255, 0, 255}, smooth = Smooth.None), Line(points = {{-40, 20}, {-38, 22}, {20, 80}, {80, 80}}, color = {255, 0, 255}, smooth = Smooth.None)}));
 end PitchWindTurbineControlled;

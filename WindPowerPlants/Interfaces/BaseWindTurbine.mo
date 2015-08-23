@@ -7,7 +7,7 @@ partial model BaseWindTurbine
   parameter WindPowerPlants.Records.TurbineData.Generic turbineData "Wind turbine data" annotation(choicesAllMatching = true);
   Modelica.SIunits.Torque tau "Torque of flange_a";
   Modelica.SIunits.Angle phi "Angle of flange_a";
-  Modelica.Blocks.Interfaces.RealInput v "Wind velocity" annotation(Placement(visible = true, transformation(origin = {-110, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-110, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  Modelica.Blocks.Interfaces.RealInput v(unit = "m/s") "Wind velocity" annotation(Placement(visible = true, transformation(origin = {-110, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-110, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
   Modelica.Mechanics.Rotational.Interfaces.Flange_a flange_a annotation(Placement(visible = true, transformation(origin = {100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
 equation
   // ALIAS VARIABLES

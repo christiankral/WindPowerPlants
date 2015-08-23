@@ -2,8 +2,8 @@ within WindPowerPlants.Blocks;
 
 model AngularVelocity "Calculates the angular velocity from tip speed ratio and wind speed"
   parameter Modelica.SIunits.Length D = 101 "Diameter of wind turbine";
-  Modelica.Blocks.Interfaces.RealInput v "Wind speed" annotation(Placement(visible = true, transformation(origin = {-110, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-110, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
-  Modelica.Blocks.Interfaces.RealOutput w "Angular velocity" annotation(Placement(transformation(extent = {{100, -10}, {120, 10}})));
+  Modelica.Blocks.Interfaces.RealInput v(unit = "m/s") "Wind speed" annotation(Placement(visible = true, transformation(origin = {-110, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-110, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  Modelica.Blocks.Interfaces.RealOutput w(unit = "rad/s") "Angular velocity" annotation(Placement(transformation(extent = {{100, -10}, {120, 10}})));
   Modelica.Blocks.Interfaces.RealInput lambda "Tip speed ratio" annotation(Placement(visible = true, transformation(origin = {-110, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-110, 60}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
 equation
   lambda * v = w * D / 2;
