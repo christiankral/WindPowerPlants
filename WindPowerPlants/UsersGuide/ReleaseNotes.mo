@@ -15,7 +15,7 @@ of the library. If you do not use components of the
 you do not have to be concerned about this issue.
 </p>
 
-<h5>Version 0.9.5, 2015-08-23</h5>
+<h5>Version 0.9.5, 2015-08-24</h5>
 <ul>
 <li>Re-designed <a href=\"modelica://WindPowerPlants.Blocks.TorqueLimiter\">torque limiter</a></li>
 <li>Replaced first order delay
@@ -25,6 +25,8 @@ you do not have to be concerned about this issue.
 <li>New name of model class
     <a href=\"modelica://WindPowerPlants.Blocks.TriangleAndStep\">TriangleAndStep</a>;
     this is a non backwards compatible change</li>
+<li>Added units to input and output connectors with
+    unambiguous physical meaning</li>
 </ul>
 
 <h5>Version 0.9.4, 2015-08-06</h5>
@@ -62,8 +64,8 @@ you do not have to be concerned about this issue.
 
 <h5>Version 0.1.0, 2015-07-22</h5>
 <ul>
-<li>First version based on partner wind data which are intended for public use</li>
-<li>This version is not publicly available</li>
+<li>First release version is not publicly available</li>
+<li>This version is based on partner wind data which are not intended for public use</li>
 </ul>
 </html>"));
 end ReleaseNotes;
