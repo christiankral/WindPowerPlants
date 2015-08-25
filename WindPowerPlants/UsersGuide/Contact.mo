@@ -3,6 +3,12 @@ within WindPowerPlants.UsersGuide;
 class Contact "Contact"
   extends Modelica.Icons.Contact;
   annotation(preferredView = "info", Documentation(info = "<html>
+<p>
+This library was developed during a diploma thesis at the
+<a href=\"http://www.tgm.ac.at\">TGM</a>
+by Philip Eberhart and Tek Shan Chung under the supervision of Christian Kral.
+</p>
+
 <h4>Contact</h4>
 
 <p>
@@ -23,10 +29,5 @@ Tek Shan Chung<br>
 1210 Vienna, Austria<br>
 </p>
 
-<p>
-This library was developed during a diploma thesis at the
-<a href=\"http://www.tgm.ac.at\">TGM</a>
-by Philip Eberhart and Tek Shan Chung under the supervision of Christian Kral.
-</p>
 </html>"));
 end Contact;
