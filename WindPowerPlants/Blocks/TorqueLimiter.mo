@@ -5,9 +5,9 @@ model TorqueLimiter
   parameter Modelica.SIunits.AngularVelocity wRef "Reference angular velocity";
   parameter Real linear = 0.02 "Linear range for w < wRef*linear";
   parameter Real limit = 0.02 "Relative torque limit w.r.t. tauRef for zero speed";
-  Modelica.Blocks.Interfaces.RealInput tau(unit = "N.m") "Torque" annotation(Placement(visible = true, transformation(origin = {-110, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0), iconTransformation(origin = {-120, 0}, extent = {{-20, -20}, {20, 20}}, rotation = 0)));
+  Modelica.Blocks.Interfaces.RealInput tau(unit = "N.m") "Torque" annotation(Placement(transformation(origin = {-110, 0}, extent = {{-10, -10}, {10, 10}}), iconTransformation(origin = {-120, 0}, extent = {{-20, -20}, {20, 20}})));
   Modelica.Blocks.Interfaces.RealOutput tauLimited(unit = "N.m") "Limited Torque" annotation(Placement(transformation(extent = {{100, -10}, {120, 10}}), iconTransformation(extent = {{100, -10}, {120, 10}})));
-  Modelica.Blocks.Interfaces.RealInput w(unit = "rad/s") "rotational speed" annotation(Placement(visible = true, transformation(origin = {0, 110}, extent = {{-10, -10}, {10, 10}}, rotation = 270), iconTransformation(origin = {0, 120}, extent = {{-20, -20}, {20, 20}}, rotation = 270)));
+  Modelica.Blocks.Interfaces.RealInput w(unit = "rad/s") "rotational speed" annotation(Placement(transformation(origin = {0, 110}, extent = {{-10, -10}, {10, 10}}, rotation = 270), iconTransformation(origin = {0, 120}, extent = {{-20, -20}, {20, 20}}, rotation = 270)));
   Modelica.Blocks.Nonlinear.VariableLimiter variableLimiter annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}})));
   Modelica.Blocks.Tables.CombiTable1D upperLimit(smoothness = Modelica.Blocks.Types.Smoothness.LinearSegments, table = [-2 * wRef, tauRef; -linear * wRef, tauRef; -linear * limit * wRef, limit * tauRef; limit * wRef, limit * tauRef; wRef, tauRef; 2 * wRef, tauRef]) annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 270, origin = {-30, 30})));
   Modelica.Blocks.Tables.CombiTable1D lowerLimit(smoothness = Modelica.Blocks.Types.Smoothness.LinearSegments, table = [-2 * wRef, -tauRef; -wRef, -tauRef; -limit * wRef, -limit * tauRef; linear * limit * wRef, -limit * tauRef; linear * wRef, -tauRef; 2 * wRef, -tauRef]) annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 270, origin = {-60, 30})));
@@ -18,7 +18,7 @@ equation
   connect(upperLimit.y[1], variableLimiter.limit1) annotation(Line(points = {{-30, 19}, {-30, 19}, {-30, 8}, {-12, 8}}, color = {0, 0, 127}));
   connect(lowerLimit.u[1], w) annotation(Line(points = {{-60, 42}, {-60, 42}, {-60, 80}, {4.44089e-16, 80}, {4.44089e-16, 110}}, color = {0, 0, 127}));
   connect(lowerLimit.y[1], variableLimiter.limit2) annotation(Line(points = {{-60, 19}, {-60, 19}, {-60, -2}, {-60, -8}, {-12, -8}}, color = {0, 0, 127}));
-  annotation(Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics = {Rectangle(extent = {{-100, 100}, {100, -100}}, lineColor = {0, 0, 127}, fillColor = {255, 255, 255}, fillPattern = FillPattern.Solid), Line(points = {{-80, -60}, {-40, -20}, {40, -20}, {80, -60}}, color = {0, 0, 0}, smooth = Smooth.None), Line(points = {{0, 102}, {0, 20}}, color = {0, 0, 0}, smooth = Smooth.None), Line(points = {{-80, 60}, {-40, 20}, {40, 20}, {80, 60}}, color = {0, 0, 0}, smooth = Smooth.None)}), Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}})), Documentation(info = "<html>
+  annotation(Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics = {Rectangle(extent = {{-100, 100}, {100, -100}}, lineColor = {0, 0, 127}, fillColor = {255, 255, 255}, fillPattern = FillPattern.Solid), Line(points = {{-80, -60}, {-40, -20}, {40, -20}, {80, -60}}, color = {0, 0, 0}), Line(points = {{0, 102}, {0, 20}}, color = {0, 0, 0}), Line(points = {{-80, 60}, {-40, 20}, {40, 20}, {80, 60}}, color = {0, 0, 0})}), Documentation(info = "<html>
 <p>
 The torque output of the angular velocity control is limited
 to avoid significant dynamics around zero speed and

@@ -20,16 +20,16 @@ block TriangleAndStep "Multiple steps and triangles"
   Modelica.Blocks.Interfaces.RealOutput step annotation(Placement(transformation(extent = {{100, 50}, {120, 70}})));
   Modelica.Blocks.Interfaces.RealOutput triangle annotation(Placement(transformation(extent = {{100, -70}, {120, -50}})));
 equation
-  connect(realToInteger.y, integerToReal.u) annotation(Line(points = {{-19, 10}, {-12, 10}}, color = {255, 127, 0}, smooth = Smooth.None));
-  connect(ramp.y, feedback.u1) annotation(Line(points = {{-79, 10}, {-68, 10}}, color = {0, 0, 127}, smooth = Smooth.None));
-  connect(feedback.y, realToInteger.u) annotation(Line(points = {{-51, 10}, {-42, 10}}, color = {0, 0, 127}, smooth = Smooth.None));
-  connect(const.y, feedback.u2) annotation(Line(points = {{-79, -30}, {-60, -30}, {-60, 2}}, color = {0, 0, 127}, smooth = Smooth.None));
-  connect(integerToReal.y, gain.u) annotation(Line(points = {{11, 10}, {18, 10}}, color = {0, 0, 127}, smooth = Smooth.None));
-  connect(constantOffset.y, add.u1) annotation(Line(points = {{41, 50}, {44, 50}, {44, 16}, {50, 16}}, color = {0, 0, 127}, smooth = Smooth.None));
-  connect(gain.y, add.u2) annotation(Line(points = {{41, 10}, {44, 10}, {44, 4}, {50, 4}}, color = {0, 0, 127}, smooth = Smooth.None));
-  connect(add.y, step) annotation(Line(points = {{73, 10}, {90, 10}, {90, 60}, {110, 60}}, color = {0, 0, 127}, smooth = Smooth.None));
-  connect(trapezoid.y, triangle) annotation(Line(points = {{81, -60}, {110, -60}}, color = {0, 0, 127}, smooth = Smooth.None));
-  annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics), Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics = {Rectangle(extent = {{-100, 100}, {100, -100}}, lineColor = {0, 0, 255}, fillColor = {255, 255, 255}, fillPattern = FillPattern.Solid), Line(points = {{-60, 40}, {-20, 40}, {-20, 60}, {20, 60}, {20, 80}, {60, 80}}, color = {0, 0, 255}, smooth = Smooth.None), Line(points = {{-58, -80}, {-40, -40}, {-20, -80}, {0, -40}, {20, -80}, {40, -40}, {60, -80}}, color = {0, 0, 255}, smooth = Smooth.None)}), Documentation(info = "<html>
+  connect(realToInteger.y, integerToReal.u) annotation(Line(points = {{-19, 10}, {-12, 10}}, color = {255, 127, 0}));
+  connect(ramp.y, feedback.u1) annotation(Line(points = {{-79, 10}, {-68, 10}}, color = {0, 0, 127}));
+  connect(feedback.y, realToInteger.u) annotation(Line(points = {{-51, 10}, {-42, 10}}, color = {0, 0, 127}));
+  connect(const.y, feedback.u2) annotation(Line(points = {{-79, -30}, {-60, -30}, {-60, 2}}, color = {0, 0, 127}));
+  connect(integerToReal.y, gain.u) annotation(Line(points = {{11, 10}, {18, 10}}, color = {0, 0, 127}));
+  connect(constantOffset.y, add.u1) annotation(Line(points = {{41, 50}, {44, 50}, {44, 16}, {50, 16}}, color = {0, 0, 127}));
+  connect(gain.y, add.u2) annotation(Line(points = {{41, 10}, {44, 10}, {44, 4}, {50, 4}}, color = {0, 0, 127}));
+  connect(add.y, step) annotation(Line(points = {{73, 10}, {90, 10}, {90, 60}, {110, 60}}, color = {0, 0, 127}));
+  connect(trapezoid.y, triangle) annotation(Line(points = {{81, -60}, {110, -60}}, color = {0, 0, 127}));
+  annotation( Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics = {Rectangle(extent = {{-100, 100}, {100, -100}}, lineColor = {0, 0, 255}, fillColor = {255, 255, 255}, fillPattern = FillPattern.Solid), Line(points = {{-60, 40}, {-20, 40}, {-20, 60}, {20, 60}, {20, 80}, {60, 80}}, color = {0, 0, 255}), Line(points = {{-58, -80}, {-40, -40}, {-20, -80}, {0, -40}, {20, -80}, {40, -40}, {60, -80}}, color = {0, 0, 255})}), Documentation(info = "<html>
 <p>The step output starts from <code>stepOffset</code> and increases to <code>stepOffset + stepHeight</code> in <code>stepNumber</code>steps. The total duration of all step changes is equal to <code>T</code>. </p>
 <p>During each step the <code>triangle</code> output is increased from
 <code>triangleOffset</code> to <code>triangleOffset + triangleHeight</code>
