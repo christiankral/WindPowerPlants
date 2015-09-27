@@ -18,7 +18,7 @@ class References "References"
     <tr>
       <td valign=\"top\">[Eberhart2015]</td>
       <td valign=\"top\">Philip Eberhart, Tek Shan Chung, Anton Haumer, Christian Kral
-        &quot;<a href=\"https://www.modelica.org/events/modelica2015/\">Open
+        &quot;<a href=\"http://dx.doi.org/10.3384/ecp15118929\">Open
         Source Library for the Simulation of Wind Power Plants</a>,&quot;
         <i>Modelica Conference</i>,
         September 2015.</td>
