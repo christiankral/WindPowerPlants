@@ -9,6 +9,11 @@ This library was developed during a diploma thesis at the
 by Philip Eberhart and Tek Shan Chung under the supervision of Christian Kral.
 </p>
 
+<p>
+<img src=\"modelica://WindPowerPlants/Resources/Images/tgm.png\"
+           alt=\"tgm.png\">
+</p>
+
 <h4>Contact</h4>
 
 <p>

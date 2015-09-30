@@ -15,7 +15,7 @@ of the library. If you do not use components of the
 you do not have to be concerned about this issue.
 </p>
 
-<h5>Version 0.9.5, 2015-08-24</h5>
+<h5>Version 0.9.5, 2015-09-30</h5>
 <ul>
 <li>Re-designed <a href=\"modelica://WindPowerPlants.Blocks.TorqueLimiter\">torque limiter</a></li>
 <li>Replaced first order delay
@@ -27,6 +27,7 @@ you do not have to be concerned about this issue.
     this is a non backwards compatible change</li>
 <li>Added units to input and output connectors with
     unambiguous physical meaning</li>
+<li>Fixed issue #9 with negative lambda in wind turbine model</li>
 </ul>
 
 <h5>Version 0.9.4, 2015-08-06</h5>
