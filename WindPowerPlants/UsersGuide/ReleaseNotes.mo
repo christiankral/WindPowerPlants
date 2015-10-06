@@ -15,7 +15,7 @@ of the library. If you do not use components of the
 you do not have to be concerned about this issue.
 </p>
 
-<h5>Version 0.9.5, 2015-09-30</h5>
+<h5>Version 0.9.5, 2015-10-06</h5>
 <ul>
 <li>Re-designed <a href=\"modelica://WindPowerPlants.Blocks.TorqueLimiter\">torque limiter</a></li>
 <li>Replaced first order delay
