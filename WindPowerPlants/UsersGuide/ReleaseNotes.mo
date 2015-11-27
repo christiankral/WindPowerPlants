@@ -32,13 +32,13 @@ you do not have to be concerned about this issue.
 
 <h5>Version 0.9.4, 2015-08-06</h5>
 <ul>
-<li>Improved setting of intial conditions</li>
+<li>Improved setting of initial conditions</li>
 </ul>
 
 <h5>Version 0.9.3, 2015-08-06</h5>
 <ul>
 <li>Fixed typos in documentation</li>
-<li>Fixed missing intial conditions</li>
+<li>Fixed missing initial conditions</li>
 <li>Improved documentation of third party data source</li>
 </ul>
 
