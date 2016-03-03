@@ -33,4 +33,4 @@ Library authors are [Christian Kral](http://christiankral.net), Philip Eberhart 
 
 # Contact
 
-e-mail: dr.christian.kral(at)gmail.com
+e-mail: dr.christian.kral(at)gmail.com 
