@@ -1,6 +1,6 @@
 package WindPowerPlants "Library of wind power plants"
   extends Modelica.Icons.Package;
-  annotation(version = "0.9.6", versionBuild = 1, versionDate = "2015-10-06", uses(Modelica(version = "3.2.1"), Complex(version = "3.2.1")), preferredView = "info", Documentation(info = "<html>
+  annotation(version = "0.9.7", versionBuild = 1, versionDate = "2016-03-12", uses(Modelica(version = "3.2.1"), Complex(version = "3.2.1")), preferredView = "info", Documentation(info = "<html>
 <h3>WindPowerPlants Library</h3>
 
 <p>The WindPowerPlants library is an open source library for the

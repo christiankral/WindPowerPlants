@@ -1,15 +1,17 @@
 within WindPowerPlants.Functions;
 
+
 function cpVal "Power coefficient"
   extends Modelica.Icons.Function;
-  input WindPowerPlants.Records.TurbineData.Generic turbineData "Wind turbine record";
+  input WindPowerPlants.Records.TurbineData.Generic turbineData
+    "Wind turbine record";
   input Real lambda "Tip speed ratio";
   input Real beta "Pitch angle in degree";
   output Real cp "Power coefficient";
 protected
   Real lambda1 "Internal lambda";
 algorithm
-  lambda1 := 1 / (1 / (lambda + 0.089) - 0.035 / (beta ^ 3 + 1));
+  lambda1 := 1 / (1 / (lambda + 0.089*beta) - 0.035 / (beta ^ 3 + 1));
   cp := turbineData.c1 * (turbineData.c2 / lambda1 - turbineData.c3 * beta - turbineData.c4) * exp(-turbineData.c5 / lambda1) + turbineData.c6 * lambda1;
   cp := max(0, cp);
   annotation(Documentation(info = "<html>
