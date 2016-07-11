@@ -1,5 +1,4 @@
 within WindPowerPlants.Blocks;
-
 block LogTerminal "Log data at terminal time"
   parameter String preString = "Variable = " "String prior to numeric value";
   parameter String postString = "unit" "Unit of numeric value";

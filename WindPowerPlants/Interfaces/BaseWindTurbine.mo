@@ -1,5 +1,4 @@
 within WindPowerPlants.Interfaces;
-
 partial model BaseWindTurbine
   parameter Modelica.SIunits.Density rho = 1.2 "Mass density of air";
   parameter Modelica.SIunits.Length D = 101 "Diameter of wind turbine";

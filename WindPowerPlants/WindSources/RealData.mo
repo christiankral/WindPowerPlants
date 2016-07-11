@@ -1,5 +1,4 @@
 within WindPowerPlants.WindSources;
-
 block RealData "Real wind data from file"
   parameter String fileName = "modelica://WindPowerPlants/Data/EVN01.tx" "File name" annotation(Dialog(group = "Wind data definition", enable = tableOnFile, loadSelector(filter = "Text files (*.txt)", caption = "Open file in which data are present")));
   parameter Modelica.SIunits.Velocity veps(min = 0.001) = 0.01 "Threshold speed greater than zero";

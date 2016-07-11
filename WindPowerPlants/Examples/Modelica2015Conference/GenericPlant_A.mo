@@ -1,5 +1,4 @@
 within WindPowerPlants.Examples.Modelica2015Conference;
-
 model GenericPlant_A "Generic wind power plant A [Eberhart2015] with statistical wind data"
   extends Modelica.Icons.Example;
   Modelica.Blocks.Continuous.Integrator energyIntegrator(k = 1) annotation(Placement(transformation(origin = {60, 20}, extent = {{-10, -10}, {10, 10}})));

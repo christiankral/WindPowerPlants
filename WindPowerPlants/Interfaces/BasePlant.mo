@@ -1,5 +1,4 @@
 within WindPowerPlants.Interfaces;
-
 partial model BasePlant "Ideal wind power plant without elecftrical connector"
   parameter Modelica.SIunits.Length D = 90 "Diameter of wind turbine" annotation(Dialog(tab = "Specification"));
   parameter Modelica.SIunits.Power powerMax = 2E6 "Maximum power to be limited by betaLimit" annotation(Dialog(tab = "Specification"));

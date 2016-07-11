@@ -1,5 +1,4 @@
 within WindPowerPlants.Blocks;
-
 block TriangleAndStep "Multiple steps and triangles"
   parameter Modelica.SIunits.Time T = 1 "Total time of varying outputs";
   parameter Integer stepNumber = 5 "Number of steps";

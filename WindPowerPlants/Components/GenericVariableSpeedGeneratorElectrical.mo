@@ -1,5 +1,4 @@
 within WindPowerPlants.Components;
-
 model GenericVariableSpeedGeneratorElectrical "Idealized doubly fed induction generator with electrical connector"
   parameter Modelica.SIunits.Inertia J = 0 "Moment of inertia" annotation(Evaluate = true);
   parameter Modelica.SIunits.Voltage VRef = 1 "Reference line to line voltage";
@@ -11,7 +10,7 @@ model GenericVariableSpeedGeneratorElectrical "Idealized doubly fed induction ge
   Modelica.Mechanics.Rotational.Sources.Torque torque annotation(Placement(transformation(origin = {-52, 0}, extent = {{-28, -10}, {-8, 10}})));
   Modelica.Mechanics.Rotational.Sensors.PowerSensor mechanicalPowerSensor annotation(Placement(transformation(origin = {-30, 0}, extent = {{-10, 10}, {10, -10}})));
   Sources.IdealRealPowerConductance idealPower(final VRef = VRef, final T = T) annotation(Placement(transformation(extent = {{-10, 10}, {10, 30}})));
-  MSL_322.PowerSensor electricalPowerSensor(final m = 3) annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 270, origin = {0, 50})));
+  Modelica.Electrical.QuasiStationary.MultiPhase.Sensors.PowerSensor electricalPowerSensor(final m = 3) annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 270, origin = {0, 50})));
   Modelica.Electrical.QuasiStationary.MultiPhase.Basic.Star star(final m = 3) annotation(Placement(transformation(extent = {{-50, 40}, {-70, 60}})));
   Modelica.Electrical.QuasiStationary.SinglePhase.Basic.Ground ground annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 270, origin = {-90, 50})));
   Modelica.ComplexBlocks.ComplexMath.ComplexToReal complexToReal annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 90, origin = {-30, 70})));

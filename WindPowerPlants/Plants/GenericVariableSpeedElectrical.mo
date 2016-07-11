@@ -1,5 +1,4 @@
 within WindPowerPlants.Plants;
-
 model GenericVariableSpeedElectrical "Ideal wind power plant with variable speed generator and electrical connector"
   extends Interfaces.BasePlant;
   parameter Modelica.SIunits.Voltage VRef = 10000 "Reference line to line voltage of generator" annotation(Dialog(tab = "Specification"));

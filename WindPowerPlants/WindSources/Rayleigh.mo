@@ -1,5 +1,4 @@
 within WindPowerPlants.WindSources;
-
 block Rayleigh "Rayleigh wind distribution"
   import Modelica.Constants.pi;
   parameter Modelica.SIunits.Velocity vMean = 5 "Mean velocity";

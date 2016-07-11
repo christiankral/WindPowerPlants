@@ -1,5 +1,4 @@
 within WindPowerPlants.Blocks;
-
 model TipSpeedRatio "Determines tip speed ratio"
   parameter Modelica.SIunits.Length D = 101 "Diameter of wind turbine";
   Modelica.Blocks.Interfaces.RealInput v(unit = "m/s") "Wind speed" annotation(Placement(transformation(origin = {-110, 10}, extent = {{-10, -10}, {10, 10}}), iconTransformation(origin = {-120, 0}, extent = {{-20, -20}, {20, 20}})));

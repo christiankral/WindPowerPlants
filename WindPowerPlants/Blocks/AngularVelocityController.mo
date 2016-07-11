@@ -1,5 +1,4 @@
 within WindPowerPlants.Blocks;
-
 model AngularVelocityController "Controller of the angular velocity incorporating tip speed ratio and wind speed"
   parameter WindPowerPlants.Records.TurbineControlData.Generic turbineControlData "Wind turbine record" annotation(choicesAllMatching = true);
   parameter Modelica.SIunits.Length D = 90 "Diameter of wind turbine";

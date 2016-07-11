@@ -1,5 +1,4 @@
 within WindPowerPlants.UsersGuide;
-
 class References "References"
   extends Modelica.Icons.References;
   annotation(preferredView = "info", Documentation(info = "<html>

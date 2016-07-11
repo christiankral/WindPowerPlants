@@ -1,6 +1,4 @@
 within WindPowerPlants.Functions;
-
-
 function cpVal "Power coefficient"
   extends Modelica.Icons.Function;
   input WindPowerPlants.Records.TurbineData.Generic turbineData "Wind turbine record";

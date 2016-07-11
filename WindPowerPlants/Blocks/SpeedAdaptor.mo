@@ -1,5 +1,4 @@
 within WindPowerPlants.Blocks;
-
 model SpeedAdaptor
   parameter Modelica.SIunits.Height hin = 10 "Height of input speed vin";
   parameter Modelica.SIunits.Height hout = 70 "Height of output speed vout";

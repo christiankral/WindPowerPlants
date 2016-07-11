@@ -1,6 +1,4 @@
 within WindPowerPlants.Components;
-
-
 model PitchWindTurbineControlled "Wind turbine with controlled pitch angle"
   extends WindPowerPlants.Interfaces.BaseWindTurbine;
   parameter Boolean limitStart = false "Starting value indicating power limit";

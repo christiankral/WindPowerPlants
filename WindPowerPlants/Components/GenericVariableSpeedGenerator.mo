@@ -1,5 +1,4 @@
 within WindPowerPlants.Components;
-
 model GenericVariableSpeedGenerator "Ideal doubly fed induction generator without electrical connector"
   parameter Modelica.SIunits.Inertia J = 0 "Moment of inertia" annotation(Evaluate = true);
   Modelica.SIunits.AngularVelocity w = der(flange_a.phi) "Angular rotor velocity";

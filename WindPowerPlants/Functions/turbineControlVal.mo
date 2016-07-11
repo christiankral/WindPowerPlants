@@ -1,5 +1,4 @@
 within WindPowerPlants.Functions;
-
 function turbineControlVal "Evaluation of polynominal for given input"
   extends Modelica.Icons.Function;
   input WindPowerPlants.Records.TurbineControlData.Generic turbineControlData "turbine control record";

@@ -1,5 +1,4 @@
 within WindPowerPlants.Sources;
-
 model IdealRealPowerConductance "Ideal three phase power source or sink based on controlled conductance"
   final parameter Integer m = 3 "Number of phases";
   parameter Modelica.SIunits.Voltage VRef = 1 "Reference line to line voltage";
@@ -8,7 +7,7 @@ model IdealRealPowerConductance "Ideal three phase power source or sink based on
   Modelica.Blocks.Interfaces.RealInput power(unit = "W") "Real power to be controlled" annotation(Placement(transformation(extent = {{-140, -20}, {-100, 20}}), iconTransformation(extent = {{-140, -20}, {-100, 20}})));
   Modelica.Electrical.QuasiStationary.MultiPhase.Basic.VariableConductor variableCurrentSource(final m = m) annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 90, origin = {40, 0})));
   Modelica.Electrical.QuasiStationary.MultiPhase.Basic.Star star(final m = m) annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 270, origin = {40, -30})));
-  MSL_322.PowerSensor powerSensor(final m = m) annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 270, origin = {40, 50})));
+  Modelica.Electrical.QuasiStationary.MultiPhase.Sensors.PowerSensor powerSensor(final m = m) annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 270, origin = {40, 50})));
   Modelica.Blocks.Math.Feedback feedback annotation(Placement(transformation(extent = {{-80, 10}, {-60, -10}})));
   Modelica.ComplexBlocks.ComplexMath.ComplexToReal complexToReal annotation(Placement(transformation(extent = {{-20, 60}, {-40, 80}})));
   Modelica.Blocks.Continuous.Integrator integrator(k = 3 / VRef / VRef / T) annotation(Placement(transformation(extent = {{-48, -10}, {-28, 10}})));

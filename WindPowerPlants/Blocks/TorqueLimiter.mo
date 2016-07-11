@@ -1,5 +1,4 @@
 within WindPowerPlants.Blocks;
-
 model TorqueLimiter
   parameter Modelica.SIunits.Torque tauRef "Reference torque";
   parameter Modelica.SIunits.AngularVelocity wRef "Reference angular velocity";

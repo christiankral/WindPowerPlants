@@ -1,5 +1,4 @@
 within WindPowerPlants.Blocks;
-
 model AngularVelocity "Calculates the angular velocity from tip speed ratio and wind speed"
   parameter Modelica.SIunits.Length D = 101 "Diameter of wind turbine";
   Modelica.Blocks.Interfaces.RealInput v(unit = "m/s") "Wind speed" annotation(Placement(transformation(origin = {-110, 0}, extent = {{-10, -10}, {10, 10}}), iconTransformation(origin = {-110, 0}, extent = {{-10, -10}, {10, 10}})));

@@ -1,5 +1,4 @@
 within WindPowerPlants.Plants;
-
 model GenericVariableSpeed "Ideal wind power plant with variable speed generator"
   extends Interfaces.BasePlant;
   Modelica.SIunits.AngularVelocity wGenerator = der(generator.flange_a.phi) "Angular velocity of generator";
