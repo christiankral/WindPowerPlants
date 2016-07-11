@@ -1,5 +1,4 @@
 within WindPowerPlants.Examples;
-
 model GenericPlantRealData "Generic wind power plant simulation with real wind data"
   extends Modelica.Icons.Example;
   parameter String fileName = Modelica.Utilities.Files.loadResource("modelica://WindPowerPlants/Resources/Data/beresford2006.txt") "File on which data is present" annotation(Dialog(loadSelector(filter = "Text files (*.txt)", caption = "Open text file to read parameters of the form \"name = value\"")));

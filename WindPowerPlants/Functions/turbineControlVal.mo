@@ -12,7 +12,7 @@ algorithm
       beta := beta + turbineControlData.p[k] * lambda ^ (size(turbineControlData.p, 1) - k);
     end for;
   end if;
-  annotation( Documentation(info = "<html>
+  annotation (Documentation(info = "<html>
 <p>This function evaluates the polynomial approximation of the optimum power coefficient cp
 storted in the turbine record
 <a href=\"WindPowerPlants.Records.TurbineControlData.Generic\">TurbineControlData</a>.

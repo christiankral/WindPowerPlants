@@ -27,7 +27,7 @@ equation
   connect(star.pin_n, ground.pin) annotation(Line(points = {{40, -40}, {40, -50}}, color = {85, 170, 255}));
   connect(integrator.y, replicator.u) annotation(Line(points = {{-27, 0}, {-12, 0}}, color = {0, 0, 127}));
   connect(replicator.y, variableCurrentSource.G_ref) annotation(Line(points = {{11, 0}, {29, 0}}, color = {0, 0, 127}));
-  annotation( Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics = {Ellipse(extent = {{-60, 60}, {60, -60}}, lineColor = {0, 0, 255}), Line(points = {{0, 90}, {0, 88}, {0, 60}}, color = {0, 0, 255}), Text(extent = {{-40, 40}, {40, -40}}, lineColor = {0, 0, 255}, textString = "P"), Ellipse(extent = {{-80, 80}, {80, -80}}, lineColor = {0, 0, 255})}), Documentation(info = "<html>
+  annotation (Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics={  Ellipse(extent = {{-60, 60}, {60, -60}}, lineColor = {0, 0, 255}), Line(points = {{0, 90}, {0, 88}, {0, 60}}, color = {0, 0, 255}), Text(extent = {{-40, 40}, {40, -40}}, lineColor = {0, 0, 255}, textString = "P"), Ellipse(extent = {{-80, 80}, {80, -80}}, lineColor = {0, 0, 255})}), Documentation(info = "<html>
 <p>
 The ideal real power source is based on a controlled variable conductor.
 The reference voltage and the time constant are required to scale the

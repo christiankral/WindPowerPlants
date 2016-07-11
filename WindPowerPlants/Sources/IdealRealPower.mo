@@ -6,7 +6,11 @@ model IdealRealPower "Ideal three phase power source or sink"
   parameter Modelica.SIunits.Time T = 1E-3 "Internal control time constant";
   Modelica.Electrical.QuasiStationary.MultiPhase.Interfaces.PositivePlug positivePlug annotation(Placement(transformation(extent = {{-10, 90}, {10, 110}}), iconTransformation(extent = {{-10, 90}, {10, 110}})));
   Modelica.Blocks.Interfaces.RealInput power(unit = "W") "Real power to be controlled" annotation(Placement(transformation(extent = {{-140, -20}, {-100, 20}}), iconTransformation(extent = {{-140, -20}, {-100, 20}})));
-  MSL_322.VariableUnrootedCurrentSource variableCurrentSource(final m = m) annotation(Placement(transformation(extent = {{10, -10}, {-10, 10}}, rotation = 90, origin = {40, 40})));
+  VariableUnrootedCurrentSource variableCurrentSource(final m=m) annotation (
+      Placement(transformation(
+        extent={{10,-10},{-10,10}},
+        rotation=90,
+        origin={40,40})));
   Modelica.Electrical.QuasiStationary.MultiPhase.Basic.Star star(final m = m) annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 270, origin = {40, 10})));
   MSL_322.PowerSensor powerSensor(final m = m) annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 270, origin = {40, 70})));
   Modelica.Electrical.QuasiStationary.MultiPhase.Sensors.PotentialSensor potentialSensor(final m = m) annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 270, origin = {70, 90})));
@@ -36,7 +40,7 @@ equation
   connect(star.pin_n, ground.pin) annotation(Line(points = {{40, 1.33227e-15}, {40, -10}}, color = {85, 170, 255}));
   connect(powerSensor.currentN, variableCurrentSource.plug_p) annotation(Line(points = {{40, 60}, {40, 50}}, color = {85, 170, 255}));
   connect(variableCurrentSource.plug_n, star.plug_p) annotation(Line(points = {{40, 30}, {40, 20}}, color = {85, 170, 255}));
-  annotation( Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics = {Ellipse(extent = {{-60, 60}, {60, -60}}, lineColor = {0, 0, 255}), Line(points = {{0, 90}, {0, 88}, {0, 60}}, color = {0, 0, 255}), Text(extent = {{-40, 40}, {40, -40}}, lineColor = {0, 0, 255}, textString = "P")}), Documentation(info = "<html>
+  annotation (Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics={  Ellipse(extent = {{-60, 60}, {60, -60}}, lineColor = {0, 0, 255}), Line(points = {{0, 90}, {0, 88}, {0, 60}}, color = {0, 0, 255}), Text(extent = {{-40, 40}, {40, -40}}, lineColor = {0, 0, 255}, textString = "P")}), Documentation(info = "<html>
 <p>
 The ideal real power source is based on a space phasor approach,
 where the current and voltage space phasor are aligned.

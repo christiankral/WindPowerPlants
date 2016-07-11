@@ -1,5 +1,4 @@
 within WindPowerPlants.Records.TurbineData;
-
 record Generic "Gerneric wind turbine record"
   extends Modelica.Icons.Record;
   parameter Real c1 "c1 coefficient";

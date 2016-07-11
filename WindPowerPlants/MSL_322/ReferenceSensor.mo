@@ -1,7 +1,8 @@
 within WindPowerPlants.MSL_322;
 
 model ReferenceSensor "Sensor of reference angle gamma"
-  extends Modelica.Electrical.QuasiStationary.MultiPhase.Interfaces.AbsoluteSensor;
+  extends
+    Modelica.Electrical.QuasiStationary.MultiPhase.Interfaces.AbsoluteSensor;
   Modelica.Blocks.Interfaces.RealOutput y "Reference angle" annotation(Placement(transformation(extent = {{100, -10}, {120, 10}})));
 equation
   y = plug_p.reference.gamma;

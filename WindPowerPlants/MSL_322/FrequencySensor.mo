@@ -1,7 +1,8 @@
 within WindPowerPlants.MSL_322;
 
 model FrequencySensor "Frequency sensor"
-  extends Modelica.Electrical.QuasiStationary.MultiPhase.Interfaces.AbsoluteSensor;
+  extends
+    Modelica.Electrical.QuasiStationary.MultiPhase.Interfaces.AbsoluteSensor;
   Modelica.Electrical.QuasiStationary.SinglePhase.Sensors.FrequencySensor frequencySensor annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}})));
   Modelica.Electrical.QuasiStationary.MultiPhase.Basic.PlugToPin_p plugToPin_p(final m = m, final k = 1) annotation(Placement(transformation(extent = {{-80, -10}, {-60, 10}})));
   Modelica.Blocks.Interfaces.RealOutput y annotation(Placement(transformation(extent = {{100, -10}, {120, 10}})));
