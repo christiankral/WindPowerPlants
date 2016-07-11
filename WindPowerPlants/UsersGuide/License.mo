@@ -2,7 +2,7 @@ within WindPowerPlants.UsersGuide;
 class License "Modelica License 1.1"
   extends Modelica.Icons.Information;
   annotation(Documentation(info = "<html>
-<h3>WindPowerPlants Modelica Library and Octave Scripts</h3>
+<h4>WindPowerPlants Modelica Library and Octave Scripts</h4>
 
 <p>The WindPowerPlants library and the included Octave scripts are released under the
 <a href=\"https://www.modelica.org/licenses/ModelicaLicense1.1\">Modelica License 1.1</a>
@@ -41,7 +41,7 @@ The software (sources, binaries, etc.) in their original or in a modified form
  even if advised of the possibility of such damage.
 </p>
 
-<h3>Wind Data</h3>
+<h4>Wind Data</h4>
 
 <p>Examples of real wind data can be taken from
 <a href=\"https://catalog.data.gov/dataset/anemometer-data-wind-speed-direction-for-beresford-south-dakota-2006-4f2db\">data.gov</a>
