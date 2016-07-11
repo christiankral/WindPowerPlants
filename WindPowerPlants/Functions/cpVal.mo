@@ -8,7 +8,7 @@ function cpVal "Power coefficient"
 protected
   Real lambda1 "Internal lambda";
 algorithm
-  lambda1 := 1 / (1 / (lambda + 0.08*beta) - 0.035 / (beta ^ 3 + 1));
+  lambda1 := 1 / (1 / (lambda + 0.08*beta + Modelica.Constants.eps) - 0.035 / (beta ^ 3 + 1));
   cp := turbineData.c1 * (turbineData.c2 / lambda1 - turbineData.c3 * beta - turbineData.c4) * exp(-turbineData.c5 / lambda1) + turbineData.c6 * lambda1;
   cp := max(0, cp);
   annotation(Documentation(info = "<html>
