@@ -3,6 +3,12 @@ class ReleaseNotes "Release Notes"
   extends Modelica.Icons.ReleaseNotes;
   annotation(preferredView = "info", Documentation(info="<html>
 
+<h5>Version 1.X.X, 2017-XX-XX</h5>
+<ul>
+<li>Fixed wrong image according to equation fix of #15</li>
+<li>Fixed wrong link in <a href=\"modelica://WindPowerPlants.Components.PitchWindTurbine\">PitchWindTurbine</a></li>
+</ul>
+
 <h5>Version 1.0.0, 2016-07-11</h5>
 <ul>
 <li>Removed package <code>MSL_322</code> and switched to MSL 3.2.2; this is an announced <b>non backwards compatible change</b></li>
