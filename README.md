@@ -2,7 +2,7 @@
 
 The WindPowerPlants library is an open source library for the simulation of wind power plants. The library provides models of wind turbines, generators and control.
 
-#Library description
+# Library description
 
 In the presented version of the library wind turbine models are modeled with
 pitch control. The generator models have variable speed and an optional
