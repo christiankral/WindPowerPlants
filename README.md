@@ -11,6 +11,8 @@ conditions and losses are fully neglected. Yet, the library
 can be extended towards more detailed models considering different types of
 losses.
 
+![GenericPlantElectricRealData](https://github.com/christiankral/WindPowerPlants/blob/master/WindPowerPlants/Resources/Images/GenericPlantElectricRealData.png)
+
 The WindPowerPlants library does not model all the controllers that a real
 wind power plant has. Instead, the intention was to model the overall
 behavior of wind power plants in such a way, that the major operating
