@@ -10,7 +10,7 @@ equation
     terminalValue = gain * u;
     Modelica.Utilities.Streams.print(preString + String(terminalValue) + postString);
   end when;
-  annotation(Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics = {Rectangle(extent = {{-100, 102}, {100, -100}}, lineColor = {0, 0, 0}, fillColor = {255, 255, 255}, fillPattern = FillPattern.Solid), Rectangle(extent = {{-58, 60}, {62, -60}}, lineColor = {255, 0, 0}, fillColor = {255, 255, 255}, fillPattern = FillPattern.Solid), Line(points = {{-40, -40}, {40, 40}}, color = {255, 0, 0}), Line(points = {{-40, 40}, {40, -40}}, color = {255, 0, 0}), Text(origin = {0, 123}, lineColor = {0, 0, 255}, extent = {{-100, 9}, {100, -11}}, textString = "%name")}), Documentation(info = "<html>
+  annotation(Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics={  Rectangle(extent = {{-100, 102}, {100, -100}}, lineColor = {0, 0, 0}, fillColor = {255, 255, 255}, fillPattern = FillPattern.Solid), Rectangle(extent = {{-58, 60}, {62, -60}}, lineColor = {255, 0, 0}, fillColor = {255, 255, 255}, fillPattern = FillPattern.Solid), Line(points = {{-40, -40}, {40, 40}}, color = {255, 0, 0}), Line(points = {{-40, 40}, {40, -40}}, color = {255, 0, 0}), Text(origin = {0, 123}, lineColor = {0, 0, 255}, extent = {{-100, 9}, {100, -11}}, textString = "%name")}), Documentation(info = "<html>
 <p>This block writes a value to the Modelica log file once the simulation terminates. The output to the Modelica log file consists of:
 <ul>
 <li>a string written prior to the numeric value</li>

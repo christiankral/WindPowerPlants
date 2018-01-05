@@ -30,7 +30,7 @@ equation
   connect(angularVelocity.w, PID.u_s) annotation(Line(points = {{-19, -60}, {-2, -60}}, color = {0, 0, 127}));
   connect(PID.y, tau) annotation(Line(points = {{21, -60}, {60, -60}, {60, 4.44089e-16}, {110, 4.44089e-16}}, color = {0, 0, 127}));
   connect(zero.y, PID.u_m) annotation(Line(points = {{79, -90}, {10, -90}, {10, -72}}, color = {0, 0, 127}));
-  annotation (Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics = {Rectangle(extent = {{-100, 100}, {100, -100}}, lineColor = {0, 0, 127}, fillColor = {255, 255, 255}, fillPattern = FillPattern.Solid), Ellipse(extent = {{-20, 20}, {20, -20}}, lineColor = {95, 95, 95}, fillColor = {255, 255, 255}, fillPattern = FillPattern.Solid), Text(extent = {{-150, 150}, {150, 110}}, textString = "%name", lineColor = {0, 0, 255})}), Documentation(info = "<html>
+  annotation (Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics={  Rectangle(extent = {{-100, 100}, {100, -100}}, lineColor = {0, 0, 127}, fillColor = {255, 255, 255}, fillPattern = FillPattern.Solid), Ellipse(extent = {{-20, 20}, {20, -20}}, lineColor = {95, 95, 95}, fillColor = {255, 255, 255}, fillPattern = FillPattern.Solid), Text(extent = {{-150, 150}, {150, 110}}, textString = "%name", lineColor = {0, 0, 255})}), Documentation(info = "<html>
 <p>This model controls the angular velocity <code>w</code> based
 on the tip speed ration <code>lambda</code> and wind speed
 <code>v</code>. For wind speeds below the cut in wind speed, <code>vMin</code>, zero angular
