@@ -3,6 +3,11 @@ class ReleaseNotes "Release Notes"
   extends Modelica.Icons.ReleaseNotes;
   annotation(preferredView = "info", Documentation(info="<html>
 
+<h5>Version 1.1.1, 2018-10-19</h5>
+<ul>
+<li>Fix Modelica versioning conflict</li>
+</ul>
+
 <h5>Version 1.1.0, 2018-10-14</h5>
 <ul>
 <li>Change Modelica 1.1 to BSD 3-clause license</li>
@@ -10,8 +15,8 @@ class ReleaseNotes "Release Notes"
 
 <h5>Version 1.0.1, 2018-01-05</h5>
 <ul>
-<li>Fixed 
-    <a href=\"modelica://PhotoVoltaics.Sources.Blocks.TriangleAndStep\">TriangleAndStep</a>, see 
+<li>Fixed
+    <a href=\"modelica://PhotoVoltaics.Sources.Blocks.TriangleAndStep\">TriangleAndStep</a>, see
     <a href=\"https://github.com/christiankral/PhotoVoltaics/issues/18\">#18</a></li>
 <li>Fixed wrong image according to equation fix of #15</li>
 <li>Fixed wrong link in <a href=\"modelica://WindPowerPlants.Components.PitchWindTurbine\">PitchWindTurbine</a></li>
