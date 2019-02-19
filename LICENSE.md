@@ -1,6 +1,6 @@
 BSD 3-Clause License
 
-Copyright 2015-2018 Christian Kral, Philip Eberhart, Tek Shan Chung
+Copyright 2015-2019 Christian Kral, Philip Eberhart, Tek Shan Chung
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
