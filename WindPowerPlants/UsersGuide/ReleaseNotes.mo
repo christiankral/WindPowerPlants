@@ -7,6 +7,8 @@ class ReleaseNotes "Release Notes"
 <ul>
 <li>Add unit to integrator in examples, see 
     <a href=\"https://github.com/christiankral/WindPowerPlants/issues/21\">#21</a></li>
+<li>Fix wrong boolean parameter in annotation, see
+    <a href=\"https://github.com/christiankral/WindPowerPlants/issues/22\">#22</a></li>
 </ul>
 
 <h5>Version 1.1.1, 2018-10-19</h5>
