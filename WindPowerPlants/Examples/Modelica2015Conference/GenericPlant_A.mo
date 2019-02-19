@@ -1,7 +1,8 @@
 within WindPowerPlants.Examples.Modelica2015Conference;
 model GenericPlant_A "Generic wind power plant A [Eberhart2015] with statistical wind data"
   extends Modelica.Icons.Example;
-  Modelica.Blocks.Continuous.Integrator energyIntegrator(k = 1) annotation(Placement(transformation(origin = {60, 20}, extent = {{-10, -10}, {10, 10}})));
+  Modelica.Blocks.Continuous.Integrator energyIntegrator(k = 1, y(unit="J"))
+                                                                annotation(Placement(transformation(origin = {60, 20}, extent = {{-10, -10}, {10, 10}})));
   Plants.GenericVariableSpeed plant(rho = 1.198, D = 112, powerMax = 3E6, JTurbine = 3E7) annotation(Placement(transformation(extent = {{10, -10}, {30, 10}})));
   WindPowerPlants.WindSources.Rayleigh windSource(n = 25, vMax = 25, T = 31536000, vMean = 6.95) annotation(Placement(transformation(origin = {-10, 0}, extent = {{-10, -10}, {10, 10}})));
   Blocks.LogTerminal logTerminal(preString = "Total energy = ", postString = " kWh", gain = 1 / 3.6E6) annotation(Placement(transformation(extent = {{80, 10}, {100, 30}})));

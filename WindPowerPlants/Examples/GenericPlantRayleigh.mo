@@ -1,7 +1,8 @@
 within WindPowerPlants.Examples;
 model GenericPlantRayleigh "Generic wind power plant simulation with statistical wind data"
   extends Modelica.Icons.Example;
-  Modelica.Blocks.Continuous.Integrator energyIntegrator(k = 1) annotation(Placement(transformation(origin = {60, 20}, extent = {{-10, -10}, {10, 10}})));
+  Modelica.Blocks.Continuous.Integrator energyIntegrator(k = 1, y(unit="J"))
+                                                                annotation(Placement(transformation(origin = {60, 20}, extent = {{-10, -10}, {10, 10}})));
   Plants.GenericVariableSpeed plant annotation(Placement(transformation(extent = {{10, -10}, {30, 10}})));
   WindPowerPlants.WindSources.Rayleigh windSource(n = 25, vMax = 25, vMean = 6.07, T = 2678400) annotation(Placement(transformation(origin = {-40, 0}, extent = {{-10, -10}, {10, 10}})));
   Blocks.SpeedAdaptor speedadaptor1(hin = 50, hout = 105, roughness = 0.1) annotation(Placement(transformation(origin = {-10, 0}, extent = {{-10, -10}, {10, 10}})));

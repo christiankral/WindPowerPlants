@@ -10,7 +10,7 @@ This library is published under the
 <a href=\"https://opensource.org/licenses/BSD-3-Clause\">BSD-3-Clause</a>.
 </p>
 <p>
-Copyright 2015-2018 Christian Kral, Philip Eberhart, Tek Shan Chung
+Copyright 2015-2019 Christian Kral, Philip Eberhart, Tek Shan Chung
 </p>
 
 <p>
