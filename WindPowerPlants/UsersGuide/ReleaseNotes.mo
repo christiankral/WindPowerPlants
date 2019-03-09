@@ -3,6 +3,13 @@ class ReleaseNotes "Release Notes"
   extends Modelica.Icons.ReleaseNotes;
   annotation(preferredView = "info", Documentation(info="<html>
 
+<h5>Version 1.2.0, 2019-03-09</h5>
+<ul>
+<li>Switch to Modelica Standard Library 3.2.3, see 
+    <a href=\"https://github.com/christiankral/WindPowerPlants/issues/23\">#23</a></li>
+<li>Remove <code>versionBuild</code> from libraray annotation</li>
+</ul>
+
 <h5>Version 1.1.2, 2019-02-19</h5>
 <ul>
 <li>Add unit to integrator in examples, see 
