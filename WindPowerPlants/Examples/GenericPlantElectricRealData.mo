@@ -10,9 +10,9 @@ model GenericPlantElectricRealData "Generic wind power plant simulation with rea
   WindPowerPlants.Plants.GenericVariableSpeedElectrical plant annotation(Placement(transformation(origin = {20, 0}, extent = {{-10, -10}, {10, 10}})));
   Modelica.Electrical.QuasiStationary.MultiPhase.Sources.VoltageSource voltagesource(f = 50, V = fill(10000 / sqrt(3), 3)) annotation(Placement(transformation(origin = {-10, -70}, extent = {{-10, -10}, {10, 10}}, rotation = 180)));
   Modelica.Electrical.QuasiStationary.MultiPhase.Basic.Star star annotation(Placement(transformation(origin = {-40, -70}, extent = {{-10, -10}, {10, 10}}, rotation = 180)));
-  WindSources.RealData windSource(fileName = fileName) annotation(Placement(transformation(extent = {{-50, -10}, {-30, 10}})));
-  Blocks.LogTerminal logTerminal(preString = "Total energy = ", postString = " kWh", gain = 1 / 3.6E6) annotation(Placement(transformation(extent = {{80, 10}, {100, 30}})));
-  Blocks.SpeedAdaptor speedadaptor1(hin = 50, hout = 105, roughness = 0.1) annotation(Placement(transformation(origin = {-10, 0}, extent = {{-10, -10}, {10, 10}})));
+  WindPowerPlants.WindSources.RealData windSource(fileName = fileName) annotation(Placement(transformation(extent = {{-50, -10}, {-30, 10}})));
+  WindPowerPlants.Blocks.LogTerminal logTerminal(preString = "Total energy = ", postString = " kWh", gain = 1 / 3.6E6) annotation(Placement(transformation(extent = {{80, 10}, {100, 30}})));
+  WindPowerPlants.Blocks.SpeedAdaptor speedadaptor1(hin = 50, hout = 105, roughness = 0.1) annotation(Placement(transformation(origin = {-10, 0}, extent = {{-10, -10}, {10, 10}})));
 equation
   connect(star.pin_n, ground.pin) annotation(Line(points = {{-50, -70}, {-60, -70}}, color = {85, 170, 255}));
   connect(star.plug_p, voltagesource.plug_n) annotation(Line(points = {{-30, -70}, {-20, -70}}, color = {85, 170, 255}));
