@@ -14,7 +14,7 @@ record Generic "Gerneric wind turbine record"
 <img src=\"modelica://WindPowerPlants/Resources/Images/cpturbine.png\"/>
 </p>
 <p>
-<img src=\"modelica://WindPowerPlants/Resources/Images/lambda1turbine.png\"/>
+<img src=\"modelica://WindPowerPlants/Resources/Images/lambda_i_turbine.png\"/>
 </p>
 </html>"));
 end Generic;
