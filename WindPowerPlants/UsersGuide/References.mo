@@ -1,7 +1,7 @@
 within WindPowerPlants.UsersGuide;
 class References "References"
   extends Modelica.Icons.References;
-  annotation(preferredView = "info", Documentation(info = "<html>
+  annotation(preferredView = "info", Documentation(info="<html>
 <h4>References</h4>
 
 <table border=\"0\" cellspacing=\"0\" cellpadding=\"2\">
@@ -21,6 +21,11 @@ class References "References"
         Source Library for the Simulation of Wind Power Plants</a>,&quot;
         <i>Modelica Conference</i>,
         September 2015.</td>
+    </tr>
+
+    <tr>
+      <td valign=\"top\">[Eberhart2015*]</td>
+      <td valign=\"top\"><a href=\"https://github.com/christiankral/WindPowerPlants/blob/master/WindPowerPlants/Resources/pdf/WindPowerPlants.pdf\">Bug fix version of [Eberhart2015]</td>
     </tr>
 
     <tr>

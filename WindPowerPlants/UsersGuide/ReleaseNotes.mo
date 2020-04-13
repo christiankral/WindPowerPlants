@@ -7,6 +7,7 @@ class ReleaseNotes "Release Notes"
 <ul>
 <li>Changed internal variable <code>lambda1</code> to <code>lambda_i</code>
     <a href=\"https://github.com/christiankral/WindPowerPlants/issues/27\">#27</a></li>
+<li>Add bug fix version of [<a href=\"WindPowerPlants.UsersGuide.References\">Eberhardt2015*</a>]</code>
 </ul>
 
 <h5>Version 1.3.0, 2019-10-29</h5>
