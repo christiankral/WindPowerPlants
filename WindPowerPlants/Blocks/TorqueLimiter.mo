@@ -1,15 +1,27 @@
 within WindPowerPlants.Blocks;
 model TorqueLimiter
-  parameter Modelica.SIunits.Torque tauRef "Reference torque";
-  parameter Modelica.SIunits.AngularVelocity wRef "Reference angular velocity";
+  parameter Modelica.Units.SI.Torque tauRef "Reference torque";
+  parameter Modelica.Units.SI.AngularVelocity wRef "Reference angular velocity";
   parameter Real linear = 0.02 "Linear range for w < wRef*linear";
   parameter Real limit = 0.02 "Relative torque limit w.r.t. tauRef for zero speed";
   Modelica.Blocks.Interfaces.RealInput tau(unit = "N.m") "Torque" annotation(Placement(transformation(origin = {-110, 0}, extent = {{-10, -10}, {10, 10}}), iconTransformation(origin = {-120, 0}, extent = {{-20, -20}, {20, 20}})));
   Modelica.Blocks.Interfaces.RealOutput tauLimited(unit = "N.m") "Limited Torque" annotation(Placement(transformation(extent = {{100, -10}, {120, 10}}), iconTransformation(extent = {{100, -10}, {120, 10}})));
   Modelica.Blocks.Interfaces.RealInput w(unit = "rad/s") "rotational speed" annotation(Placement(transformation(origin = {0, 110}, extent = {{-10, -10}, {10, 10}}, rotation = 270), iconTransformation(origin = {0, 120}, extent = {{-20, -20}, {20, 20}}, rotation = 270)));
   Modelica.Blocks.Nonlinear.VariableLimiter variableLimiter annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}})));
-  Modelica.Blocks.Tables.CombiTable1D upperLimit(smoothness = Modelica.Blocks.Types.Smoothness.LinearSegments, table = [-2 * wRef, tauRef; -linear * wRef, tauRef; -linear * limit * wRef, limit * tauRef; limit * wRef, limit * tauRef; wRef, tauRef; 2 * wRef, tauRef]) annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 270, origin = {-30, 30})));
-  Modelica.Blocks.Tables.CombiTable1D lowerLimit(smoothness = Modelica.Blocks.Types.Smoothness.LinearSegments, table = [-2 * wRef, -tauRef; -wRef, -tauRef; -limit * wRef, -limit * tauRef; linear * limit * wRef, -limit * tauRef; linear * wRef, -tauRef; 2 * wRef, -tauRef]) annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 270, origin = {-60, 30})));
+  Modelica.Blocks.Tables.CombiTable1Dv upperLimit(smoothness=Modelica.Blocks.Types.Smoothness.LinearSegments,
+      table=[-2*wRef,tauRef; -linear*wRef,tauRef; -linear*limit*wRef,limit*
+        tauRef; limit*wRef,limit*tauRef; wRef,tauRef; 2*wRef,tauRef])
+    annotation (Placement(transformation(
+        extent={{-10,-10},{10,10}},
+        rotation=270,
+        origin={-30,30})));
+  Modelica.Blocks.Tables.CombiTable1Dv lowerLimit(smoothness=Modelica.Blocks.Types.Smoothness.LinearSegments,
+      table=[-2*wRef,-tauRef; -wRef,-tauRef; -limit*wRef,-limit*tauRef; linear*
+        limit*wRef,-limit*tauRef; linear*wRef,-tauRef; 2*wRef,-tauRef])
+    annotation (Placement(transformation(
+        extent={{-10,-10},{10,10}},
+        rotation=270,
+        origin={-60,30})));
 equation
   connect(tau, variableLimiter.u) annotation(Line(points = {{-110, 0}, {-12, 0}, {-12, 0}}, color = {0, 0, 127}));
   connect(variableLimiter.y, tauLimited) annotation(Line(points = {{11, 0}, {110, 0}, {110, 0}}, color = {0, 0, 127}));

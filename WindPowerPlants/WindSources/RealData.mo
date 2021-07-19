@@ -1,7 +1,8 @@
 within WindPowerPlants.WindSources;
 block RealData "Real wind data from file"
   parameter String fileName = "modelica://WindPowerPlants/Data/EVN01.tx" "File name" annotation(Dialog(group = "Wind data definition", enable = combiTimeTable.tableOnFile, loadSelector(filter = "Text files (*.txt)", caption = "Open file in which data are present")));
-  parameter Modelica.SIunits.Velocity veps(min = 0.001) = 0.01 "Threshold speed greater than zero";
+  parameter Modelica.Units.SI.Velocity veps(min=0.001) = 0.01
+    "Threshold speed greater than zero";
   Modelica.Blocks.Sources.CombiTimeTable combiTimeTable(final tableOnFile = true, final tableName = "velocity", final fileName = fileName, final extrapolation = Modelica.Blocks.Types.Extrapolation.Periodic, final smoothness = Modelica.Blocks.Types.Smoothness.LinearSegments, final columns = {2, 3}) annotation(Placement(transformation(extent={{-10,-10},{10,10}})));
   Modelica.Blocks.Interfaces.RealOutput v(unit = "m/s") "Wind velocity" annotation(Placement(transformation(extent = {{100, -10}, {120, 10}})));
   Modelica.Blocks.Math.Max threshold annotation(Placement(transformation(origin = {50, 0}, extent = {{-10, -10}, {10, 10}})));

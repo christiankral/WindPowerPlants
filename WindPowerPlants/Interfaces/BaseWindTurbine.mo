@@ -1,11 +1,12 @@
 within WindPowerPlants.Interfaces;
 partial model BaseWindTurbine
-  parameter Modelica.SIunits.Density rho = 1.2 "Mass density of air";
-  parameter Modelica.SIunits.Length D = 101 "Diameter of wind turbine";
-  parameter Modelica.SIunits.Power powerMax = 3.05E6 "Maximum mechanical power to be limited by betaLimit";
+  parameter Modelica.Units.SI.Density rho=1.2 "Mass density of air";
+  parameter Modelica.Units.SI.Length D=101 "Diameter of wind turbine";
+  parameter Modelica.Units.SI.Power powerMax=3.05E6
+    "Maximum mechanical power to be limited by betaLimit";
   parameter WindPowerPlants.Records.TurbineData.Generic turbineData "Wind turbine data" annotation(choicesAllMatching = true);
-  Modelica.SIunits.Torque tau "Torque of flange_a";
-  Modelica.SIunits.Angle phi "Angle of flange_a";
+  Modelica.Units.SI.Torque tau "Torque of flange_a";
+  Modelica.Units.SI.Angle phi "Angle of flange_a";
   Modelica.Blocks.Interfaces.RealInput v(unit = "m/s") "Wind velocity" annotation(Placement(transformation(origin = {-110, 0}, extent = {{-10, -10}, {10, 10}}), iconTransformation(origin = {-110, 0}, extent = {{-10, -10}, {10, 10}})));
   Modelica.Mechanics.Rotational.Interfaces.Flange_a flange_a annotation(Placement(transformation(origin = {100, 0}, extent = {{-10, -10}, {10, 10}}), iconTransformation(origin = {100, 0}, extent = {{-10, -10}, {10, 10}})));
 equation

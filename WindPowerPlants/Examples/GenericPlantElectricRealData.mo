@@ -4,12 +4,29 @@ model GenericPlantElectricRealData "Generic wind power plant simulation with rea
   parameter String fileName = Modelica.Utilities.Files.loadResource("modelica://WindPowerPlants/Resources/Data/beresford2006.txt") "File on which data is present" annotation(Dialog(loadSelector(filter = "Text files (*.txt)", caption = "Open text file to read parameters of the form \"name = value\"")));
   Modelica.Blocks.Continuous.Integrator energyIntegrator(y(unit="J"))
                                                          annotation(Placement(transformation(origin = {60, 20}, extent = {{-10, -10}, {10, 10}})));
-  Modelica.Electrical.QuasiStationary.MultiPhase.Basic.Resistor resistor(R_ref = fill(1, 3)) annotation(Placement(transformation(origin = {20, -30}, extent = {{-10, -10}, {10, 10}}, rotation = 90)));
-  Modelica.Electrical.QuasiStationary.MultiPhase.Basic.Inductor inductor(L = fill(0.0072934, 3)) annotation(Placement(transformation(origin = {20, -60}, extent = {{-10, -10}, {10, 10}}, rotation = 90)));
-  Modelica.Electrical.QuasiStationary.SinglePhase.Basic.Ground ground annotation(Placement(transformation(origin = {-60, -80}, extent = {{-10, -10}, {10, 10}})));
+  Modelica.Electrical.QuasiStatic.Polyphase.Basic.Resistor resistor(R_ref=fill(
+        1, 3)) annotation (Placement(transformation(
+        origin={20,-30},
+        extent={{-10,-10},{10,10}},
+        rotation=90)));
+  Modelica.Electrical.QuasiStatic.Polyphase.Basic.Inductor inductor(L=fill(
+        0.0072934, 3)) annotation (Placement(transformation(
+        origin={20,-60},
+        extent={{-10,-10},{10,10}},
+        rotation=90)));
+  Modelica.Electrical.QuasiStatic.SinglePhase.Basic.Ground ground annotation (
+      Placement(transformation(origin={-60,-80}, extent={{-10,-10},{10,10}})));
   WindPowerPlants.Plants.GenericVariableSpeedElectrical plant annotation(Placement(transformation(origin = {20, 0}, extent = {{-10, -10}, {10, 10}})));
-  Modelica.Electrical.QuasiStationary.MultiPhase.Sources.VoltageSource voltagesource(f = 50, V = fill(10000 / sqrt(3), 3)) annotation(Placement(transformation(origin = {-10, -70}, extent = {{-10, -10}, {10, 10}}, rotation = 180)));
-  Modelica.Electrical.QuasiStationary.MultiPhase.Basic.Star star annotation(Placement(transformation(origin = {-40, -70}, extent = {{-10, -10}, {10, 10}}, rotation = 180)));
+  Modelica.Electrical.QuasiStatic.Polyphase.Sources.VoltageSource voltagesource(
+      f=50, V=fill(10000/sqrt(3), 3)) annotation (Placement(transformation(
+        origin={-10,-70},
+        extent={{-10,-10},{10,10}},
+        rotation=180)));
+  Modelica.Electrical.QuasiStatic.Polyphase.Basic.Star star annotation (
+      Placement(transformation(
+        origin={-40,-70},
+        extent={{-10,-10},{10,10}},
+        rotation=180)));
   WindPowerPlants.WindSources.RealData windSource(fileName = fileName) annotation(Placement(transformation(extent = {{-50, -10}, {-30, 10}})));
   WindPowerPlants.Blocks.LogTerminal logTerminal(preString = "Total energy = ", postString = " kWh", gain = 1 / 3.6E6) annotation(Placement(transformation(extent = {{80, 10}, {100, 30}})));
   WindPowerPlants.Blocks.SpeedAdaptor speedadaptor1(hin = 50, hout = 105, roughness = 0.1) annotation(Placement(transformation(origin = {-10, 0}, extent = {{-10, -10}, {10, 10}})));

@@ -1,23 +1,27 @@
 within WindPowerPlants.WindSources;
 block Rayleigh "Rayleigh wind distribution"
   import Modelica.Constants.pi;
-  parameter Modelica.SIunits.Velocity vMean = 5 "Mean velocity";
-  parameter Modelica.SIunits.Velocity vMax = 20 "Maximum velocity (v<=vMax)";
+  parameter Modelica.Units.SI.Velocity vMean=5 "Mean velocity";
+  parameter Modelica.Units.SI.Velocity vMax=20 "Maximum velocity (v<=vMax)";
   parameter Integer n = 10 "Number of intervals";
-  parameter Modelica.SIunits.Time T = 100 "Time period";
+  parameter Modelica.Units.SI.Time T=100 "Time period";
   parameter Boolean increaseDecrease = false "If true, altering velocity increase and decrease after one period";
-  final parameter Modelica.SIunits.Velocity dv = vMax / n "Velocity increment";
-  final parameter Modelica.SIunits.Velocity vDiscrete[n] = array(k * dv for k in 1:n) "Discrete velocities";
+  final parameter Modelica.Units.SI.Velocity dv=vMax/n "Velocity increment";
+  final parameter Modelica.Units.SI.Velocity vDiscrete[n]=array(k*dv for k in 1
+      :n) "Discrete velocities";
   final parameter Real rayleigh[n] = array(dv * pi / 2 * vDiscrete[k] / vMean ^ 2 * exp(-pi / 4 * vDiscrete[k] ^ 2 / vMean ^ 2) for k in 1:n) "Rayleigh probaility";
   final parameter Real rayleigh_sum = sum(rayleigh) "Sum of all rayleigh probabilities";
   final parameter Real probability[n] = rayleigh / rayleigh_sum "Probabilities of velocities";
-  final parameter Modelica.SIunits.Time tDiscrete[n] = probability * T "Discrete durations";
+  final parameter Modelica.Units.SI.Time tDiscrete[n]=probability*T
+    "Discrete durations";
   // Variables
   Integer counter(final start = 0, final fixed = true) "Counter of repeating velocity distribution after time T";
   Integer index(final start = 1, final fixed = true) "Velocity index";
   Integer increment(final start = 1, final fixed = true) "Increment of index";
-  Modelica.SIunits.Time tNext(final start = tDiscrete[1], final fixed = true) "Time of next event";
-  discrete Modelica.SIunits.Velocity velocity(final start = vDiscrete[1], final fixed = true) "Velocity";
+  Modelica.Units.SI.Time tNext(final start=tDiscrete[1], final fixed=true)
+    "Time of next event";
+  discrete Modelica.Units.SI.Velocity velocity(final start=vDiscrete[1], final
+      fixed=true) "Velocity";
   Modelica.Blocks.Interfaces.RealOutput v(unit = "m/s") "Wind velocity" annotation(Placement(transformation(extent = {{100, -10}, {120, 10}})));
 algorithm
   when time >= tNext then

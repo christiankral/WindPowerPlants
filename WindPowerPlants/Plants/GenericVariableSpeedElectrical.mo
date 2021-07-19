@@ -1,15 +1,21 @@
 within WindPowerPlants.Plants;
 model GenericVariableSpeedElectrical "Ideal wind power plant with variable speed generator and electrical connector"
   extends Interfaces.BasePlant;
-  parameter Modelica.SIunits.Voltage VRef = 10000 "Reference line to line voltage of generator" annotation(Dialog(tab = "Specification"));
-  Modelica.SIunits.AngularVelocity wGenerator = der(generator.flange_a.phi) "Angular velocity of generator";
-  Modelica.SIunits.AngularVelocity wTurbine = der(windturbine.flange_a.phi) "Angular velocity of turbine";
+  parameter Modelica.Units.SI.Voltage VRef=10000
+    "Reference line to line voltage of generator"
+    annotation (Dialog(tab="Specification"));
+  Modelica.Units.SI.AngularVelocity wGenerator=der(generator.flange_a.phi)
+    "Angular velocity of generator";
+  Modelica.Units.SI.AngularVelocity wTurbine=der(windturbine.flange_a.phi)
+    "Angular velocity of turbine";
   Components.PitchWindTurbineControlled windturbine(final rho = rho, final D = D, final powerMax = powerMax, final turbineData = turbineData, final turbineControlData = turbineControlData, final T = T, final phi(start = 0, fixed = true)) annotation(Placement(transformation(extent = {{-60, -10}, {-40, 10}})));
   Blocks.AngularVelocityController angularVelocityControl(final turbineControlData = turbineControlData, final D = D, final k = k, final Ti = Ti, final tauRef = tauRef, final limitMot = limitMot, final vMin = vMin) annotation(Placement(transformation(extent = {{-40, -60}, {-20, -40}})));
   Modelica.Mechanics.Rotational.Components.Inertia inertia(J = JTurbine) annotation(Placement(transformation(extent = {{-30, -10}, {-10, 10}})));
   Components.GenericVariableSpeedGeneratorElectrical generator(J = JGenerator, final VRef = VRef, final T = T) "Generic variable speed generator with mains connector" annotation(Placement(transformation(extent = {{60, -10}, {40, 10}})));
   Modelica.Mechanics.Rotational.Components.IdealGear idealGear(ratio = ratio) annotation(Placement(transformation(extent = {{20, -10}, {0, 10}})));
-  Modelica.Electrical.QuasiStationary.MultiPhase.Interfaces.PositivePlug positivePlug(final m = 3) annotation(Placement(transformation(extent = {{-10, -110}, {10, -90}})));
+  Modelica.Electrical.QuasiStatic.Polyphase.Interfaces.PositivePlug
+    positivePlug(final m=3)
+    annotation (Placement(transformation(extent={{-10,-110},{10,-90}})));
   Modelica.Blocks.Interfaces.RealOutput reactivePower "Reactive power" annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 90, origin = {-60, 110})));
   Blocks.TorqueLimiter torqueLimiter(tauRef = tauRef, wRef = wRef) annotation(Placement(transformation(extent = {{20, -60}, {40, -40}})));
   Modelica.Mechanics.Rotational.Sensors.SpeedSensor speedSensor annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 270, origin = {30, -20})));

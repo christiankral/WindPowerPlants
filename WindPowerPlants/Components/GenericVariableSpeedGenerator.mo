@@ -1,7 +1,9 @@
 within WindPowerPlants.Components;
 model GenericVariableSpeedGenerator "Ideal doubly fed induction generator without electrical connector"
-  parameter Modelica.SIunits.Inertia J = 0 "Moment of inertia" annotation(Evaluate = true);
-  Modelica.SIunits.AngularVelocity w = der(flange_a.phi) "Angular rotor velocity";
+  parameter Modelica.Units.SI.Inertia J=0 "Moment of inertia"
+    annotation (Evaluate=true);
+  Modelica.Units.SI.AngularVelocity w=der(flange_a.phi)
+    "Angular rotor velocity";
   Modelica.Mechanics.Rotational.Interfaces.Flange_a flange_a annotation(Placement(transformation(extent = {{90, -10}, {110, 10}})));
   Modelica.Blocks.Interfaces.RealInput tau(unit = "N.m") "Torque to be controlled" annotation(Placement(transformation(extent = {{-140, -20}, {-100, 20}})));
   Modelica.Mechanics.Rotational.Sources.Torque torque annotation(Placement(transformation(origin = {-52, 0}, extent = {{-28, -10}, {-8, 10}})));

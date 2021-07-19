@@ -1,18 +1,31 @@
 within WindPowerPlants.Components;
 model GenericVariableSpeedGeneratorElectrical "Idealized doubly fed induction generator with electrical connector"
-  parameter Modelica.SIunits.Inertia J = 0 "Moment of inertia" annotation(Evaluate = true);
-  parameter Modelica.SIunits.Voltage VRef = 1 "Reference line to line voltage";
-  parameter Modelica.SIunits.Time T = 1E-3 "Internal control time constant";
-  Modelica.SIunits.AngularVelocity w = der(flange_a.phi) "Angular rotor velocity";
+  parameter Modelica.Units.SI.Inertia J=0 "Moment of inertia"
+    annotation (Evaluate=true);
+  parameter Modelica.Units.SI.Voltage VRef=1 "Reference line to line voltage";
+  parameter Modelica.Units.SI.Time T=1E-3 "Internal control time constant";
+  Modelica.Units.SI.AngularVelocity w=der(flange_a.phi)
+    "Angular rotor velocity";
   Modelica.Mechanics.Rotational.Interfaces.Flange_a flange_a annotation(Placement(transformation(extent = {{90, -10}, {110, 10}})));
-  Modelica.Electrical.QuasiStationary.MultiPhase.Interfaces.PositivePlug positivePlug annotation(Placement(transformation(extent = {{-10, 90}, {10, 110}})));
+  Modelica.Electrical.QuasiStatic.Polyphase.Interfaces.PositivePlug
+    positivePlug
+    annotation (Placement(transformation(extent={{-10,90},{10,110}})));
   Modelica.Blocks.Interfaces.RealInput tau(unit = "N.m") "Torque to be controlled" annotation(Placement(transformation(extent = {{-140, -20}, {-100, 20}})));
   Modelica.Mechanics.Rotational.Sources.Torque torque annotation(Placement(transformation(origin = {-52, 0}, extent = {{-28, -10}, {-8, 10}})));
   Modelica.Mechanics.Rotational.Sensors.PowerSensor mechanicalPowerSensor annotation(Placement(transformation(origin = {-30, 0}, extent = {{-10, 10}, {10, -10}})));
   Sources.IdealRealPowerConductance idealPower(final VRef = VRef, final T = T) annotation(Placement(transformation(extent = {{-10, 10}, {10, 30}})));
-  Modelica.Electrical.QuasiStationary.MultiPhase.Sensors.PowerSensor electricalPowerSensor(final m = 3) annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 270, origin = {0, 50})));
-  Modelica.Electrical.QuasiStationary.MultiPhase.Basic.Star star(final m = 3) annotation(Placement(transformation(extent = {{-50, 40}, {-70, 60}})));
-  Modelica.Electrical.QuasiStationary.SinglePhase.Basic.Ground ground annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 270, origin = {-90, 50})));
+  Modelica.Electrical.QuasiStatic.Polyphase.Sensors.PowerSensor
+    electricalPowerSensor(final m=3) annotation (Placement(transformation(
+        extent={{-10,-10},{10,10}},
+        rotation=270,
+        origin={0,50})));
+  Modelica.Electrical.QuasiStatic.Polyphase.Basic.Star star(final m=3)
+    annotation (Placement(transformation(extent={{-50,40},{-70,60}})));
+  Modelica.Electrical.QuasiStatic.SinglePhase.Basic.Ground ground annotation (
+      Placement(transformation(
+        extent={{-10,-10},{10,10}},
+        rotation=270,
+        origin={-90,50})));
   Modelica.ComplexBlocks.ComplexMath.ComplexToReal complexToReal annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 90, origin = {-30, 70})));
   Modelica.Blocks.Interfaces.RealOutput power(unit = "W") "Real power" annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 90, origin = {-60, 110})));
   Modelica.Blocks.Interfaces.RealOutput reactivePower(unit = "var") "Reactive power" annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 90, origin = {60, 110})));
@@ -26,7 +39,8 @@ equation
   connect(star.plug_p, electricalPowerSensor.voltageN) annotation(Line(points = {{-50, 50}, {-10, 50}}, color = {85, 170, 255}));
   connect(ground.pin, star.pin_n) annotation(Line(points = {{-80, 50}, {-70, 50}}, color = {85, 170, 255}));
   connect(electricalPowerSensor.currentN, idealPower.positivePlug) annotation(Line(points = {{0, 40}, {0, 30}, {6.66134e-16, 30}}, color = {85, 170, 255}));
-  connect(complexToReal.u, electricalPowerSensor.y) annotation(Line(points = {{-30, 58}, {-11, 58}}, color = {85, 170, 255}));
+  connect(complexToReal.u, electricalPowerSensor.apparentPower)
+    annotation (Line(points={{-30,58},{-11,58}}, color={85,170,255}));
   connect(complexToReal.re, power) annotation(Line(points = {{-36, 82}, {-36, 90}, {-60, 90}, {-60, 110}}, color = {0, 0, 127}));
   connect(complexToReal.im, reactivePower) annotation(Line(points = {{-24, 82}, {-24, 90}, {60, 90}, {60, 110}}, color = {0, 0, 127}));
   connect(mechanicalPowerSensor.flange_b, inertia.flange_a) annotation(Line(points = {{-20, 0}, {40, 0}}, color = {0, 0, 0}));

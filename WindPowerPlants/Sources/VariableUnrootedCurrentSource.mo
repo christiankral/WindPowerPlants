@@ -1,6 +1,6 @@
 within WindPowerPlants.Sources;
 model VariableUnrootedCurrentSource "Unrooted variable multiphase AC current"
-  extends Modelica.Electrical.QuasiStationary.MultiPhase.Interfaces.OnePort;
+  extends Modelica.Electrical.QuasiStatic.Polyphase.Interfaces.OnePort;
   import Modelica.Constants.pi;
   Modelica.ComplexBlocks.Interfaces.ComplexInput I[m] annotation(Placement(transformation(origin = {0, 100}, extent = {{-20, -20}, {20, 20}}, rotation = 270)));
 equation

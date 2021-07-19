@@ -1,8 +1,8 @@
 within WindPowerPlants.Blocks;
 model SpeedAdaptor
-  parameter Modelica.SIunits.Height hin = 10 "Height of input speed vin";
-  parameter Modelica.SIunits.Height hout = 70 "Height of output speed vout";
-  parameter Modelica.SIunits.Length roughness = 0.1 "Roughness length";
+  parameter Modelica.Units.SI.Height hin=10 "Height of input speed vin";
+  parameter Modelica.Units.SI.Height hout=70 "Height of output speed vout";
+  parameter Modelica.Units.SI.Length roughness=0.1 "Roughness length";
   Modelica.Blocks.Interfaces.RealInput vin(unit = "m/s") "Input velocity" annotation(Placement(transformation(origin = {-120, 0}, extent = {{-20, -20}, {20, 20}}), iconTransformation(origin = {-120, 0}, extent = {{-20, -20}, {20, 20}})));
   Modelica.Blocks.Interfaces.RealOutput vout(unit = "m/s") "Output velocity" annotation(Placement(transformation(origin = {110, 0}, extent = {{-10, -10}, {10, 10}}), iconTransformation(origin = {110, 0}, extent = {{-10, 10}, {10, -10}})));
 equation

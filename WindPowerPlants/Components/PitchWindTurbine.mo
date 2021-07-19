@@ -3,8 +3,8 @@ model PitchWindTurbine "Wind turbine with pitch input"
   extends WindPowerPlants.Interfaces.BaseWindTurbine;
   parameter Boolean limitStart = false "Starting value indicating power limit";
   Real cp "Power coefficient";
-  Modelica.SIunits.Power power "Power of flange_a";
-  Modelica.SIunits.Power powerWind "Power of wind";
+  Modelica.Units.SI.Power power "Power of flange_a";
+  Modelica.Units.SI.Power powerWind "Power of wind";
   Modelica.Blocks.Interfaces.RealInput beta "Pitch angle (deg)" annotation(Placement(transformation(origin = {-110, -60}, extent = {{-10, -10}, {10, 10}}), iconTransformation(origin = {-110, -60}, extent = {{-10, -10}, {10, 10}})));
   Modelica.Blocks.Interfaces.BooleanOutput limit(final start = limitStart, final fixed = true) "True if power limit is reached" annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 270, origin = {0, -110})));
   Modelica.Blocks.Interfaces.RealOutput lambda "Tip speed ratio" annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 270, origin = {-60, -110})));

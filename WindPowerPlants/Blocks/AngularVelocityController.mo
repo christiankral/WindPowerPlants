@@ -1,12 +1,12 @@
 within WindPowerPlants.Blocks;
 model AngularVelocityController "Controller of the angular velocity incorporating tip speed ratio and wind speed"
   parameter WindPowerPlants.Records.TurbineControlData.Generic turbineControlData "Wind turbine record" annotation(choicesAllMatching = true);
-  parameter Modelica.SIunits.Length D = 90 "Diameter of wind turbine";
+  parameter Modelica.Units.SI.Length D=90 "Diameter of wind turbine";
   parameter Real k = 120 "Controller gain";
-  parameter Modelica.SIunits.Time Ti = 25 "Controller time constant";
-  parameter Modelica.SIunits.Torque tauRef = 0 "Reference generator torque > 0";
+  parameter Modelica.Units.SI.Time Ti=25 "Controller time constant";
+  parameter Modelica.Units.SI.Torque tauRef=0 "Reference generator torque > 0";
   parameter Real limitMot = 0.05 "Motoring torque limit w.r.t. tauRef";
-  parameter Modelica.SIunits.Velocity vMin = 4 "Minimum wind speed of operation";
+  parameter Modelica.Units.SI.Velocity vMin=4 "Minimum wind speed of operation";
   Modelica.Blocks.Interfaces.RealInput v(unit = "m/s") "Wind speed" annotation(Placement(transformation(origin = {-110, -60}, extent = {{-10, -10}, {10, 10}}), iconTransformation(origin = {-110, -60}, extent = {{-10, -10}, {10, 10}})));
   Modelica.Blocks.Interfaces.RealOutput tau(unit = "N.m") "Reference Torque" annotation(Placement(transformation(extent = {{100, -10}, {120, 10}})));
   Modelica.Blocks.Interfaces.RealInput lambda "Tip speed ratio" annotation(Placement(transformation(origin = {-110, 0}, extent = {{-10, -10}, {10, 10}}), iconTransformation(origin = {-110, 0}, extent = {{-10, -10}, {10, 10}})));

@@ -3,7 +3,7 @@ model PitchWindTurbineControlled "Wind turbine with controlled pitch angle"
   extends WindPowerPlants.Interfaces.BaseWindTurbine;
   parameter Boolean limitStart = false "Starting value indicating power limit";
   parameter WindPowerPlants.Records.TurbineControlData.Generic turbineControlData "Turbine control" annotation(choicesAllMatching = true);
-  parameter Modelica.SIunits.Time T = 1E-3 "Power limit control time constant";
+  parameter Modelica.Units.SI.Time T=1E-3 "Power limit control time constant";
   Modelica.Blocks.Interfaces.BooleanOutput limit "True if power limit is reached" annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 270, origin = {0, -110})));
   PitchWindTurbine turbine(final rho = rho, final D = D, final powerMax = powerMax, final turbineData = turbineData, final limitStart = limitStart) annotation(Placement(transformation(extent = {{60, 50}, {80, 70}})));
   Modelica.Blocks.Logical.Switch switch1 annotation(Placement(transformation(extent = {{-60, -50}, {-40, -70}})));
