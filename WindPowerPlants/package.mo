@@ -30,7 +30,7 @@ conditions are fulfilled. Therefore, only mechanical dynamics are taken into
 account. Electrical transients are fully neglected. There is yet an
 electrical interface available to couple electrical networks with one or
 more wind power plants. This electrical interface to the mains is based on a
-quasi static multi phase connector.</p>
+quasi static polyphase connector.</p>
 
 <h4><a href=\"modelica://WindPowerPlants.UsersGuide.License\">License</a>
 </h4></html>"));

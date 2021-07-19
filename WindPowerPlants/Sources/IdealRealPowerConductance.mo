@@ -1,7 +1,8 @@
 within WindPowerPlants.Sources;
 model IdealRealPowerConductance "Ideal three phase power source or sink based on controlled conductance"
   final parameter Integer m = 3 "Number of phases";
-  parameter Modelica.Units.SI.Voltage VRef=1 "Reference line to line voltage";
+  parameter Modelica.Units.SI.Voltage VRef=1
+    "Reference line to line voltage";
   parameter Modelica.Units.SI.Time T=1E-3 "Internal control time constant";
   Modelica.Electrical.QuasiStatic.Polyphase.Interfaces.PositivePlug
     positivePlug annotation (Placement(transformation(extent={{-10,90},{10,110}}),
@@ -32,8 +33,8 @@ equation
   connect(powerSensor.currentP, powerSensor.voltageP) annotation(Line(points = {{40, 60}, {50, 60}, {50, 50}}, color = {85, 170, 255}));
   connect(powerSensor.voltageN, star.plug_p) annotation(Line(points = {{30, 50}, {20, 50}, {20, -20}, {40, -20}}, color = {85, 170, 255}));
   connect(variableCurrentSource.plug_p, star.plug_p) annotation(Line(points = {{40, -10}, {40, -20}}, color = {85, 170, 255}));
-  connect(complexToReal.u, powerSensor.apparentPower) annotation (Line(points={
-          {-18,70},{0,70},{0,58},{29,58}}, color={85,170,255}));
+  connect(complexToReal.u, powerSensor.apparentPower) annotation (Line(
+        points={{-18,70},{0,70},{0,58},{29,58}}, color={85,170,255}));
   connect(complexToReal.re, feedback.u2) annotation(Line(points = {{-42, 76}, {-70, 76}, {-70, 8}}, color = {0, 0, 127}));
   connect(feedback.y, integrator.u) annotation(Line(points = {{-61, 0}, {-50, 0}}, color = {0, 0, 127}));
   connect(power, feedback.u1) annotation(Line(points = {{-120, 8.88178e-16}, {-90, 8.88178e-16}, {-90, 0}, {-78, 0}}, color = {0, 0, 127}));

@@ -7,7 +7,8 @@ model SpeedAdaptor
   Modelica.Blocks.Interfaces.RealOutput vout(unit = "m/s") "Output velocity" annotation(Placement(transformation(origin = {110, 0}, extent = {{-10, -10}, {10, 10}}), iconTransformation(origin = {110, 0}, extent = {{-10, 10}, {10, -10}})));
 equation
   vout = vin * log(hout / roughness) / log(hin / roughness);
-  annotation (Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = false, grid = {2, 2}), graphics={  Rectangle(extent = {{-100, 100}, {100, -100}}, lineColor = {0, 0, 0}, fillColor = {255, 255, 255}, fillPattern = FillPattern.Solid), Line(points = {{-98, -98}, {98, 98}, {98, 98}}), Text(origin = {-18, 118}, lineColor = {0, 0, 255}, extent = {{-82, 16}, {118, -6}}, textString = "%name")}), Documentation(info = "<html>
+  annotation (Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = false, grid = {2, 2}), graphics={  Rectangle(extent = {{-100, 100}, {100, -100}}, lineColor = {0, 0, 0}, fillColor = {255, 255, 255},
+            fillPattern =                                                                                                                                                                                                        FillPattern.Solid), Line(points = {{-98, -98}, {98, 98}, {98, 98}}), Text(origin = {-18, 118}, lineColor = {0, 0, 255}, extent = {{-82, 16}, {118, -6}}, textString = "%name")}), Documentation(info = "<html>
 <p>
 This model transformes wind speeds with respect of height <code>hin</code>
 to wind speeds of height <code>hout</code>.</p>

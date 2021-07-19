@@ -34,6 +34,6 @@ equation
   connect(torqueLimiter.tauLimited, generator.tau) annotation(Line(points = {{41, -50}, {80, -50}, {80, 8.88178e-16}, {62, 8.88178e-16}}, color = {0, 0, 127}));
   connect(speedSensor.flange, generator.flange_a) annotation(Line(points = {{30, -10}, {30, 4.44089e-16}, {40, 4.44089e-16}}, color = {0, 0, 0}));
   annotation(defaultComponentName = "plant", Documentation(info = "<html>
-<p>This is a generic wind turbine model with variable speed generator and pitch control. The plant model is equipped with a multi phase quasi static connector to the mains. The generator is controlled such way that the reactive power is equal to zero.</p>
+<p>This is a generic wind turbine model with variable speed generator and pitch control. The plant model is equipped with a polyphase quasi static connector to the mains. The generator is controlled such way that the reactive power is equal to zero.</p>
 </html>"));
 end GenericVariableSpeedElectrical;

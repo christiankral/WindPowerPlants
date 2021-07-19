@@ -7,8 +7,8 @@ block Rayleigh "Rayleigh wind distribution"
   parameter Modelica.Units.SI.Time T=100 "Time period";
   parameter Boolean increaseDecrease = false "If true, altering velocity increase and decrease after one period";
   final parameter Modelica.Units.SI.Velocity dv=vMax/n "Velocity increment";
-  final parameter Modelica.Units.SI.Velocity vDiscrete[n]=array(k*dv for k in 1
-      :n) "Discrete velocities";
+  final parameter Modelica.Units.SI.Velocity vDiscrete[n]=array(k*dv for k in
+          1:n) "Discrete velocities";
   final parameter Real rayleigh[n] = array(dv * pi / 2 * vDiscrete[k] / vMean ^ 2 * exp(-pi / 4 * vDiscrete[k] ^ 2 / vMean ^ 2) for k in 1:n) "Rayleigh probaility";
   final parameter Real rayleigh_sum = sum(rayleigh) "Sum of all rayleigh probabilities";
   final parameter Real probability[n] = rayleigh / rayleigh_sum "Probabilities of velocities";
@@ -20,8 +20,8 @@ block Rayleigh "Rayleigh wind distribution"
   Integer increment(final start = 1, final fixed = true) "Increment of index";
   Modelica.Units.SI.Time tNext(final start=tDiscrete[1], final fixed=true)
     "Time of next event";
-  discrete Modelica.Units.SI.Velocity velocity(final start=vDiscrete[1], final
-      fixed=true) "Velocity";
+  discrete Modelica.Units.SI.Velocity velocity(final start=vDiscrete[1],
+      final fixed=true) "Velocity";
   Modelica.Blocks.Interfaces.RealOutput v(unit = "m/s") "Wind velocity" annotation(Placement(transformation(extent = {{100, -10}, {120, 10}})));
 algorithm
   when time >= tNext then
@@ -44,7 +44,13 @@ algorithm
     tNext := time + tDiscrete[index];
   end when;
   v := velocity;
-  annotation(Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics={  Rectangle(extent = {{-100, 100}, {100, -100}}, lineColor = {0, 0, 0}, fillColor = {255, 255, 255}, fillPattern = FillPattern.Solid), Rectangle(extent = {{-76, -38}, {-64, -18}}, lineColor = {0, 0, 255}, fillColor = {85, 170, 255}, fillPattern = FillPattern.Solid), Rectangle(extent = {{-56, -38}, {-44, 14}}, lineColor = {0, 0, 255}, fillColor = {85, 170, 255}, fillPattern = FillPattern.Solid), Rectangle(extent = {{-36, -38}, {-24, 38}}, lineColor = {0, 0, 255}, fillColor = {85, 170, 255}, fillPattern = FillPattern.Solid), Rectangle(extent = {{-16, -38}, {-4, 20}}, lineColor = {0, 0, 255}, fillColor = {85, 170, 255}, fillPattern = FillPattern.Solid), Rectangle(extent = {{4, -38}, {16, 2}}, lineColor = {0, 0, 255}, fillColor = {85, 170, 255}, fillPattern = FillPattern.Solid), Rectangle(extent = {{24, -38}, {36, -10}}, lineColor = {0, 0, 255}, fillColor = {85, 170, 255},
+  annotation(Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics={  Rectangle(extent = {{-100, 100}, {100, -100}}, lineColor = {0, 0, 0}, fillColor = {255, 255, 255},
+            fillPattern =                                                                                                                                                                                                        FillPattern.Solid), Rectangle(extent = {{-76, -38}, {-64, -18}}, lineColor = {0, 0, 255}, fillColor = {85, 170, 255},
+            fillPattern =                                                                                                                                                                                                        FillPattern.Solid), Rectangle(extent = {{-56, -38}, {-44, 14}}, lineColor = {0, 0, 255}, fillColor = {85, 170, 255},
+            fillPattern =                                                                                                                                                                                                        FillPattern.Solid), Rectangle(extent = {{-36, -38}, {-24, 38}}, lineColor = {0, 0, 255}, fillColor = {85, 170, 255},
+            fillPattern =                                                                                                                                                                                                        FillPattern.Solid), Rectangle(extent = {{-16, -38}, {-4, 20}}, lineColor = {0, 0, 255}, fillColor = {85, 170, 255},
+            fillPattern =                                                                                                                                                                                                        FillPattern.Solid), Rectangle(extent = {{4, -38}, {16, 2}}, lineColor = {0, 0, 255}, fillColor = {85, 170, 255},
+            fillPattern =                                                                                                                                                                                                        FillPattern.Solid), Rectangle(extent = {{24, -38}, {36, -10}}, lineColor = {0, 0, 255}, fillColor = {85, 170, 255},
             fillPattern =                                                                                                                                                                                                        FillPattern.Solid), Rectangle(extent = {{44, -38}, {56, -16}}, lineColor = {0, 0, 255}, fillColor = {85, 170, 255},
             fillPattern =                                                                                                                                                                                                        FillPattern.Solid), Rectangle(extent = {{64, -38}, {76, -22}}, lineColor = {0, 0, 255}, fillColor = {85, 170, 255},
             fillPattern =                                                                                                                                                                                                        FillPattern.Solid), Text(extent = {{20, 80}, {80, 20}}, lineColor = {0, 0, 255}, fillColor = {85, 170, 255},

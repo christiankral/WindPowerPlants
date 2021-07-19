@@ -2,7 +2,8 @@ within WindPowerPlants.Components;
 model GenericVariableSpeedGeneratorElectrical "Idealized doubly fed induction generator with electrical connector"
   parameter Modelica.Units.SI.Inertia J=0 "Moment of inertia"
     annotation (Evaluate=true);
-  parameter Modelica.Units.SI.Voltage VRef=1 "Reference line to line voltage";
+  parameter Modelica.Units.SI.Voltage VRef=1
+    "Reference line to line voltage";
   parameter Modelica.Units.SI.Time T=1E-3 "Internal control time constant";
   Modelica.Units.SI.AngularVelocity w=der(flange_a.phi)
     "Angular rotor velocity";
@@ -21,8 +22,8 @@ model GenericVariableSpeedGeneratorElectrical "Idealized doubly fed induction ge
         origin={0,50})));
   Modelica.Electrical.QuasiStatic.Polyphase.Basic.Star star(final m=3)
     annotation (Placement(transformation(extent={{-50,40},{-70,60}})));
-  Modelica.Electrical.QuasiStatic.SinglePhase.Basic.Ground ground annotation (
-      Placement(transformation(
+  Modelica.Electrical.QuasiStatic.SinglePhase.Basic.Ground ground
+    annotation (Placement(transformation(
         extent={{-10,-10},{10,10}},
         rotation=270,
         origin={-90,50})));
@@ -45,7 +46,12 @@ equation
   connect(complexToReal.im, reactivePower) annotation(Line(points = {{-24, 82}, {-24, 90}, {60, 90}, {60, 110}}, color = {0, 0, 127}));
   connect(mechanicalPowerSensor.flange_b, inertia.flange_a) annotation(Line(points = {{-20, 0}, {40, 0}}, color = {0, 0, 0}));
   connect(inertia.flange_b, flange_a) annotation(Line(points = {{60, 0}, {100, 0}}, color = {0, 0, 0}));
-  annotation(defaultComponentName = "generator", Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics = {Rectangle(extent = {{-50, 60}, {70, -60}}, lineColor = {0, 0, 0}, fillPattern = FillPattern.HorizontalCylinder, fillColor = {213, 255, 170}), Rectangle(extent = {{-50, 60}, {-70, -60}}, lineColor = {0, 0, 0}, fillPattern = FillPattern.HorizontalCylinder, fillColor = {128, 128, 128}), Rectangle(extent = {{70, 10}, {90, -10}}, lineColor = {0, 0, 0}, fillPattern = FillPattern.HorizontalCylinder, fillColor = {95, 95, 95}), Rectangle(extent = {{-50, 70}, {30, 50}}, lineColor = {95, 95, 95}, fillColor = {95, 95, 95}, fillPattern = FillPattern.Solid), Polygon(points = {{-60, -90}, {-50, -90}, {-20, -20}, {30, -20}, {60, -90}, {70, -90}, {70, -100}, {-60, -100}, {-60, -90}}, lineColor = {0, 0, 0}, fillColor = {0, 0, 0}, fillPattern = FillPattern.Solid)}), Documentation(info = "<html>
+  annotation(defaultComponentName = "generator", Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics={  Rectangle(extent = {{-50, 60}, {70, -60}}, lineColor = {0, 0, 0},
+            fillPattern =                                                                                                                                                                                                        FillPattern.HorizontalCylinder, fillColor = {213, 255, 170}), Rectangle(extent = {{-50, 60}, {-70, -60}}, lineColor = {0, 0, 0},
+            fillPattern =                                                                                                                                                                                                        FillPattern.HorizontalCylinder, fillColor = {128, 128, 128}), Rectangle(extent = {{70, 10}, {90, -10}}, lineColor = {0, 0, 0},
+            fillPattern =                                                                                                                                                                                                        FillPattern.HorizontalCylinder, fillColor = {95, 95, 95}), Rectangle(extent = {{-50, 70}, {30, 50}}, lineColor = {95, 95, 95}, fillColor = {95, 95, 95},
+            fillPattern =                                                                                                                                                                                                        FillPattern.Solid), Polygon(points = {{-60, -90}, {-50, -90}, {-20, -20}, {30, -20}, {60, -90}, {70, -90}, {70, -100}, {-60, -100}, {-60, -90}}, lineColor = {0, 0, 0}, fillColor = {0, 0, 0},
+            fillPattern =                                                                                                                                                                                                        FillPattern.Solid)}), Documentation(info = "<html>
 <p>Variable speed generator with 100% efficiency and no loss.
 The mechanical power is directly converted into an equivalent three phase electric power.
 The generator has a torque input which is directly converted into a

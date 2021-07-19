@@ -1,7 +1,8 @@
 within WindPowerPlants.Sources;
 model IdealRealPower "Ideal three phase power source or sink"
   final parameter Integer m = 3 "Number of phases";
-  parameter Modelica.Units.SI.Voltage VRef=1 "Reference line to line voltage";
+  parameter Modelica.Units.SI.Voltage VRef=1
+    "Reference line to line voltage";
   parameter Modelica.Units.SI.Time T=1E-3 "Internal control time constant";
   Modelica.Electrical.QuasiStatic.Polyphase.Interfaces.PositivePlug
     positivePlug annotation (Placement(transformation(extent={{-10,90},{10,110}}),
@@ -27,8 +28,8 @@ model IdealRealPower "Ideal three phase power source or sink"
         extent={{-10,-10},{10,10}},
         rotation=270,
         origin={70,90})));
-  Modelica.Electrical.QuasiStatic.Polyphase.Blocks.ToSpacePhasor toSpacePhasor(
-      final m=m) annotation (Placement(transformation(
+  Modelica.Electrical.QuasiStatic.Polyphase.Blocks.ToSpacePhasor
+    toSpacePhasor(final m=m) annotation (Placement(transformation(
         extent={{-10,-10},{10,10}},
         rotation=270,
         origin={70,50})));
@@ -49,8 +50,8 @@ equation
   connect(powerSensor.voltageN, star.plug_p) annotation(Line(points = {{30, 70}, {20, 70}, {20, 20}, {40, 20}}, color = {85, 170, 255}));
   connect(potentialSensor.plug_p, positivePlug) annotation(Line(points = {{70, 100}, {4.44089e-16, 100}}, color = {85, 170, 255}));
   connect(potentialSensor.v, toSpacePhasor.u) annotation(Line(points = {{70, 79}, {70, 62}}, color = {85, 170, 255}));
-  connect(complexToReal.u, powerSensor.apparentPower) annotation (Line(points={
-          {2,70},{12,70},{12,78},{29,78}}, color={85,170,255}));
+  connect(complexToReal.u, powerSensor.apparentPower) annotation (Line(
+        points={{2,70},{12,70},{12,78},{29,78}}, color={85,170,255}));
   connect(complexToReal.re, feedback.u2) annotation(Line(points = {{-22, 76}, {-70, 76}, {-70, -32}}, color = {0, 0, 127}));
   connect(feedback.y, integrator.u) annotation(Line(points = {{-61, -40}, {-50, -40}}, color = {0, 0, 127}));
   connect(fromSpacePhasor.y, variableCurrentSource.I) annotation(Line(points = {{1.33227e-15, 31}, {1.33227e-15, 40}, {30, 40}}, color = {85, 170, 255}));
